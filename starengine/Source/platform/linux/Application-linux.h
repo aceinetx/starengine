@@ -2,7 +2,7 @@
 #include <ApplicationProtocol.h>
 
 namespace star {
-class Application : public ApplicationProtocol {
+class Application : protected ApplicationProtocol {
 protected:
 	static Application* p_instance;
 
@@ -11,5 +11,6 @@ public:
 	static Application* getInstance();
 
 	int run();
+	float getDeltaTime();
 };
 } // namespace star

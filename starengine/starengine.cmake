@@ -1,9 +1,16 @@
 include_directories("starengine/Source")
 include_directories("Source")
 
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED YES)
+
 file(GLOB ENGINE_SOURCE CONFIGURE_DEPENDS "starengine/Source/*.cpp")
 if(LINUX)
     add_compile_definitions("STAR_PLATFORM_LINUX")
+    if(NOT ANDROID AND LINUX)
+        add_compile_options(-fsanitize=address -Wall -Werror)
+        add_link_options(-fsanitize=address)
+    endif()
 
     find_package(raylib 5.5 REQUIRED)
     if(NOT raylib_FOUND)

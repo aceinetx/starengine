@@ -15,6 +15,7 @@ protected:
 	Vec2 p_position;
 	std::vector<Node*> children;
 	Node* p_parent;
+	float p_scale;
 
 public:
 	Node();
@@ -48,6 +49,15 @@ public:
 	 * Get position Y
 	 */
 	virtual float getPositionY();
+
+	/**
+	 * Set the node's scale
+	 */
+	virtual void setScale(float scale);
+	/**
+	 * Get the node's scale
+	 */
+	virtual float getScale();
 
 	/**
 	 * Add the child to the current node

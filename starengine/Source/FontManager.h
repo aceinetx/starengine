@@ -21,5 +21,11 @@ public:
 	 * Loads or gets the Font raylib resource from a given path
 	 */
 	Font getFont(std::string path);
+	/**
+	 * Unloads all fonts
+	 *
+	 * Automatically called by Application when the game closes
+	 */
+	void unloadAllFonts();
 };
 } // namespace star

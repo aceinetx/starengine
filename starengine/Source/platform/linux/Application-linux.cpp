@@ -1,5 +1,6 @@
 #include "Application-linux.h"
 #include "Director.h"
+#include "FontManager.h"
 #include <raylib.h>
 
 using namespace star;
@@ -20,10 +21,12 @@ int Application::run() {
 	}
 
 	auto director = Director::getInstance();
+	auto fontManager = FontManager::getInstance();
 	while (!WindowShouldClose()) {
 		director->mainLoop();
 	}
 
+	fontManager->unloadAllFonts();
 	CloseWindow();
 
 	director->getRunningScene()->release();

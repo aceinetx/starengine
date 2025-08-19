@@ -115,6 +115,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab6283ce36200791c85db4d85e52440a8" id="r_ab6283ce36200791c85db4d85e52440a8"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structstar_1_1Vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab6283ce36200791c85db4d85e52440a8">getPosition</a> ()</td></tr>
 <tr class="memitem:ae7bb674dab874c64d35dc36ed8f6ac66" id="r_ae7bb674dab874c64d35dc36ed8f6ac66"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae7bb674dab874c64d35dc36ed8f6ac66">getPositionX</a> ()</td></tr>
 <tr class="memitem:a5577307b04f360836ca412a5111a0591" id="r_a5577307b04f360836ca412a5111a0591"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5577307b04f360836ca412a5111a0591">getPositionY</a> ()</td></tr>
+<tr class="memitem:acf0955a52f51a9d6c8b0c9267b1e8668" id="r_acf0955a52f51a9d6c8b0c9267b1e8668"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acf0955a52f51a9d6c8b0c9267b1e8668">setScale</a> (float scale)</td></tr>
+<tr class="memitem:a546d5feb4e89abbd8cdca917fc0b5c7f" id="r_a546d5feb4e89abbd8cdca917fc0b5c7f"><td class="memItemLeft" align="right" valign="top">virtual float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a546d5feb4e89abbd8cdca917fc0b5c7f">getScale</a> ()</td></tr>
 <tr class="memitem:a132699398b350e83b548a5645e69beb0" id="r_a132699398b350e83b548a5645e69beb0"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a132699398b350e83b548a5645e69beb0">addChild</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *child)</td></tr>
 <tr class="memitem:ab5f0786bcb59591c528efb0b776797fc" id="r_ab5f0786bcb59591c528efb0b776797fc"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab5f0786bcb59591c528efb0b776797fc">setParent</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *parent)</td></tr>
 <tr class="memitem:a220a8d64cb0df1cce083ed38c1260615" id="r_a220a8d64cb0df1cce083ed38c1260615"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classstar_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a220a8d64cb0df1cce083ed38c1260615">getParent</a> ()</td></tr>
@@ -138,6 +140,8 @@ Protected Attributes</h2></td></tr>
 std::vector&lt; <a class="el" href="classstar_1_1Node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>children</b></td></tr>
 <tr class="memitem:aefdd10f1dec863c8cc107d12dd311101" id="r_aefdd10f1dec863c8cc107d12dd311101"><td class="memItemLeft" align="right" valign="top"><a id="aefdd10f1dec863c8cc107d12dd311101" name="aefdd10f1dec863c8cc107d12dd311101"></a>
 <a class="el" href="classstar_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_parent</b></td></tr>
+<tr class="memitem:a54ded894f1da5d56318d49680dbc742d" id="r_a54ded894f1da5d56318d49680dbc742d"><td class="memItemLeft" align="right" valign="top"><a id="a54ded894f1da5d56318d49680dbc742d" name="a54ded894f1da5d56318d49680dbc742d"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>p_scale</b></td></tr>
 <tr class="inherit_header pro_attribs_classstar_1_1Object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classstar_1_1Object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classstar_1_1Object.html">star::Object</a></td></tr>
 <tr class="memitem:a96787adaca9650cfe61528dbe3b3f248 inherit pro_attribs_classstar_1_1Object" id="r_a96787adaca9650cfe61528dbe3b3f248"><td class="memItemLeft" align="right" valign="top">
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b></td></tr>
@@ -359,6 +363,32 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b
 
 </div>
 </div>
+<a id="a546d5feb4e89abbd8cdca917fc0b5c7f" name="a546d5feb4e89abbd8cdca917fc0b5c7f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a546d5feb4e89abbd8cdca917fc0b5c7f">&#9670;&#160;</a></span>getScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">float Node::getScale </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the node's scale </p>
+
+</div>
+</div>
 <a id="a6293815ad5f410cf3e1378fcb98b2ff7" name="a6293815ad5f410cf3e1378fcb98b2ff7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6293815ad5f410cf3e1378fcb98b2ff7">&#9670;&#160;</a></span>init()</h2>
 
@@ -488,6 +518,32 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b
 </table>
 </div><div class="memdoc">
 <p>Set Y position </p>
+
+</div>
+</div>
+<a id="acf0955a52f51a9d6c8b0c9267b1e8668" name="acf0955a52f51a9d6c8b0c9267b1e8668"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acf0955a52f51a9d6c8b0c9267b1e8668">&#9670;&#160;</a></span>setScale()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Node::setScale </td>
+          <td>(</td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>scale</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Set the node's scale </p>
 
 </div>
 </div>

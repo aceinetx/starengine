@@ -17,6 +17,17 @@ FetchContent_Declare(
 
 FetchContent_MakeAvailable(fmt)
 
+set(Content_SOURCE_DIR "${CMAKE_SOURCE_DIR}/Content")
+set(Content_DESTINATION_DIR "${CMAKE_BINARY_DIR}/Content")
+
+file(COPY ${Content_SOURCE_DIR} DESTINATION ${Content_DESTINATION_DIR})
+
+add_custom_target(copy_content ALL
+    COMMAND ${CMAKE_COMMAND} -E copy_directory
+    "${CMAKE_SOURCE_DIR}/Content" "${CMAKE_BINARY_DIR}/Content"
+    COMMENT "Copying content from ${Content_SOURCE_DIR} to ${Content_DESTINATION_DIR}"
+)
+
 if(LINUX)
     add_compile_definitions("STAR_PLATFORM_LINUX")
     if(NOT ANDROID AND LINUX)
@@ -38,6 +49,7 @@ if(LINUX)
 
     add_executable(${APP_NAME} "proj.linux/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
     target_link_libraries(${APP_NAME} raylib)
+    add_dependencies(${APP_NAME} copy_content)
 endif()
 
 target_link_libraries(${APP_NAME} fmt)

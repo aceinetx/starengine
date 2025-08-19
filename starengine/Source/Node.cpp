@@ -4,7 +4,7 @@
 
 using namespace star;
 
-Node::Node() : p_position(Vec2(0, 0)) {
+Node::Node() : p_position(Vec2(0, 0)), p_parent(nullptr), p_scale(1.0f) {
 }
 
 Node::~Node() {
@@ -35,6 +35,13 @@ float Node::getPositionX() {
 }
 float Node::getPositionY() {
 	return p_position.y;
+}
+
+void Node::setScale(float scale) {
+	p_scale = scale;
+}
+float Node::getScale() {
+	return p_scale;
 }
 
 void Node::addChild(Node* child) {

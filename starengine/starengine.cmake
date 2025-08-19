@@ -28,6 +28,22 @@ add_custom_target(copy_content ALL
     COMMENT "Copying content from ${Content_SOURCE_DIR} to ${Content_DESTINATION_DIR}"
 )
 
+if(STAR_INSPECTOR)
+    add_compile_definitions("STAR_INSPECTOR")
+    set(STAR_IMGUI ON)
+endif()
+
+if(STAR_IMGUI)
+    add_compile_definitions("STAR_IMGUI")
+    include_directories("starengine/imgui")
+    include_directories("starengine/rlImGui")
+
+    add_library(rlImGui STATIC "starengine/rlImGui/rlImGui.cpp")
+
+    file(GLOB IMGUI_SOURCES CONFIGURE_DEPENDS "starengine/imgui/*.cpp")
+    add_library(imgui STATIC ${IMGUI_SOURCES})
+endif()
+
 if(LINUX)
     add_compile_definitions("STAR_PLATFORM_LINUX")
     if(NOT ANDROID AND LINUX)
@@ -53,3 +69,6 @@ if(LINUX)
 endif()
 
 target_link_libraries(${APP_NAME} fmt)
+if(STAR_IMGUI)
+    target_link_libraries(${APP_NAME} rlImGui imgui)
+endif()

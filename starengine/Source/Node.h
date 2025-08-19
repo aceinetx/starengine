@@ -13,7 +13,7 @@ namespace star {
 class Node : public Object {
 protected:
 	Vec2 p_position;
-	std::vector<Node*> children;
+	std::vector<Node*> p_children;
 	Node* p_parent;
 	float p_scale;
 
@@ -83,6 +83,11 @@ public:
 	 * Get the content size of the node. In other words, how much space does this node take
 	 */
 	virtual Vec2 getContentSize();
+
+	/**
+	 * Get the children array
+	 */
+	virtual const std::vector<Node*> getChildren();
 
 	/**
 	 * Create an autoreleased Node

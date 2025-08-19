@@ -8,7 +8,7 @@ Node::Node() : p_position(Vec2(0, 0)), p_parent(nullptr), p_scale(1.0f) {
 }
 
 Node::~Node() {
-	for (Node* child : children) {
+	for (Node* child : p_children) {
 		child->p_parent = nullptr;
 		delete child;
 	}
@@ -56,7 +56,7 @@ void Node::addChild(Node* child) {
 	STARASSERT(assertNotSelfChild(), "A node cannot be the child of his own children");
 
 	child->retain();
-	children.push_back(child);
+	p_children.push_back(child);
 	child->setParent(this);
 }
 
@@ -69,13 +69,17 @@ Node* Node::getParent() {
 }
 
 void Node::draw() {
-	for (auto child : children) {
+	for (auto child : p_children) {
 		child->draw();
 	}
 }
 
 Vec2 Node::getContentSize() {
 	return Vec2(0, 0);
+}
+
+const std::vector<Node*> Node::getChildren() {
+	return p_children;
 }
 
 Node* Node::create() {

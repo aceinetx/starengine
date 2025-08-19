@@ -2,6 +2,7 @@
 #include "Application.h"
 #include "AutoreleasePool.h"
 #include <raylib.h>
+#include <rlImGui.h>
 
 using namespace star;
 
@@ -64,6 +65,16 @@ void Director::mainLoop() {
 		Vector2 size = MeasureTextEx(GetFontDefault(), text, 30.0f, 0);
 		DrawText(text, 0, GetScreenHeight() - size.y, 30.0f, WHITE);
 	}
+
+#ifdef STAR_IMGUI
+	rlImGuiBegin();
+#endif
+#ifdef STAR_INSPECTOR
+	drawInspector();
+#endif
+#ifdef STAR_IMGUI
+	rlImGuiEnd();
+#endif
 
 	EndDrawing();
 

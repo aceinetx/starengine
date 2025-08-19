@@ -1,5 +1,6 @@
 #pragma once
 #include "Scene.h"
+#include "imgui_internal.h"
 #include <vector>
 
 namespace star {
@@ -51,6 +52,13 @@ public:
 	 * Get the game delta time (time from previous to the current frame)
 	 */
 	float getDeltaTime();
+
+#ifdef STAR_INSPECTOR
+	/**
+	 * Draws the inspector
+	 */
+	void drawInspector();
+#endif
 
 	/**
 	 * Main loop of the game, draws nodes and manages memory

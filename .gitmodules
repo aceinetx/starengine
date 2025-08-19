@@ -1,0 +1,6 @@
+[submodule "starengine/rlImGui"]
+	path = starengine/rlImGui
+	url = https://github.com/raylib-extras/rlImGui
+[submodule "starengine/imgui"]
+	path = starengine/imgui
+	url = https://github.com/ocornut/imgui

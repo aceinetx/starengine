@@ -14,7 +14,8 @@ var NAVTREEINDEX0 =
 "Object_8h_source.html":[1,0,0,0,10],
 "Scene_8h_source.html":[1,0,0,0,11],
 "Sprite_8h_source.html":[1,0,0,0,12],
-"Vec2_8h_source.html":[1,0,0,0,14],
+"TextureManager_8h_source.html":[1,0,0,0,14],
+"Vec2_8h_source.html":[1,0,0,0,15],
 "annotated.html":[0,0],
 "classes.html":[0,1],
 "classfmt_1_1formatter_3_01Vector2_01_4.html":[0,0,0,1],
@@ -79,6 +80,12 @@ var NAVTREEINDEX0 =
 "classstar_1_1Scene.html#a5afe475d025de4afd4ae430a49cfa8f8":[0,0,1,8,1],
 "classstar_1_1Scene.html#af84c0275edf85ab559bd7ee3ad387cc5":[0,0,1,8,0],
 "classstar_1_1Sprite.html":[0,0,1,9],
+"classstar_1_1Sprite.html#a51988f16dbb89517ebf3030995325891":[0,0,1,9,0],
+"classstar_1_1Sprite.html#a80c91164d537f98cd1351c1c5d8177e1":[0,0,1,9,1],
+"classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9":[0,0,1,9,2],
+"classstar_1_1TextureManager.html":[0,0,1,10],
+"classstar_1_1TextureManager.html#a7e052d4ae18e5742511f58f585fd67f2":[0,0,1,10,1],
+"classstar_1_1TextureManager.html#add8967a2f916e428e71f4539e55affa3":[0,0,1,10,0],
 "dir_0b1ceb78d05b588c5d851294bada1a62.html":[1,0,0,0],
 "dir_313d065f49b5e75b96623174c3d0c430.html":[1,0,0],
 "files.html":[1,0],
@@ -88,5 +95,5 @@ var NAVTREEINDEX0 =
 "index.html":[],
 "pages.html":[],
 "star_8h_source.html":[1,0,0,0,13],
-"structstar_1_1Vec2.html":[0,0,1,10]
+"structstar_1_1Vec2.html":[0,0,1,11]
 };

@@ -49,7 +49,7 @@ void Director::drawInspector() {
 
 		// Scale
 		float scale = selectedNode->getScale();
-		ImGui::DragFloat("Scale", &scale);
+		ImGui::DragFloat("Scale", &scale, 0.01f);
 		selectedNode->setScale(scale);
 
 		// Zoom (if camera)

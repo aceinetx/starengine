@@ -13,5 +13,8 @@ struct Vec2 {
 
 	Vec2 operator-(Vec2 vec);
 	Vec2 operator+(Vec2 vec);
+
+	void operator-=(Vec2 vec);
+	void operator+=(Vec2 vec);
 };
 } // namespace star

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['unloadallfonts_0',['unloadAllFonts',['../classstar_1_1FontManager.html#a6473bdf24e74b10967f377135695400f',1,'star::FontManager']]]
+  ['texturemanager_0',['TextureManager',['../classstar_1_1TextureManager.html',1,'star']]]
 ];

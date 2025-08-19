@@ -26,6 +26,7 @@ std::string Label::getString() {
 void Label::draw() {
 	Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize * getScale(), p_spacing);
 	Vec2 pos = getPosition();
+	pos += getParent()->getPosition();
 	pos.x -= size.x / 2;
 	pos.y += size.y / 2;
 	Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};

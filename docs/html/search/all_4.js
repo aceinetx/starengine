@@ -2,7 +2,7 @@ var searchData=
 [
   ['getcamera_0',['getCamera',['../classstar_1_1Scene.html#af84c0275edf85ab559bd7ee3ad387cc5',1,'star::Scene']]],
   ['getchildren_1',['getChildren',['../classstar_1_1Node.html#a4bdef23ee2e31c88ea7faadde086ca3d',1,'star::Node']]],
-  ['getcontentsize_2',['getContentSize',['../classstar_1_1Camera.html#a7b05b28f269c06805d94d1e70bfcdff7',1,'star::Camera::getContentSize()'],['../classstar_1_1Label.html#a819f7e878e83f430ddb6d4eb0b946bc7',1,'star::Label::getContentSize()'],['../classstar_1_1Node.html#aa51b1c507ee5b0cf2999de66e5ff4d6f',1,'star::Node::getContentSize()']]],
+  ['getcontentsize_2',['getContentSize',['../classstar_1_1Camera.html#a7b05b28f269c06805d94d1e70bfcdff7',1,'star::Camera::getContentSize()'],['../classstar_1_1Label.html#a819f7e878e83f430ddb6d4eb0b946bc7',1,'star::Label::getContentSize()'],['../classstar_1_1Node.html#aa51b1c507ee5b0cf2999de66e5ff4d6f',1,'star::Node::getContentSize()'],['../classstar_1_1Sprite.html#a80c91164d537f98cd1351c1c5d8177e1',1,'star::Sprite::getContentSize()']]],
   ['getdeltatime_3',['getDeltaTime',['../classstar_1_1Director.html#a5498d79afcea1d3f3852eaea9e02c9b5',1,'star::Director']]],
   ['getfont_4',['getFont',['../classstar_1_1FontManager.html#a2657dabbf238ddc5fb08c065aae34121',1,'star::FontManager']]],
   ['getfontpath_5',['getFontPath',['../classstar_1_1Label.html#a1d529b1c7cf5a56b4eded60387387996',1,'star::Label']]],
@@ -17,6 +17,7 @@ var searchData=
   ['getrunningscene_14',['getRunningScene',['../classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a',1,'star::Director']]],
   ['getscale_15',['getScale',['../classstar_1_1Node.html#a546d5feb4e89abbd8cdca917fc0b5c7f',1,'star::Node']]],
   ['getstring_16',['getString',['../classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1',1,'star::Label']]],
-  ['getvisiblesize_17',['getVisibleSize',['../classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1',1,'star::Director']]],
-  ['getzoom_18',['getZoom',['../classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45',1,'star::Camera']]]
+  ['gettexture_17',['getTexture',['../classstar_1_1TextureManager.html#add8967a2f916e428e71f4539e55affa3',1,'star::TextureManager']]],
+  ['getvisiblesize_18',['getVisibleSize',['../classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1',1,'star::Director']]],
+  ['getzoom_19',['getZoom',['../classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45',1,'star::Camera']]]
 ];

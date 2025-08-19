@@ -93,11 +93,30 @@ $(function(){initNavTree('Sprite_8h_source.html','',''); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Node.h&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>star {</div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno"><a class="line" href="classstar_1_1Sprite.html">    5</a></span><span class="keyword">class </span><a class="code hl_class" href="classstar_1_1Sprite.html">Sprite</a> : <span class="keyword">public</span> Node {};</div>
-<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span>} <span class="comment">// namespace star</span></div>
-<div class="ttc" id="aclassstar_1_1Sprite_html"><div class="ttname"><a href="classstar_1_1Sprite.html">star::Sprite</a></div><div class="ttdef"><b>Definition</b> Sprite.h:5</div></div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;raylib.h&gt;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>star {</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classstar_1_1Sprite.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classstar_1_1Sprite.html">Sprite</a> : <span class="keyword">public</span> Node {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    Texture2D p_texture;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9">setTexture</a>(std::string texturePath);</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Sprite.html#a51988f16dbb89517ebf3030995325891">draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">virtual</span> <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> <a class="code hl_function" href="classstar_1_1Sprite.html#a80c91164d537f98cd1351c1c5d8177e1">getContentSize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">static</span> <a class="code hl_class" href="classstar_1_1Sprite.html">Sprite</a>* <a class="code hl_function" href="classstar_1_1Node.html#aa9a92a1756b585d707a42c3fd1b274d4">create</a>(std::string texturePath);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
+</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// namespace star</span></div>
+<div class="ttc" id="aclassstar_1_1Node_html_aa9a92a1756b585d707a42c3fd1b274d4"><div class="ttname"><a href="classstar_1_1Node.html#aa9a92a1756b585d707a42c3fd1b274d4">star::Node::create</a></div><div class="ttdeci">static Node * create()</div><div class="ttdef"><b>Definition</b> Node.cpp:85</div></div>
+<div class="ttc" id="aclassstar_1_1Sprite_html"><div class="ttname"><a href="classstar_1_1Sprite.html">star::Sprite</a></div><div class="ttdef"><b>Definition</b> Sprite.h:11</div></div>
+<div class="ttc" id="aclassstar_1_1Sprite_html_a51988f16dbb89517ebf3030995325891"><div class="ttname"><a href="classstar_1_1Sprite.html#a51988f16dbb89517ebf3030995325891">star::Sprite::draw</a></div><div class="ttdeci">virtual void draw() override</div><div class="ttdef"><b>Definition</b> Sprite.cpp:11</div></div>
+<div class="ttc" id="aclassstar_1_1Sprite_html_a80c91164d537f98cd1351c1c5d8177e1"><div class="ttname"><a href="classstar_1_1Sprite.html#a80c91164d537f98cd1351c1c5d8177e1">star::Sprite::getContentSize</a></div><div class="ttdeci">virtual Vec2 getContentSize() override</div><div class="ttdef"><b>Definition</b> Sprite.cpp:21</div></div>
+<div class="ttc" id="aclassstar_1_1Sprite_html_ab7d65700421342b5ce39d908ec6fcee9"><div class="ttname"><a href="classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9">star::Sprite::setTexture</a></div><div class="ttdeci">virtual void setTexture(std::string texturePath)</div><div class="ttdef"><b>Definition</b> Sprite.cpp:7</div></div>
+<div class="ttc" id="astructstar_1_1Vec2_html"><div class="ttname"><a href="structstar_1_1Vec2.html">star::Vec2</a></div><div class="ttdef"><b>Definition</b> Vec2.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

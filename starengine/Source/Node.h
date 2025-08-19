@@ -9,6 +9,8 @@ namespace star {
  * Base class for all nodes
  *
  * Controls the position, children and drawing
+ *
+ * TODO: Rotation
  */
 class Node : public Object {
 protected:

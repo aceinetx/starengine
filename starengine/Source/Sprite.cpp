@@ -11,11 +11,12 @@ void Sprite::setTexture(std::string texturePath) {
 void Sprite::draw() {
 	Vec2 pos = getPosition();
 	pos += getParent()->getPosition();
-	pos.x -= ((float)p_texture.width / 2) * getScale();
-	pos.y += ((float)p_texture.height / 2) * getScale();
 
-	Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
-	DrawTextureEx(p_texture, rlPos, 0.0f, getScale(), WHITE);
+	// Ugly math goin' on here!
+	Rectangle src(0, 0, p_texture.width, p_texture.height);
+	Rectangle dest(pos.x, GetScreenHeight() - pos.y, p_texture.width * getScale(), p_texture.height * getScale());
+	Vector2 origin((float)p_texture.width / 2 * getScale(), (float)p_texture.height / 2 * getScale());
+	DrawTexturePro(p_texture, src, dest, origin, getRotation(), WHITE);
 }
 
 Vec2 Sprite::getContentSize() {

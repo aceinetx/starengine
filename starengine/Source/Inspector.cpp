@@ -35,7 +35,7 @@ static void iterateChildren(Node* node) {
 
 void Director::drawInspector() {
 	// Inspector window
-	ImGui::Begin("Inspector", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
+	ImGui::Begin("StarEngine Inspector", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
 	nodeIndex = 0;
 	iterateChildren(getRunningScene());
 	auto inspectorPos = ImGui::GetWindowPos();
@@ -44,7 +44,7 @@ void Director::drawInspector() {
 
 	// Properties window
 	ImGui::SetNextWindowPos({inspectorPos.x + inspectorSize.x, inspectorPos.y});
-	ImGui::Begin("Properties", nullptr, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoCollapse);
+	ImGui::Begin("> Properties", nullptr, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoCollapse);
 	if (selectedNode) {
 		// Position
 		float pos[2] = {selectedNode->getPositionX(), selectedNode->getPositionY()};
@@ -56,6 +56,11 @@ void Director::drawInspector() {
 		float scale = selectedNode->getScale();
 		ImGui::DragFloat("Scale", &scale, 0.01f);
 		selectedNode->setScale(scale);
+
+		// Rotation
+		float rotation = selectedNode->getRotation();
+		ImGui::DragFloat("Rotation", &rotation, 0.1f);
+		selectedNode->setRotation(rotation);
 
 		// Zoom (if camera)
 		if (auto camera = dynamic_cast<Camera*>(selectedNode)) {

@@ -18,6 +18,7 @@ protected:
 	std::vector<Node*> p_children;
 	Node* p_parent;
 	float p_scale;
+	float p_rotation;
 
 public:
 	Node();
@@ -60,6 +61,15 @@ public:
 	 * Get the node's scale
 	 */
 	virtual float getScale();
+
+	/**
+	 * Set the node's rotation
+	 */
+	virtual void setRotation(float rotation);
+	/**
+	 * Get the node's rotation
+	 */
+	virtual float getRotation();
 
 	/**
 	 * Add the child to the current node

@@ -5,7 +5,7 @@
 
 using namespace star;
 
-Node::Node() : p_position(Vec2(0, 0)), p_parent(nullptr), p_scale(1.0f) {
+Node::Node() : p_position(Vec2(0, 0)), p_parent(nullptr), p_scale(1.0f), p_rotation(0.0f) {
 }
 
 Node::~Node() {
@@ -42,6 +42,13 @@ void Node::setScale(float scale) {
 }
 float Node::getScale() {
 	return p_scale;
+}
+
+void Node::setRotation(float rotation) {
+	p_rotation = rotation;
+}
+float Node::getRotation() {
+	return p_rotation;
 }
 
 void Node::addChild(Node* child) {

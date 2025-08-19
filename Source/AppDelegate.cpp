@@ -12,7 +12,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	// initialize director
 	auto director = Director::getInstance();
 
-	InitWindow(1280, 720, "Star engine");
+	InitWindow(1280, 720, "StarEngine");
 	SetTargetFPS(60);
 
 	director->runWithScene(MainScene::create());

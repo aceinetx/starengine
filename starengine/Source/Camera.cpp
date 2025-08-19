@@ -22,7 +22,7 @@ rlCamera star::Camera::getRaylibCamera() {
 
 	rlCamera camera;
 	camera.zoom = p_zoom;
-	camera.rotation = 0.0f;
+	camera.rotation = getRotation(); // FIXME: Currently the camera rotates around (0, 0) in screen world coords, fix this!
 	camera.target = CLITERAL(Vector2){pos.x, pos.y};
 	camera.offset = CLITERAL(Vector2){0, 0};
 	return camera;

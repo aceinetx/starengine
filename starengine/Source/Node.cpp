@@ -67,6 +67,10 @@ void Node::draw() {
 	}
 }
 
+Vec2 Node::getContentSize() {
+	return Vec2(0, 0);
+}
+
 Node* Node::create() {
 	Node* pRet = new Node();
 	pRet->p_refCount = 1;

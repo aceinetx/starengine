@@ -15,6 +15,8 @@ protected:
 	float p_zoom;
 
 public:
+	virtual bool init() override;
+
 	/**
 	 * Create a raylib's Camera2D with the properties of the current camera converted to it
 	 */
@@ -24,10 +26,16 @@ public:
 	 * Get camera zoom
 	 */
 	virtual float getZoom();
+
 	/**
 	 * Set camera zoom
 	 */
 	virtual void setZoom(float zoom);
+
+	/**
+	 * In Node, it returns the content size, here it returns the screen size
+	 */
+	Vec2 getContentSize() override;
 
 	CREATE_FUNC(Camera);
 };

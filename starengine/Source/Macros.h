@@ -1,6 +1,7 @@
 #pragma once
 #include <cstdio>
 #include <cstdlib>
+#include <fmt/base.h>
 
 #define CREATE_FUNC(type)                                                                                                                                                                                                                                      \
 	static type* create() {                                                                                                                                                                                                                                      \
@@ -15,8 +16,8 @@
 		return pRet;                                                                                                                                                                                                                                               \
 	}
 
-#define STARASSERT(expr, msg)                                                                                                                                                                                                                                  \
+#define STARASSERT(expr, ...)                                                                                                                                                                                                                                  \
 	if (!(expr)) {                                                                                                                                                                                                                                               \
-		puts(msg);                                                                                                                                                                                                                                                 \
+		fmt::println(__VA_ARGS__);                                                                                                                                                                                                                                 \
 		std::abort();                                                                                                                                                                                                                                              \
 	}

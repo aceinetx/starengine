@@ -68,6 +68,11 @@ public:
 	virtual void draw();
 
 	/**
+	 * Get the content size of the node. In other words, how much space does this node take
+	 */
+	virtual Vec2 getContentSize();
+
+	/**
 	 * Create an autoreleased Node
 	 */
 	static Node* create();

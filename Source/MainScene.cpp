@@ -1,4 +1,6 @@
 #include "MainScene.h"
+#include <ClassFormatters.h>
+#include <fmt/format.h>
 
 using namespace star;
 
@@ -7,12 +9,18 @@ bool MainScene::init() {
 		return false;
 
 	auto director = Director::getInstance();
+	auto winSize = director->getVisibleSize();
 
 	{
 		auto label = Label::create();
 		label->setString("Hello from starengine!");
-		label->setPosition(director->getVisibleSize() / 2);
+		label->setPosition(winSize / 2);
 		addChild(label);
+
+		auto labelSize = Label::create();
+		labelSize->setString(fmt::format("{}", winSize));
+		labelSize->setPosition(Vec2(winSize.x / 2, label->getPositionY() - label->getContentSize().y));
+		addChild(labelSize);
 	}
 
 	return true;

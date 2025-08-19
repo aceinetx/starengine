@@ -10,9 +10,10 @@ namespace star {
  */
 class Label : public Node {
 protected:
-	std::string string;
-	float spacing;
-	float fontSize;
+	std::string p_string;
+	float p_spacing;
+	float p_fontSize;
+	Font p_font;
 
 public:
 	virtual bool init() override;
@@ -30,6 +31,8 @@ public:
 	 * Draw the label on the screen
 	 */
 	virtual void draw() override;
+
+	virtual Vec2 getContentSize() override;
 
 	/**
 	 * Create an autoreleased Label

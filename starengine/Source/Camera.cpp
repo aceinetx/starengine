@@ -1,16 +1,31 @@
 #include "Camera.h"
+#include "ClassFormatters.h"
+#include "Director.h"
+#include <fmt/base.h>
 #include <raylib.h>
 
 using namespace star;
 
+bool star::Camera::init() {
+	if (!Node::init())
+		return false;
+
+	p_zoom = 1.f;
+
+	return true;
+}
+
 // We can't use Camera:: since the compiler will confuse it with raylib's camera
 rlCamera star::Camera::getRaylibCamera() {
+	auto director = Director::getInstance();
+	auto winSize = director->getVisibleSize();
+	auto pos = getPosition() - (winSize / 2 / getZoom());
+
 	rlCamera camera;
-	// TODO: Use actual position
-	camera.offset = Vector2{0, 0};
-	camera.target = Vector2{0, 0};
 	camera.zoom = p_zoom;
 	camera.rotation = 0.0f;
+	camera.target = CLITERAL(Vector2){pos.x, pos.y};
+	camera.offset = CLITERAL(Vector2){0, 0};
 	return camera;
 }
 
@@ -20,4 +35,8 @@ float star::Camera::getZoom() {
 
 void star::Camera::setZoom(float zoom) {
 	p_zoom = zoom;
+}
+
+Vec2 star::Camera::getContentSize() {
+	return Director::getInstance()->getVisibleSize();
 }

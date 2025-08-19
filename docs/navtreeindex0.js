@@ -90,6 +90,8 @@ var NAVTREEINDEX0 =
 "classstar_1_1Scene.html#a5afe475d025de4afd4ae430a49cfa8f8":[0,0,1,8,1],
 "classstar_1_1Scene.html#af84c0275edf85ab559bd7ee3ad387cc5":[0,0,1,8,0],
 "classstar_1_1Scheduler.html":[0,0,1,10],
+"classstar_1_1Scheduler.html#a056aba334cd8061be2605292c6f32511":[0,0,1,10,1],
+"classstar_1_1Scheduler.html#a20209b3bb180f78e432bec56d96264ac":[0,0,1,10,0],
 "classstar_1_1Sprite.html":[0,0,1,11],
 "classstar_1_1Sprite.html#a51988f16dbb89517ebf3030995325891":[0,0,1,11,0],
 "classstar_1_1Sprite.html#a80c91164d537f98cd1351c1c5d8177e1":[0,0,1,11,1],

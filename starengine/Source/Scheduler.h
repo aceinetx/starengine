@@ -12,6 +12,10 @@ struct ScheduleEntry {
 	Node* target;
 };
 
+/** Scheduler
+ *
+ * Manages schedules
+ */
 class Scheduler {
 protected:
 	static Scheduler p_instance;
@@ -21,7 +25,9 @@ protected:
 public:
 	static Scheduler* getInstance();
 
+	/** Add an update schedule for a given target that runs every frame */
 	void scheduleUpdateForTarget(Node* target);
+	/** Removes all schedules from a given target */
 	void removeAllSchedulesFromTarget(Node* target);
 	size_t getSchedulesCount();
 

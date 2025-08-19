@@ -82,14 +82,13 @@ endif()
 ## EXECUTABLE CONFIGURATION
 ###########################
 
-if(LINUX)
+if(LINUX OR ANDROID)
 	# Executable configuration for linux
     add_compile_definitions("STAR_PLATFORM_LINUX")
-    if(NOT ANDROID AND LINUX)
 		# Enable sanitizer
-        add_compile_options(-fsanitize=address -Wall -Werror)
-        add_link_options(-fsanitize=address)
-    endif()
+		message("Enabling sanitizer")
+		add_compile_options(-fsanitize=address -Wall -Werror)
+		add_link_options(-fsanitize=address)
 
     add_raylib()
 

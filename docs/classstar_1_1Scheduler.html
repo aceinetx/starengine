@@ -91,13 +91,13 @@ $(function(){initNavTree('classstar_1_1Scheduler.html','','classstar_1_1Schedule
   <div class="headertitle"><div class="title">star::Scheduler Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="Scheduler_8h_source.html">Scheduler.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a056aba334cd8061be2605292c6f32511" id="r_a056aba334cd8061be2605292c6f32511"><td class="memItemLeft" align="right" valign="top"><a id="a056aba334cd8061be2605292c6f32511" name="a056aba334cd8061be2605292c6f32511"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>scheduleUpdateForTarget</b> (<a class="el" href="classstar_1_1Node.html">Node</a> *target)</td></tr>
-<tr class="memitem:a20209b3bb180f78e432bec56d96264ac" id="r_a20209b3bb180f78e432bec56d96264ac"><td class="memItemLeft" align="right" valign="top"><a id="a20209b3bb180f78e432bec56d96264ac" name="a20209b3bb180f78e432bec56d96264ac"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>removeAllSchedulesFromTarget</b> (<a class="el" href="classstar_1_1Node.html">Node</a> *target)</td></tr>
+<tr class="memitem:a056aba334cd8061be2605292c6f32511" id="r_a056aba334cd8061be2605292c6f32511"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a056aba334cd8061be2605292c6f32511">scheduleUpdateForTarget</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *target)</td></tr>
+<tr class="memitem:a20209b3bb180f78e432bec56d96264ac" id="r_a20209b3bb180f78e432bec56d96264ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20209b3bb180f78e432bec56d96264ac">removeAllSchedulesFromTarget</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *target)</td></tr>
 <tr class="memitem:a3d9a64698431577f91dfb593257842d3" id="r_a3d9a64698431577f91dfb593257842d3"><td class="memItemLeft" align="right" valign="top"><a id="a3d9a64698431577f91dfb593257842d3" name="a3d9a64698431577f91dfb593257842d3"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getSchedulesCount</b> ()</td></tr>
 <tr class="memitem:a533ad6047192a10444e2f4d386f3766a" id="r_a533ad6047192a10444e2f4d386f3766a"><td class="memItemLeft" align="right" valign="top"><a id="a533ad6047192a10444e2f4d386f3766a" name="a533ad6047192a10444e2f4d386f3766a"></a>
@@ -118,6 +118,46 @@ Static Protected Attributes</h2></td></tr>
 <tr class="memitem:a580e481c4da3c8df0a5003c4a38156a0" id="r_a580e481c4da3c8df0a5003c4a38156a0"><td class="memItemLeft" align="right" valign="top"><a id="a580e481c4da3c8df0a5003c4a38156a0" name="a580e481c4da3c8df0a5003c4a38156a0"></a>
 static <a class="el" href="classstar_1_1Scheduler.html">Scheduler</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p_instance</b></td></tr>
 </table>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classstar_1_1Scheduler.html">Scheduler</a></p>
+<p>Manages schedules </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a20209b3bb180f78e432bec56d96264ac" name="a20209b3bb180f78e432bec56d96264ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a20209b3bb180f78e432bec56d96264ac">&#9670;&#160;</a></span>removeAllSchedulesFromTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scheduler::removeAllSchedulesFromTarget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstar_1_1Node.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Removes all schedules from a given target </p>
+
+</div>
+</div>
+<a id="a056aba334cd8061be2605292c6f32511" name="a056aba334cd8061be2605292c6f32511"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a056aba334cd8061be2605292c6f32511">&#9670;&#160;</a></span>scheduleUpdateForTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scheduler::scheduleUpdateForTarget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstar_1_1Node.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add an update schedule for a given target that runs every frame </p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>starengine/Source/<a class="el" href="Scheduler_8h_source.html">Scheduler.h</a></li>
 <li>starengine/Source/<b>Scheduler.cpp</b></li>

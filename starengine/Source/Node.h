@@ -9,8 +9,6 @@ namespace star {
  * Base class for all nodes
  *
  * Controls the position, children and drawing
- *
- * TODO: Rotation
  */
 class Node : public Object {
 protected:
@@ -73,6 +71,7 @@ public:
 
 	/**
 	 * Add the child to the current node
+	 *
 	 * Retains the child and sets the child's parent to the current node
 	 */
 	virtual void addChild(Node* child);

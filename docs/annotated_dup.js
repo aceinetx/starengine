@@ -15,7 +15,7 @@ var annotated_dup =
       [ "Object", "classstar_1_1Object.html", "classstar_1_1Object" ],
       [ "Scene", "classstar_1_1Scene.html", "classstar_1_1Scene" ],
       [ "ScheduleEntry", "structstar_1_1ScheduleEntry.html", null ],
-      [ "Scheduler", "classstar_1_1Scheduler.html", null ],
+      [ "Scheduler", "classstar_1_1Scheduler.html", "classstar_1_1Scheduler" ],
       [ "Sprite", "classstar_1_1Sprite.html", "classstar_1_1Sprite" ],
       [ "TextureManager", "classstar_1_1TextureManager.html", "classstar_1_1TextureManager" ],
       [ "Vec2", "structstar_1_1Vec2.html", null ]

@@ -36,7 +36,6 @@ bool MainScene::init() {
 }
 
 void MainScene::update(float dt) {
-	// fmt::println("delta: {}", dt);
 	static bool increase = false;
 	static const float step = 0.05f;
 	if (increase) {

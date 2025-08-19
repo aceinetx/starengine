@@ -4,8 +4,7 @@
 #include "Node.h"
 
 namespace star {
-/*
- * Scene
+/** Scene
  * Always the parent node of the scene graph
  * Creates the camera for you
  */
@@ -17,6 +16,10 @@ public:
 	virtual ~Scene() override;
 
 	bool init() override;
+
+	/**
+	 * Get the current camera
+	 */
 	Camera* getCamera();
 
 	CREATE_FUNC(Scene);

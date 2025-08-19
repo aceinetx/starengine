@@ -3,8 +3,7 @@
 #include <vector>
 
 namespace star {
-/*
- * Director
+/** Director
  * Controls the game, scenes, and objects, draws nodes
  */
 class Director {
@@ -19,40 +18,40 @@ public:
 
 public:
 	~Director();
-	/*
+	/**
 	 * Get the instance of a director
 	 */
 	static Director* getInstance();
 
-	/*
+	/**
 	 * Reserves space on the scene stack and push the scene
 	 */
 	void runWithScene(Scene* scene);
-	/*
+	/**
 	 * Push the scene to the scene stack
 	 */
 	void pushScene(Scene* scene);
-	/*
+	/**
 	 * Pop the scene from the scene stack
 	 */
 	void popScene();
 
-	/*
+	/**
 	 * Get the current running scene
 	 */
 	Scene* getRunningScene();
 
-	/*
+	/**
 	 * Get the screen size
 	 */
 	Vec2 getVisibleSize();
 
-	/*
+	/**
 	 * Get the game delta time (time from previous to the current frame)
 	 */
 	float getDeltaTime();
 
-	/*
+	/**
 	 * Main loop of the game, draws nodes and manages memory
 	 */
 	void mainLoop();

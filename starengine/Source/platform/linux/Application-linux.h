@@ -10,6 +10,6 @@ public:
 	Application();
 	static Application* getInstance();
 
-	int run();
+	int run() override;
 };
 } // namespace star

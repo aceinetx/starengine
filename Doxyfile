@@ -1,6 +1,6 @@
 PROJECT_NAME           = starengine
 OUTPUT_DIRECTORY       = docs
 INPUT                  = starengine/Source
-RECURSIVE             = YES
+RECURSIVE             = NO
 GENERATE_HTML         = YES
 GENERATE_LATEX        = NO

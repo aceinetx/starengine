@@ -1,4 +1,5 @@
 #include "Label.h"
+#include "FontManager.h"
 #include <raylib.h>
 
 using namespace star;
@@ -31,7 +32,39 @@ void Label::draw() {
 	DrawTextEx(p_font, p_string.c_str(), rlPos, p_fontSize, p_spacing, WHITE);
 }
 
+void Label::setFont(std::string path) {
+	p_font = FontManager::getInstance()->getFont(path);
+	p_fontPath = path;
+}
+
+std::string Label::getFontPath() {
+	return p_fontPath;
+}
+
+void Label::setFontSize(float size) {
+	p_fontSize = size;
+}
+
+float Label::getFontSize() {
+	return p_fontSize;
+}
+
 Vec2 Label::getContentSize() {
 	Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize, p_spacing);
 	return Vec2(size.x, size.y);
+}
+
+Label* Label::createWithFont(std::string text, std::string font, float fontSize) {
+	auto label = Label::create();
+	label->setFontSize(fontSize);
+	label->setFont(font);
+	label->setString(text);
+	return label;
+}
+
+Label* Label::createWithDefaultFont(std::string text, float fontSize) {
+	auto label = Label::create();
+	label->setFontSize(fontSize);
+	label->setString(text);
+	return label;
 }

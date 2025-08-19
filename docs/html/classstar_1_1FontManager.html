@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>starengine: star::ApplicationProtocol Class Reference</title>
+<title>starengine: star::FontManager Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -62,7 +62,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('classstar_1_1ApplicationProtocol.html','','classstar_1_1ApplicationProtocol-members'); });
+$(function(){initNavTree('classstar_1_1FontManager.html','','classstar_1_1FontManager-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -88,70 +88,55 @@ $(function(){initNavTree('classstar_1_1ApplicationProtocol.html','','classstar_1
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">star::ApplicationProtocol Class Reference<span class="mlabels"><span class="mlabel abstract">abstract</span></span></div></div>
+  <div class="headertitle"><div class="title">star::FontManager Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="FontManager_8h_source.html">FontManager.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a87ef52cb1f6bb02d39c7a78ee70d0d8a" id="r_a87ef52cb1f6bb02d39c7a78ee70d0d8a"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87ef52cb1f6bb02d39c7a78ee70d0d8a">applicationDidFinishLaunching</a> ()=0</td></tr>
-<tr class="memitem:ab068f908d8b0a9dec75829095fd67a69" id="r_ab068f908d8b0a9dec75829095fd67a69"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab068f908d8b0a9dec75829095fd67a69">run</a> ()=0</td></tr>
+<tr class="memitem:a2657dabbf238ddc5fb08c065aae34121" id="r_a2657dabbf238ddc5fb08c065aae34121"><td class="memItemLeft" align="right" valign="top">Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2657dabbf238ddc5fb08c065aae34121">getFont</a> (std::string path)</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a958be2e64e4edaf44e03dfbafff450ed" id="r_a958be2e64e4edaf44e03dfbafff450ed"><td class="memItemLeft" align="right" valign="top"><a id="a958be2e64e4edaf44e03dfbafff450ed" name="a958be2e64e4edaf44e03dfbafff450ed"></a>
+static <a class="el" href="classstar_1_1FontManager.html">FontManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:a5776702bee5cd4bdc242f4a36515f5a9" id="r_a5776702bee5cd4bdc242f4a36515f5a9"><td class="memItemLeft" align="right" valign="top"><a id="a5776702bee5cd4bdc242f4a36515f5a9" name="a5776702bee5cd4bdc242f4a36515f5a9"></a>
+std::unordered_map&lt; std::string, Font &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>p_fonts</b></td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 id="header-pro-static-attribs" class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
+Static Protected Attributes</h2></td></tr>
+<tr class="memitem:ad1ed0b9d6528d96810141684ca9c44f8" id="r_ad1ed0b9d6528d96810141684ca9c44f8"><td class="memItemLeft" align="right" valign="top"><a id="ad1ed0b9d6528d96810141684ca9c44f8" name="ad1ed0b9d6528d96810141684ca9c44f8"></a>
+static <a class="el" href="classstar_1_1FontManager.html">FontManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p_instance</b></td></tr>
 </table>
-<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="a87ef52cb1f6bb02d39c7a78ee70d0d8a" name="a87ef52cb1f6bb02d39c7a78ee70d0d8a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a87ef52cb1f6bb02d39c7a78ee70d0d8a">&#9670;&#160;</a></span>applicationDidFinishLaunching()</h2>
+<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classstar_1_1FontManager.html">FontManager</a> Manages fonts, if a font is already loaded it will not load it again </p>
+</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a2657dabbf238ddc5fb08c065aae34121" name="a2657dabbf238ddc5fb08c065aae34121"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2657dabbf238ddc5fb08c065aae34121">&#9670;&#160;</a></span>getFont()</h2>
 
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool star::ApplicationProtocol::applicationDidFinishLaunching </td>
+          <td class="memname">Font FontManager::getFont </td>
           <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td class="paramtype">std::string</td>          <td class="paramname"><span class="paramname"><em>path</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>What to do when the app finishes launching? </p>
+<p>Loads or gets the Font raylib resource from a given path </p>
 
 </div>
 </div>
-<a id="ab068f908d8b0a9dec75829095fd67a69" name="ab068f908d8b0a9dec75829095fd67a69"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab068f908d8b0a9dec75829095fd67a69">&#9670;&#160;</a></span>run()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual int star::ApplicationProtocol::run </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel pure-virtual">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Run the application Calls applicationDidFinishLaunching, runs the main loop, and releases everything at the end </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
-<li>starengine/Source/<a class="el" href="ApplicationProtocol_8h_source.html">ApplicationProtocol.h</a></li>
+<hr/>The documentation for this class was generated from the following files:<ul>
+<li>starengine/Source/<a class="el" href="FontManager_8h_source.html">FontManager.h</a></li>
+<li>starengine/Source/<b>FontManager.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -166,7 +151,7 @@ Public Member Functions</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>star</b></li><li class="navelem"><a href="classstar_1_1ApplicationProtocol.html">ApplicationProtocol</a></li>
+    <li class="navelem"><b>star</b></li><li class="navelem"><a href="classstar_1_1FontManager.html">FontManager</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

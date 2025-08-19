@@ -42,7 +42,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"Application-linux_8h_source.html"
+"ApplicationProtocol_8h_source.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

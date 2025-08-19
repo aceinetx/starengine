@@ -12,8 +12,7 @@ bool MainScene::init() {
 	auto winSize = director->getVisibleSize();
 
 	{
-		auto label = Label::create();
-		label->setString("Hello from starengine!");
+		auto label = Label::createWithDefaultFont("Hello from starengine", 30.0f);
 		label->setPosition(winSize / 2);
 		addChild(label);
 

@@ -1,10 +1,9 @@
 var hierarchy =
 [
-    [ "star::ApplicationProtocol", "classstar_1_1ApplicationProtocol.html", [
-      [ "star::Application", "classstar_1_1Application.html", null ]
-    ] ],
+    [ "star::ApplicationProtocol", "classstar_1_1ApplicationProtocol.html", null ],
     [ "star::AutoreleasePool", "classstar_1_1AutoreleasePool.html", null ],
     [ "star::Director", "classstar_1_1Director.html", null ],
+    [ "star::FontManager", "classstar_1_1FontManager.html", null ],
     [ "fmt::formatter< star::Vec2 >", "classfmt_1_1formatter_3_01star_1_1Vec2_01_4.html", null ],
     [ "fmt::formatter< Vector2 >", "classfmt_1_1formatter_3_01Vector2_01_4.html", null ],
     [ "star::Object", "classstar_1_1Object.html", [

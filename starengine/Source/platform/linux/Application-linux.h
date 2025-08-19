@@ -11,6 +11,5 @@ public:
 	static Application* getInstance();
 
 	int run();
-	float getDeltaTime();
 };
 } // namespace star

@@ -8,6 +8,7 @@ protected:
 	static Director* p_instance;
 
 	std::vector<Scene*> p_sceneStack;
+	float p_deltaTime;
 
 public:
 	bool statsDisplay;
@@ -24,6 +25,7 @@ public:
 
 	Vec2 getVisibleSize();
 
+	float getDeltaTime();
 	void mainLoop();
 };
 } // namespace star

@@ -21,8 +21,6 @@ int Application::run() {
 
 	auto director = Director::getInstance();
 	while (!WindowShouldClose()) {
-		p_deltaTime = GetFrameTime();
-
 		director->mainLoop();
 	}
 
@@ -33,8 +31,4 @@ int Application::run() {
 		delete Director::getInstance();
 
 	return 0;
-}
-
-float Application::getDeltaTime() {
-	return p_deltaTime;
 }

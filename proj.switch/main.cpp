@@ -1,3 +1,5 @@
+#include <Macros.h>
+
 int main() {
-  // NOT IMPLEMENTED
+	STARASSERT(false, "starengine does not support this platform for now");
 }

@@ -42,6 +42,8 @@ Vec2 Director::getVisibleSize() {
 }
 
 void Director::mainLoop() {
+	p_deltaTime = GetFrameTime();
+
 	BeginDrawing();
 	ClearBackground(BLACK);
 
@@ -57,7 +59,7 @@ void Director::mainLoop() {
 	}
 
 	if (statsDisplay) {
-		const char* text = TextFormat("%d / %.3f", GetFPS(), Application::getInstance()->getDeltaTime());
+		const char* text = TextFormat("%d / %.3f", GetFPS(), getDeltaTime());
 		Vector2 size = MeasureTextEx(GetFontDefault(), text, 30.0f, 0);
 		DrawText(text, 0, GetScreenHeight() - size.y, 30.0f, WHITE);
 	}
@@ -65,4 +67,8 @@ void Director::mainLoop() {
 	EndDrawing();
 
 	AutoreleasePool::getInstance()->clear();
+}
+
+float Director::getDeltaTime() {
+	return p_deltaTime;
 }

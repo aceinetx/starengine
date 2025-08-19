@@ -19,6 +19,7 @@ bool MainScene::init() {
 		auto labelSize = Label::create();
 		labelSize->setFont("Mecha.ttf");
 		labelSize->setString(fmt::format("The window size is {}", winSize));
+		labelSize->setScale(0.7f);
 		labelSize->setPosition(Vec2(winSize.x / 2, label->getPositionY() - label->getContentSize().y));
 		addChild(labelSize);
 	}

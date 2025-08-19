@@ -8,7 +8,7 @@ bool Label::init() {
 		return false;
 
 	fontSize = 30.0f;
-	spacing = 1.0f;
+	spacing = fontSize / 10.0f;
 
 	return true;
 }
@@ -27,6 +27,5 @@ void Label::draw() {
 	pos.x -= size.x / 2;
 	pos.y += size.y / 2;
 	Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
-	// printf("%f %f\n", rlPos.x, rlPos.y);
 	DrawTextEx(GetFontDefault(), string.c_str(), rlPos, fontSize, spacing, WHITE);
 }

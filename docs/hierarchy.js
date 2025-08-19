@@ -14,6 +14,8 @@ var hierarchy =
         [ "star::Sprite", "classstar_1_1Sprite.html", null ]
       ] ]
     ] ],
+    [ "star::ScheduleEntry", "structstar_1_1ScheduleEntry.html", null ],
+    [ "star::Scheduler", "classstar_1_1Scheduler.html", null ],
     [ "star::TextureManager", "classstar_1_1TextureManager.html", null ],
     [ "star::Vec2", "structstar_1_1Vec2.html", null ]
 ];

@@ -1,6 +1,7 @@
 var classstar_1_1Node =
 [
     [ "addChild", "classstar_1_1Node.html#a132699398b350e83b548a5645e69beb0", null ],
+    [ "cleanup", "classstar_1_1Node.html#aa2de84c6cdeec9cd647d236c30ee0567", null ],
     [ "draw", "classstar_1_1Node.html#ab88c83ced58700a56de568f5b1e3c473", null ],
     [ "getChildren", "classstar_1_1Node.html#a4bdef23ee2e31c88ea7faadde086ca3d", null ],
     [ "getContentSize", "classstar_1_1Node.html#aa51b1c507ee5b0cf2999de66e5ff4d6f", null ],
@@ -8,11 +9,19 @@ var classstar_1_1Node =
     [ "getPosition", "classstar_1_1Node.html#ab6283ce36200791c85db4d85e52440a8", null ],
     [ "getPositionX", "classstar_1_1Node.html#ae7bb674dab874c64d35dc36ed8f6ac66", null ],
     [ "getPositionY", "classstar_1_1Node.html#a5577307b04f360836ca412a5111a0591", null ],
+    [ "getRotation", "classstar_1_1Node.html#af915e0f0c8cf0a1a9153ade2d81d8aee", null ],
     [ "getScale", "classstar_1_1Node.html#a546d5feb4e89abbd8cdca917fc0b5c7f", null ],
     [ "init", "classstar_1_1Node.html#a6293815ad5f410cf3e1378fcb98b2ff7", null ],
+    [ "removeAllChildrenAndCleanup", "classstar_1_1Node.html#a9bd26fa82ed29f97aea1ab872c31aeb8", null ],
+    [ "removeChild", "classstar_1_1Node.html#adb62722d840bfd6a0393ec87d15c9c7a", null ],
+    [ "removeChildAndCleanup", "classstar_1_1Node.html#ab15c88aa3d996d3f8082d44adf4fde42", null ],
+    [ "removeFromParentAndCleanup", "classstar_1_1Node.html#a6dd7f6128e5f491b5932ff9870f7e314", null ],
+    [ "scheduleUpdate", "classstar_1_1Node.html#aaabfedeca4c915c087c1ce5ee941d7c2", null ],
     [ "setParent", "classstar_1_1Node.html#ab5f0786bcb59591c528efb0b776797fc", null ],
     [ "setPosition", "classstar_1_1Node.html#adb6f56d19f3966590c90ffe4097d061e", null ],
     [ "setPositionX", "classstar_1_1Node.html#ae1dfc73d6122a95778d5d9db3d1fd913", null ],
     [ "setPositionY", "classstar_1_1Node.html#a5c97d36655f0daa71a5f6c715d2b0470", null ],
-    [ "setScale", "classstar_1_1Node.html#acf0955a52f51a9d6c8b0c9267b1e8668", null ]
+    [ "setRotation", "classstar_1_1Node.html#a62dda439f77712f0d9b405ce887df676", null ],
+    [ "setScale", "classstar_1_1Node.html#acf0955a52f51a9d6c8b0c9267b1e8668", null ],
+    [ "update", "classstar_1_1Node.html#a61d250c20cbd8bfee499bf93370be43f", null ]
 ];

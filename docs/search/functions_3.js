@@ -14,10 +14,11 @@ var searchData=
   ['getpositiony_11',['getPositionY',['../classstar_1_1Node.html#a5577307b04f360836ca412a5111a0591',1,'star::Node']]],
   ['getraylibcamera_12',['getRaylibCamera',['../classstar_1_1Camera.html#af0c928910aeebde8a4a05a9ca0e049ee',1,'star::Camera']]],
   ['getreferencecount_13',['getReferenceCount',['../classstar_1_1Object.html#a7f4406dc81bdc16e353e95f78026ffc7',1,'star::Object']]],
-  ['getrunningscene_14',['getRunningScene',['../classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a',1,'star::Director']]],
-  ['getscale_15',['getScale',['../classstar_1_1Node.html#a546d5feb4e89abbd8cdca917fc0b5c7f',1,'star::Node']]],
-  ['getstring_16',['getString',['../classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1',1,'star::Label']]],
-  ['gettexture_17',['getTexture',['../classstar_1_1TextureManager.html#add8967a2f916e428e71f4539e55affa3',1,'star::TextureManager']]],
-  ['getvisiblesize_18',['getVisibleSize',['../classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1',1,'star::Director']]],
-  ['getzoom_19',['getZoom',['../classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45',1,'star::Camera']]]
+  ['getrotation_14',['getRotation',['../classstar_1_1Node.html#af915e0f0c8cf0a1a9153ade2d81d8aee',1,'star::Node']]],
+  ['getrunningscene_15',['getRunningScene',['../classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a',1,'star::Director']]],
+  ['getscale_16',['getScale',['../classstar_1_1Node.html#a546d5feb4e89abbd8cdca917fc0b5c7f',1,'star::Node']]],
+  ['getstring_17',['getString',['../classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1',1,'star::Label']]],
+  ['gettexture_18',['getTexture',['../classstar_1_1TextureManager.html#add8967a2f916e428e71f4539e55affa3',1,'star::TextureManager']]],
+  ['getvisiblesize_19',['getVisibleSize',['../classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1',1,'star::Director']]],
+  ['getzoom_20',['getZoom',['../classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45',1,'star::Camera']]]
 ];

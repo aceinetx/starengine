@@ -3,7 +3,9 @@
 #include "AutoreleasePool.h"
 #include "Scheduler.h"
 #include <raylib.h>
+#ifdef STAR_IMGUI
 #include <rlImGui.h>
+#endif
 
 using namespace star;
 

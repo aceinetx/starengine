@@ -5,7 +5,9 @@
 #include "Scheduler.h"
 #include "TextureManager.h"
 #include <raylib.h>
+#ifdef STAR_IMGUI
 #include <rlImGui.h>
+#endif
 
 using namespace star;
 

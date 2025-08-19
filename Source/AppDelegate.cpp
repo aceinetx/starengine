@@ -16,7 +16,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
 	SetTargetFPS(60);
 
 	director->runWithScene(MainScene::create());
-	director->statsDisplay = true;
+	director->statsDisplay = false;
 
 	return true;
 }

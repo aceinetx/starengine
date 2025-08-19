@@ -1,3 +1,4 @@
+#ifdef STAR_INSPECTOR
 #include "Director.h"
 #include "Node.h"
 #include "fmt/base.h"
@@ -72,3 +73,4 @@ void Director::drawInspector() {
 
 	ImGui::End();
 }
+#endif

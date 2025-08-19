@@ -1,6 +1,5 @@
 #pragma once
 #include "Scene.h"
-#include "imgui_internal.h"
 #include <vector>
 
 namespace star {

@@ -4,6 +4,7 @@ var NAVTREEINDEX0 =
 "Application_8h_source.html":[1,0,0,0,0],
 "AutoreleasePool_8h_source.html":[1,0,0,0,2],
 "Camera_8h_source.html":[1,0,0,0,3],
+"ClassFormatters_8h.html":[1,0,0,0,4],
 "ClassFormatters_8h_source.html":[1,0,0,0,4],
 "Director_8h_source.html":[1,0,0,0,5],
 "FontManager_8h_source.html":[1,0,0,0,6],

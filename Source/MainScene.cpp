@@ -18,7 +18,7 @@ bool MainScene::init() {
 		addChild(label);
 
 		auto labelSize = Label::create();
-		labelSize->setString(fmt::format("{}", winSize));
+		labelSize->setString(fmt::format("The window size is {}", winSize));
 		labelSize->setPosition(Vec2(winSize.x / 2, label->getPositionY() - label->getContentSize().y));
 		addChild(labelSize);
 	}

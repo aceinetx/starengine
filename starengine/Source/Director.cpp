@@ -48,8 +48,9 @@ void Director::mainLoop() {
 	ClearBackground(BLACK);
 
 	Scene* scene = getRunningScene();
+	auto camera = scene->getCamera();
 	if (scene) {
-		BeginMode2D(scene->getCamera()->getRaylibCamera());
+		BeginMode2D(camera->getRaylibCamera());
 	}
 
 	scene->draw();

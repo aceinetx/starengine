@@ -23,18 +23,12 @@ int Application::run() {
 	while (!WindowShouldClose()) {
 		p_deltaTime = GetFrameTime();
 
-		BeginDrawing();
-		ClearBackground(BLACK);
-
-		if (director->statsDisplay) {
-			const char* text = TextFormat("%d / %.3f", GetFPS(), getDeltaTime());
-			Vector2 size = MeasureTextEx(GetFontDefault(), text, 30.0f, 0);
-			DrawText(text, 0, GetScreenHeight() - size.y, 30.0f, WHITE);
-		}
-		EndDrawing();
+		director->mainLoop();
 	}
 
 	CloseWindow();
+
+	director->getRunningScene()->release();
 	if (Director::getInstance())
 		delete Director::getInstance();
 

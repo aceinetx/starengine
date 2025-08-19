@@ -19,5 +19,11 @@ public:
 	void runWithScene(Scene* scene);
 	void pushScene(Scene* scene);
 	void popScene();
+
+	Scene* getRunningScene();
+
+	Vec2 getVisibleSize();
+
+	void mainLoop();
 };
 } // namespace star

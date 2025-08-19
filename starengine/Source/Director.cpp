@@ -1,13 +1,13 @@
 #include "Director.h"
+#include "Application.h"
+#include "AutoreleasePool.h"
+#include <raylib.h>
 
 using namespace star;
 
 Director* Director::p_instance = nullptr;
 
 Director::~Director() {
-	for (Scene* scene : p_sceneStack) {
-		delete scene;
-	}
 }
 
 Director* Director::getInstance() {
@@ -22,10 +22,45 @@ void Director::runWithScene(Scene* scene) {
 }
 
 void Director::pushScene(Scene* scene) {
+	scene->retain();
 	p_sceneStack.push_back(scene);
 }
 
 void Director::popScene() {
-	delete p_sceneStack.back();
+	p_sceneStack.back()->release();
 	p_sceneStack.pop_back();
+}
+
+Scene* Director::getRunningScene() {
+	if (p_sceneStack.empty())
+		return nullptr;
+	return p_sceneStack.back();
+}
+
+Vec2 Director::getVisibleSize() {
+	return Vec2(GetScreenWidth(), GetScreenHeight());
+}
+
+void Director::mainLoop() {
+	BeginDrawing();
+	ClearBackground(BLACK);
+
+	Scene* scene = getRunningScene();
+	if (scene) {
+		BeginMode2D(scene->getCamera()->getRaylibCamera());
+	}
+
+	if (statsDisplay) {
+		const char* text = TextFormat("%d / %.3f", GetFPS(), Application::getInstance()->getDeltaTime());
+		Vector2 size = MeasureTextEx(GetFontDefault(), text, 30.0f, 0);
+		DrawText(text, 0, GetScreenHeight() - size.y, 30.0f, WHITE);
+	}
+
+	if (scene) {
+		EndMode2D();
+	}
+
+	EndDrawing();
+
+	AutoreleasePool::getInstance()->clear();
 }

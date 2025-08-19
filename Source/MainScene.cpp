@@ -1,4 +1,5 @@
 #include "MainScene.h"
+#include "fmt/base.h"
 #include <ClassFormatters.h>
 #include <fmt/format.h>
 
@@ -22,12 +23,31 @@ bool MainScene::init() {
 		labelSize->setPosition(Vec2(winSize.x / 2, label->getPositionY() - label->getContentSize().y));
 		addChild(labelSize);
 
-		auto logo = Sprite::create("logo.png");
+		logo = Sprite::create("logo.png");
 		logo->setPosition(winSize / 2);
 		logo->setScale(0.5f);
 		logo->setPositionY(logo->getContentSize().y * logo->getScale() / 1.5f);
 		addChild(logo);
 	}
 
+	scheduleUpdate();
+
 	return true;
+}
+
+void MainScene::update(float dt) {
+	// fmt::println("delta: {}", dt);
+	static bool increase = false;
+	static const float step = 0.05f;
+	if (increase) {
+		logo->setScale(logo->getScale() + step * dt);
+		if (logo->getScale() > 0.5f) {
+			increase = false;
+		}
+	} else {
+		logo->setScale(logo->getScale() - step * dt);
+		if (logo->getScale() < 0.4f) {
+			increase = true;
+		}
+	}
 }

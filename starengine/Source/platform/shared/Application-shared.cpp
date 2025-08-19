@@ -1,6 +1,8 @@
 #include "Application-shared.h"
 #include "Director.h"
 #include "FontManager.h"
+#include "Macros.h"
+#include "Scheduler.h"
 #include "TextureManager.h"
 #include <raylib.h>
 #include <rlImGui.h>
@@ -26,6 +28,7 @@ int Application::run() {
 	auto director = Director::getInstance();
 	auto fontManager = FontManager::getInstance();
 	auto textureManager = TextureManager::getInstance();
+	auto scheduler = Scheduler::getInstance();
 #ifdef STAR_IMGUI
 	rlImGuiSetup(true);
 	static auto& io = ImGui::GetIO();
@@ -43,7 +46,8 @@ int Application::run() {
 #endif
 	CloseWindow();
 
-	director->getRunningScene()->release();
+	director->getRunningScene()->removeFromParentAndCleanup();
+	STARASSERT(scheduler->getSchedulesCount() == 0, "Some schedules are still not deleted, this shouldn't do anything bad, but you should be concerned.");
 	if (Director::getInstance())
 		delete Director::getInstance();
 

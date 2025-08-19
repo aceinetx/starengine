@@ -1,6 +1,7 @@
 #include "Director.h"
 #include "Application.h"
 #include "AutoreleasePool.h"
+#include "Scheduler.h"
 #include <raylib.h>
 #include <rlImGui.h>
 
@@ -47,6 +48,8 @@ void Director::mainLoop() {
 
 	BeginDrawing();
 	ClearBackground(BLACK);
+
+	Scheduler::getInstance()->update(getDeltaTime());
 
 	Scene* scene = getRunningScene();
 	auto camera = scene->getCamera();

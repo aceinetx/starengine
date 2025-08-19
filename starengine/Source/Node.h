@@ -92,6 +92,41 @@ public:
 	virtual const std::vector<Node*> getChildren();
 
 	/**
+	 * Runs every frame, override if you need
+	 */
+	virtual void update(float dt);
+
+	/**
+	 * Schedule update
+	 */
+	virtual void scheduleUpdate();
+
+	/**
+	 * Cleans schedules
+	 */
+	virtual void cleanup();
+
+	/**
+	 * Removes the child from parent and calls cleanup()
+	 */
+	virtual void removeFromParentAndCleanup();
+
+	/**
+	 * Removes a certain child
+	 */
+	virtual void removeChild(Node* child);
+
+	/**
+	 * Removes a certain child and calls cleanup() on it
+	 */
+	virtual void removeChildAndCleanup(Node* child);
+
+	/**
+	 * Removes all children and calls cleanup() on them
+	 */
+	virtual void removeAllChildrenAndCleanup();
+
+	/**
 	 * Create an autoreleased Node
 	 */
 	static Node* create();

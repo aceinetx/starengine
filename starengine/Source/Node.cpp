@@ -1,5 +1,6 @@
 #include "Node.h"
 #include "Macros.h"
+#include "Scheduler.h"
 #include <cstdio>
 
 using namespace star;
@@ -8,10 +9,7 @@ Node::Node() : p_position(Vec2(0, 0)), p_parent(nullptr), p_scale(1.0f) {
 }
 
 Node::~Node() {
-	for (Node* child : p_children) {
-		child->p_parent = nullptr;
-		delete child;
-	}
+	removeAllChildrenAndCleanup();
 }
 
 bool Node::init() {
@@ -38,6 +36,8 @@ float Node::getPositionY() {
 }
 
 void Node::setScale(float scale) {
+	if (scale < 0)
+		return; // Why would you want negative scale?
 	p_scale = scale;
 }
 float Node::getScale() {
@@ -80,6 +80,49 @@ Vec2 Node::getContentSize() {
 
 const std::vector<Node*> Node::getChildren() {
 	return p_children;
+}
+
+void Node::update(float dt) {
+}
+
+void Node::scheduleUpdate() {
+	Scheduler::getInstance()->scheduleUpdateForTarget(this);
+}
+
+void Node::cleanup() {
+	Scheduler::getInstance()->removeAllSchedulesFromTarget(this);
+}
+
+void Node::removeFromParentAndCleanup() {
+	cleanup();
+	if (getParent() != nullptr)
+		getParent()->removeChild(this);
+	else
+		release();
+}
+
+void Node::removeChild(Node* child) {
+	for (size_t i = 0; i < p_children.size(); i++) {
+		Node* node = p_children.at(i);
+		if (node == child) {
+			child->release();
+			p_children.erase(p_children.begin() + i);
+		}
+	}
+}
+
+void Node::removeChildAndCleanup(Node* child) {
+	child->cleanup();
+	removeChild(child);
+}
+
+void Node::removeAllChildrenAndCleanup() {
+	for (Node* child : p_children) {
+		child->cleanup();
+		child->removeAllChildrenAndCleanup();
+		child->release();
+	}
+	p_children.clear();
 }
 
 Node* Node::create() {

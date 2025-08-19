@@ -2,6 +2,7 @@
 #include "Node.h"
 #include "fmt/base.h"
 #include "imgui.h"
+#include <cstdio>
 #include <fmt/format.h>
 #include <string>
 #include <typeinfo>
@@ -19,28 +20,32 @@ static Node* selectedNode = nullptr;
 // Iterate children (Draw tree)
 static void iterateChildren(Node* node) {
 	std::string title = fmt::format("{}##{}", getNodeName(node), nodeIndex);
-	if (ImGui::TreeNode(title.c_str())) {
+	bool open = ImGui::TreeNode(title.c_str());
+	if (ImGui::IsItemClicked()) {
+		selectedNode = node;
+	}
+	if (open) {
 		for (Node* child : node->getChildren()) {
 			iterateChildren(child);
 		}
 		ImGui::TreePop();
 	}
-	if (ImGui::IsItemClicked()) {
-		selectedNode = node;
-	}
 	nodeIndex++;
 }
 
 void Director::drawInspector() {
+	// Inspector window
 	ImGui::Begin("Inspector", nullptr, ImGuiWindowFlags_AlwaysAutoResize);
 	nodeIndex = 0;
 	iterateChildren(getRunningScene());
+	auto inspectorPos = ImGui::GetWindowPos();
+	auto inspectorSize = ImGui::GetWindowSize();
 	ImGui::End();
 
 	// Properties window
+	ImGui::SetNextWindowPos({inspectorPos.x + inspectorSize.x, inspectorPos.y});
+	ImGui::Begin("Properties", nullptr, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoCollapse);
 	if (selectedNode) {
-		ImGui::SetNextWindowPos({200, 200}, ImGuiCond_Once);
-		ImGui::Begin("Properties", nullptr, ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoCollapse);
 		// Position
 		float pos[2] = {selectedNode->getPositionX(), selectedNode->getPositionY()};
 		ImGui::DragFloat2("Position", pos);
@@ -58,11 +63,7 @@ void Director::drawInspector() {
 			ImGui::DragFloat("Zoom", &zoom, 0.01f);
 			camera->setZoom(zoom);
 		}
-
-		// Close button
-		if (ImGui::Button("Close")) {
-			selectedNode = nullptr;
-		}
-		ImGui::End();
 	}
+
+	ImGui::End();
 }

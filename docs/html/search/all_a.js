@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['release_0',['release',['../classstar_1_1Object.html#ac2e671032f6b9a12f58d411cff406928',1,'star::Object']]],
-  ['retain_1',['retain',['../classstar_1_1Object.html#a038b801e069bb74d0be6b262472e02b5',1,'star::Object']]],
-  ['runwithscene_2',['runWithScene',['../classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a',1,'star::Director']]]
+  ['popscene_0',['popScene',['../classstar_1_1Director.html#a92916c5c47d0f0a202fe1a5023841e8b',1,'star::Director']]],
+  ['pushscene_1',['pushScene',['../classstar_1_1Director.html#ad113f1a2b5ab297788caa791b57f458b',1,'star::Director']]]
 ];

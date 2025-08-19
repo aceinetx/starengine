@@ -105,19 +105,27 @@ $(function(){initNavTree('Camera_8h_source.html','',''); });
 <div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> p_zoom;</div>
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <span class="keyword">virtual</span> rlCamera <a class="code hl_function" href="classstar_1_1Camera.html#af0c928910aeebde8a4a05a9ca0e049ee">getRaylibCamera</a>();</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45">getZoom</a>();</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5">setZoom</a>(<span class="keywordtype">float</span> zoom);</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span> </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    CREATE_FUNC(<a class="code hl_class" href="classstar_1_1Camera.html">Camera</a>);</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>};</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classstar_1_1Camera.html#a301689bba5c35f4ebd6becb466baab2f">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">virtual</span> rlCamera <a class="code hl_function" href="classstar_1_1Camera.html#af0c928910aeebde8a4a05a9ca0e049ee">getRaylibCamera</a>();</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45">getZoom</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5">setZoom</a>(<span class="keywordtype">float</span> zoom);</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> <a class="code hl_function" href="classstar_1_1Camera.html#a7b05b28f269c06805d94d1e70bfcdff7">getContentSize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    CREATE_FUNC(<a class="code hl_class" href="classstar_1_1Camera.html">Camera</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
 </div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>} <span class="comment">// namespace star</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace star</span></div>
 <div class="ttc" id="aclassstar_1_1Camera_html"><div class="ttname"><a href="classstar_1_1Camera.html">star::Camera</a></div><div class="ttdef"><b>Definition</b> Camera.h:13</div></div>
-<div class="ttc" id="aclassstar_1_1Camera_html_a4cfd026ff2a7c316028cdeab591e8b45"><div class="ttname"><a href="classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45">star::Camera::getZoom</a></div><div class="ttdeci">virtual float getZoom()</div><div class="ttdef"><b>Definition</b> Camera.cpp:17</div></div>
-<div class="ttc" id="aclassstar_1_1Camera_html_a9670237954712b194944a4c88520c0a5"><div class="ttname"><a href="classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5">star::Camera::setZoom</a></div><div class="ttdeci">virtual void setZoom(float zoom)</div><div class="ttdef"><b>Definition</b> Camera.cpp:21</div></div>
-<div class="ttc" id="aclassstar_1_1Camera_html_af0c928910aeebde8a4a05a9ca0e049ee"><div class="ttname"><a href="classstar_1_1Camera.html#af0c928910aeebde8a4a05a9ca0e049ee">star::Camera::getRaylibCamera</a></div><div class="ttdeci">virtual rlCamera getRaylibCamera()</div><div class="ttdef"><b>Definition</b> Camera.cpp:7</div></div>
+<div class="ttc" id="aclassstar_1_1Camera_html_a301689bba5c35f4ebd6becb466baab2f"><div class="ttname"><a href="classstar_1_1Camera.html#a301689bba5c35f4ebd6becb466baab2f">star::Camera::init</a></div><div class="ttdeci">virtual bool init() override</div><div class="ttdef"><b>Definition</b> Camera.cpp:9</div></div>
+<div class="ttc" id="aclassstar_1_1Camera_html_a4cfd026ff2a7c316028cdeab591e8b45"><div class="ttname"><a href="classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45">star::Camera::getZoom</a></div><div class="ttdeci">virtual float getZoom()</div><div class="ttdef"><b>Definition</b> Camera.cpp:32</div></div>
+<div class="ttc" id="aclassstar_1_1Camera_html_a7b05b28f269c06805d94d1e70bfcdff7"><div class="ttname"><a href="classstar_1_1Camera.html#a7b05b28f269c06805d94d1e70bfcdff7">star::Camera::getContentSize</a></div><div class="ttdeci">Vec2 getContentSize() override</div><div class="ttdef"><b>Definition</b> Camera.cpp:40</div></div>
+<div class="ttc" id="aclassstar_1_1Camera_html_a9670237954712b194944a4c88520c0a5"><div class="ttname"><a href="classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5">star::Camera::setZoom</a></div><div class="ttdeci">virtual void setZoom(float zoom)</div><div class="ttdef"><b>Definition</b> Camera.cpp:36</div></div>
+<div class="ttc" id="aclassstar_1_1Camera_html_af0c928910aeebde8a4a05a9ca0e049ee"><div class="ttname"><a href="classstar_1_1Camera.html#af0c928910aeebde8a4a05a9ca0e049ee">star::Camera::getRaylibCamera</a></div><div class="ttdeci">virtual rlCamera getRaylibCamera()</div><div class="ttdef"><b>Definition</b> Camera.cpp:19</div></div>
+<div class="ttc" id="astructstar_1_1Vec2_html"><div class="ttname"><a href="structstar_1_1Vec2.html">star::Vec2</a></div><div class="ttdef"><b>Definition</b> Vec2.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

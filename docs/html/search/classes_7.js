@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vec2_0',['Vec2',['../structstar_1_1Vec2.html',1,'star']]]
+  ['scene_0',['Scene',['../classstar_1_1Scene.html',1,'star']]]
 ];

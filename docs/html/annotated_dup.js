@@ -1,5 +1,9 @@
 var annotated_dup =
 [
+    [ "fmt", null, [
+      [ "formatter< star::Vec2 >", "classfmt_1_1formatter_3_01star_1_1Vec2_01_4.html", null ],
+      [ "formatter< Vector2 >", "classfmt_1_1formatter_3_01Vector2_01_4.html", null ]
+    ] ],
     [ "star", null, [
       [ "Application", "classstar_1_1Application.html", null ],
       [ "ApplicationProtocol", "classstar_1_1ApplicationProtocol.html", "classstar_1_1ApplicationProtocol" ],

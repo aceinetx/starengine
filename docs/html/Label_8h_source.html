@@ -101,28 +101,33 @@ $(function(){initNavTree('Label_8h_source.html','',''); });
 <div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
 <div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classstar_1_1Label.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classstar_1_1Label.html">Label</a> : <span class="keyword">public</span> Node {</div>
 <div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    std::string string;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">float</span> spacing;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> fontSize;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classstar_1_1Label.html#ad2fb627fd81a2af45e056239b01d3852">init</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65">setString</a>(std::string <span class="keywordtype">string</span>);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1">getString</a>();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Label.html#aed5ab94d78ccb89fd8f6b9932fdbdf02">draw</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno"><a class="line" href="classstar_1_1Label.html#a311898911bd324f7ffe85663d6208164">   37</a></span>    <a class="code hl_function" href="classstar_1_1Label.html#a311898911bd324f7ffe85663d6208164">CREATE_FUNC</a>(<a class="code hl_class" href="classstar_1_1Label.html">Label</a>);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>};</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    std::string p_string;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    <span class="keywordtype">float</span> p_spacing;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> p_fontSize;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    Font p_font;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code hl_function" href="classstar_1_1Label.html#ad2fb627fd81a2af45e056239b01d3852">init</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65">setString</a>(std::string <span class="keywordtype">string</span>);</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    <span class="keyword">virtual</span> std::string <a class="code hl_function" href="classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1">getString</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span></div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Label.html#aed5ab94d78ccb89fd8f6b9932fdbdf02">draw</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span> </div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keyword">virtual</span> <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> <a class="code hl_function" href="classstar_1_1Label.html#a819f7e878e83f430ddb6d4eb0b946bc7">getContentSize</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="classstar_1_1Label.html#a311898911bd324f7ffe85663d6208164">   40</a></span>    <a class="code hl_function" href="classstar_1_1Label.html#a311898911bd324f7ffe85663d6208164">CREATE_FUNC</a>(<a class="code hl_class" href="classstar_1_1Label.html">Label</a>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>};</div>
 </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>} <span class="comment">// namespace star</span></div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>} <span class="comment">// namespace star</span></div>
 <div class="ttc" id="aclassstar_1_1Label_html"><div class="ttname"><a href="classstar_1_1Label.html">star::Label</a></div><div class="ttdef"><b>Definition</b> Label.h:11</div></div>
-<div class="ttc" id="aclassstar_1_1Label_html_a0f1228f3515597cdeff40438ff2a7b65"><div class="ttname"><a href="classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65">star::Label::setString</a></div><div class="ttdeci">virtual void setString(std::string string)</div><div class="ttdef"><b>Definition</b> Label.cpp:16</div></div>
+<div class="ttc" id="aclassstar_1_1Label_html_a0f1228f3515597cdeff40438ff2a7b65"><div class="ttname"><a href="classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65">star::Label::setString</a></div><div class="ttdeci">virtual void setString(std::string string)</div><div class="ttdef"><b>Definition</b> Label.cpp:17</div></div>
 <div class="ttc" id="aclassstar_1_1Label_html_a311898911bd324f7ffe85663d6208164"><div class="ttname"><a href="classstar_1_1Label.html#a311898911bd324f7ffe85663d6208164">star::Label::CREATE_FUNC</a></div><div class="ttdeci">CREATE_FUNC(Label)</div></div>
+<div class="ttc" id="aclassstar_1_1Label_html_a819f7e878e83f430ddb6d4eb0b946bc7"><div class="ttname"><a href="classstar_1_1Label.html#a819f7e878e83f430ddb6d4eb0b946bc7">star::Label::getContentSize</a></div><div class="ttdeci">virtual Vec2 getContentSize() override</div><div class="ttdef"><b>Definition</b> Label.cpp:34</div></div>
 <div class="ttc" id="aclassstar_1_1Label_html_ad2fb627fd81a2af45e056239b01d3852"><div class="ttname"><a href="classstar_1_1Label.html#ad2fb627fd81a2af45e056239b01d3852">star::Label::init</a></div><div class="ttdeci">virtual bool init() override</div><div class="ttdef"><b>Definition</b> Label.cpp:6</div></div>
-<div class="ttc" id="aclassstar_1_1Label_html_adc668e922c657e0c317430cbd65080a1"><div class="ttname"><a href="classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1">star::Label::getString</a></div><div class="ttdeci">virtual std::string getString()</div><div class="ttdef"><b>Definition</b> Label.cpp:20</div></div>
-<div class="ttc" id="aclassstar_1_1Label_html_aed5ab94d78ccb89fd8f6b9932fdbdf02"><div class="ttname"><a href="classstar_1_1Label.html#aed5ab94d78ccb89fd8f6b9932fdbdf02">star::Label::draw</a></div><div class="ttdeci">virtual void draw() override</div><div class="ttdef"><b>Definition</b> Label.cpp:24</div></div>
+<div class="ttc" id="aclassstar_1_1Label_html_adc668e922c657e0c317430cbd65080a1"><div class="ttname"><a href="classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1">star::Label::getString</a></div><div class="ttdeci">virtual std::string getString()</div><div class="ttdef"><b>Definition</b> Label.cpp:21</div></div>
+<div class="ttc" id="aclassstar_1_1Label_html_aed5ab94d78ccb89fd8f6b9932fdbdf02"><div class="ttname"><a href="classstar_1_1Label.html#aed5ab94d78ccb89fd8f6b9932fdbdf02">star::Label::draw</a></div><div class="ttdeci">virtual void draw() override</div><div class="ttdef"><b>Definition</b> Label.cpp:25</div></div>
+<div class="ttc" id="astructstar_1_1Vec2_html"><div class="ttname"><a href="structstar_1_1Vec2.html">star::Vec2</a></div><div class="ttdef"><b>Definition</b> Vec2.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

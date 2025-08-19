@@ -110,6 +110,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f1228f3515597cdeff40438ff2a7b65" id="r_a0f1228f3515597cdeff40438ff2a7b65"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f1228f3515597cdeff40438ff2a7b65">setString</a> (std::string string)</td></tr>
 <tr class="memitem:adc668e922c657e0c317430cbd65080a1" id="r_adc668e922c657e0c317430cbd65080a1"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adc668e922c657e0c317430cbd65080a1">getString</a> ()</td></tr>
 <tr class="memitem:aed5ab94d78ccb89fd8f6b9932fdbdf02" id="r_aed5ab94d78ccb89fd8f6b9932fdbdf02"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aed5ab94d78ccb89fd8f6b9932fdbdf02">draw</a> () override</td></tr>
+<tr class="memitem:a819f7e878e83f430ddb6d4eb0b946bc7" id="r_a819f7e878e83f430ddb6d4eb0b946bc7"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structstar_1_1Vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a819f7e878e83f430ddb6d4eb0b946bc7">getContentSize</a> () override</td></tr>
 <tr class="memitem:a311898911bd324f7ffe85663d6208164" id="r_a311898911bd324f7ffe85663d6208164"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a311898911bd324f7ffe85663d6208164">CREATE_FUNC</a> (<a class="el" href="classstar_1_1Label.html">Label</a>)</td></tr>
 <tr class="inherit_header pub_methods_classstar_1_1Node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classstar_1_1Node')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classstar_1_1Node.html">star::Node</a></td></tr>
 <tr class="memitem:adb6f56d19f3966590c90ffe4097d061e inherit pub_methods_classstar_1_1Node" id="r_adb6f56d19f3966590c90ffe4097d061e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstar_1_1Node.html#adb6f56d19f3966590c90ffe4097d061e">setPosition</a> (<a class="el" href="structstar_1_1Vec2.html">Vec2</a> pos)</td></tr>
@@ -129,12 +130,14 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a0f735155dd9505c88d2c8d7619172f42" id="r_a0f735155dd9505c88d2c8d7619172f42"><td class="memItemLeft" align="right" valign="top"><a id="a0f735155dd9505c88d2c8d7619172f42" name="a0f735155dd9505c88d2c8d7619172f42"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>string</b></td></tr>
-<tr class="memitem:a225de47aa06b97b2d26b2ee549e9dc10" id="r_a225de47aa06b97b2d26b2ee549e9dc10"><td class="memItemLeft" align="right" valign="top"><a id="a225de47aa06b97b2d26b2ee549e9dc10" name="a225de47aa06b97b2d26b2ee549e9dc10"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>spacing</b></td></tr>
-<tr class="memitem:a864964b8af4d23b5e586b3e88c833866" id="r_a864964b8af4d23b5e586b3e88c833866"><td class="memItemLeft" align="right" valign="top"><a id="a864964b8af4d23b5e586b3e88c833866" name="a864964b8af4d23b5e586b3e88c833866"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>fontSize</b></td></tr>
+<tr class="memitem:ad19cab7df3a1678482baf680f0797631" id="r_ad19cab7df3a1678482baf680f0797631"><td class="memItemLeft" align="right" valign="top"><a id="ad19cab7df3a1678482baf680f0797631" name="ad19cab7df3a1678482baf680f0797631"></a>
+std::string&#160;</td><td class="memItemRight" valign="bottom"><b>p_string</b></td></tr>
+<tr class="memitem:aee9bcbe499e9b96e944618cc295f4ce9" id="r_aee9bcbe499e9b96e944618cc295f4ce9"><td class="memItemLeft" align="right" valign="top"><a id="aee9bcbe499e9b96e944618cc295f4ce9" name="aee9bcbe499e9b96e944618cc295f4ce9"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>p_spacing</b></td></tr>
+<tr class="memitem:a556f31235673c618e999079a6149ef35" id="r_a556f31235673c618e999079a6149ef35"><td class="memItemLeft" align="right" valign="top"><a id="a556f31235673c618e999079a6149ef35" name="a556f31235673c618e999079a6149ef35"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>p_fontSize</b></td></tr>
+<tr class="memitem:acc5a95cb4718e01b56ab4e54542eba9b" id="r_acc5a95cb4718e01b56ab4e54542eba9b"><td class="memItemLeft" align="right" valign="top"><a id="acc5a95cb4718e01b56ab4e54542eba9b" name="acc5a95cb4718e01b56ab4e54542eba9b"></a>
+Font&#160;</td><td class="memItemRight" valign="bottom"><b>p_font</b></td></tr>
 <tr class="inherit_header pro_attribs_classstar_1_1Node"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classstar_1_1Node')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classstar_1_1Node.html">star::Node</a></td></tr>
 <tr class="memitem:a7e7a4bea80f2cc9025a842b46c2f46d0 inherit pro_attribs_classstar_1_1Node" id="r_a7e7a4bea80f2cc9025a842b46c2f46d0"><td class="memItemLeft" align="right" valign="top">
 <a class="el" href="structstar_1_1Vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p_position</b></td></tr>
@@ -197,6 +200,34 @@ Additional Inherited Members</h2></td></tr>
 <p>Draw the label on the screen </p>
 
 <p>Reimplemented from <a class="el" href="classstar_1_1Node.html#ab88c83ced58700a56de568f5b1e3c473">star::Node</a>.</p>
+
+</div>
+</div>
+<a id="a819f7e878e83f430ddb6d4eb0b946bc7" name="a819f7e878e83f430ddb6d4eb0b946bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a819f7e878e83f430ddb6d4eb0b946bc7">&#9670;&#160;</a></span>getContentSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structstar_1_1Vec2.html">Vec2</a> Label::getContentSize </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel override">override</span><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the content size of the node. In other words, how much space does this node take </p>
+
+<p>Reimplemented from <a class="el" href="classstar_1_1Node.html#aa51b1c507ee5b0cf2999de66e5ff4d6f">star::Node</a>.</p>
 
 </div>
 </div>

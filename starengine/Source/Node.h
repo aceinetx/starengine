@@ -27,6 +27,8 @@ public:
 	virtual void setParent(Node* parent);
 	virtual Node* getParent();
 
+	virtual void draw();
+
 	static Node* create();
 };
 } // namespace star

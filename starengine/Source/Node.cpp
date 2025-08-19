@@ -61,6 +61,12 @@ Node* Node::getParent() {
 	return p_parent;
 }
 
+void Node::draw() {
+	for (auto child : children) {
+		child->draw();
+	}
+}
+
 Node* Node::create() {
 	Node* pRet = new Node();
 	pRet->p_refCount = 1;

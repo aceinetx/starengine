@@ -1,6 +1,10 @@
 #pragma once
 #include "Application.h"
+#include "Camera.h"
 #include "Director.h"
+#include "Label.h"
 #include "Macros.h"
 #include "Node.h"
+#include "Object.h"
 #include "Scene.h"
+#include "Vec2.h"

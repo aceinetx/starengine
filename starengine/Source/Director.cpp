@@ -50,14 +50,16 @@ void Director::mainLoop() {
 		BeginMode2D(scene->getCamera()->getRaylibCamera());
 	}
 
+	scene->draw();
+
+	if (scene) {
+		EndMode2D();
+	}
+
 	if (statsDisplay) {
 		const char* text = TextFormat("%d / %.3f", GetFPS(), Application::getInstance()->getDeltaTime());
 		Vector2 size = MeasureTextEx(GetFontDefault(), text, 30.0f, 0);
 		DrawText(text, 0, GetScreenHeight() - size.y, 30.0f, WHITE);
-	}
-
-	if (scene) {
-		EndMode2D();
 	}
 
 	EndDrawing();

@@ -13,7 +13,5 @@ struct Vec2 {
 
 	Vec2 operator-(Vec2 vec);
 	Vec2 operator+(Vec2 vec);
-
-	Vector2 convertToRaylib();
 };
 } // namespace star

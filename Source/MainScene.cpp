@@ -8,10 +8,12 @@ bool MainScene::init() {
 
 	auto director = Director::getInstance();
 
-	auto label = Label::create();
-	label->setString("Hello from starengine!");
-	label->setPosition(director->getVisibleSize() / 2);
-	addChild(label);
+	{
+		auto label = Label::create();
+		label->setString("Hello from starengine!");
+		label->setPosition(director->getVisibleSize() / 2);
+		addChild(label);
+	}
 
 	return true;
 }

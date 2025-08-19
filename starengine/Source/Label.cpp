@@ -25,6 +25,8 @@ void Label::draw() {
 	Vector2 size = MeasureTextEx(GetFontDefault(), string.c_str(), fontSize, spacing);
 	Vec2 pos = getPosition();
 	pos.x -= size.x / 2;
-	pos.y -= size.y / 2;
-	DrawTextEx(GetFontDefault(), string.c_str(), pos.convertToRaylib(), fontSize, spacing, WHITE);
+	pos.y += size.y / 2;
+	Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
+	// printf("%f %f\n", rlPos.x, rlPos.y);
+	DrawTextEx(GetFontDefault(), string.c_str(), rlPos, fontSize, spacing, WHITE);
 }

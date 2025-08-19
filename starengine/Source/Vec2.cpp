@@ -24,7 +24,3 @@ Vec2 Vec2::operator-(Vec2 vec) {
 Vec2 Vec2::operator+(Vec2 vec) {
 	return Vec2(x + vec.x, y + vec.y);
 }
-
-Vector2 Vec2::convertToRaylib() {
-	return CLITERAL(Vector2){x, y};
-}

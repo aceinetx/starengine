@@ -10,7 +10,8 @@ var hierarchy =
       [ "star::Node", "classstar_1_1Node.html", [
         [ "star::Camera", "classstar_1_1Camera.html", null ],
         [ "star::Label", "classstar_1_1Label.html", null ],
-        [ "star::Scene", "classstar_1_1Scene.html", null ]
+        [ "star::Scene", "classstar_1_1Scene.html", null ],
+        [ "star::Sprite", "classstar_1_1Sprite.html", null ]
       ] ]
     ] ],
     [ "star::Vec2", "structstar_1_1Vec2.html", null ]

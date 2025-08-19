@@ -99,10 +99,11 @@ Inheritance diagram for star::Node:</div>
  <div class="center">
   <img src="classstar_1_1Node.png" usemap="#star_3A_3ANode_map" alt=""/>
   <map id="star_3A_3ANode_map" name="star_3A_3ANode_map">
-<area href="classstar_1_1Object.html" alt="star::Object" shape="rect" coords="93,0,176,24"/>
+<area href="classstar_1_1Object.html" alt="star::Object" shape="rect" coords="139,0,222,24"/>
 <area href="classstar_1_1Camera.html" alt="star::Camera" shape="rect" coords="0,112,83,136"/>
 <area href="classstar_1_1Label.html" alt="star::Label" shape="rect" coords="93,112,176,136"/>
 <area href="classstar_1_1Scene.html" alt="star::Scene" shape="rect" coords="186,112,269,136"/>
+<area href="classstar_1_1Sprite.html" alt="star::Sprite" shape="rect" coords="279,112,362,136"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -122,6 +123,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a220a8d64cb0df1cce083ed38c1260615" id="r_a220a8d64cb0df1cce083ed38c1260615"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classstar_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a220a8d64cb0df1cce083ed38c1260615">getParent</a> ()</td></tr>
 <tr class="memitem:ab88c83ced58700a56de568f5b1e3c473" id="r_ab88c83ced58700a56de568f5b1e3c473"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab88c83ced58700a56de568f5b1e3c473">draw</a> ()</td></tr>
 <tr class="memitem:aa51b1c507ee5b0cf2999de66e5ff4d6f" id="r_aa51b1c507ee5b0cf2999de66e5ff4d6f"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="structstar_1_1Vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa51b1c507ee5b0cf2999de66e5ff4d6f">getContentSize</a> ()</td></tr>
+<tr class="memitem:a4bdef23ee2e31c88ea7faadde086ca3d" id="r_a4bdef23ee2e31c88ea7faadde086ca3d"><td class="memItemLeft" align="right" valign="top">virtual const std::vector&lt; <a class="el" href="classstar_1_1Node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4bdef23ee2e31c88ea7faadde086ca3d">getChildren</a> ()</td></tr>
 <tr class="inherit_header pub_methods_classstar_1_1Object"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classstar_1_1Object')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classstar_1_1Object.html">star::Object</a></td></tr>
 <tr class="memitem:a038b801e069bb74d0be6b262472e02b5 inherit pub_methods_classstar_1_1Object" id="r_a038b801e069bb74d0be6b262472e02b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstar_1_1Object.html#a038b801e069bb74d0be6b262472e02b5">retain</a> ()</td></tr>
 <tr class="memitem:ac2e671032f6b9a12f58d411cff406928 inherit pub_methods_classstar_1_1Object" id="r_ac2e671032f6b9a12f58d411cff406928"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstar_1_1Object.html#ac2e671032f6b9a12f58d411cff406928">release</a> ()</td></tr>
@@ -136,8 +138,8 @@ Static Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a7e7a4bea80f2cc9025a842b46c2f46d0" id="r_a7e7a4bea80f2cc9025a842b46c2f46d0"><td class="memItemLeft" align="right" valign="top"><a id="a7e7a4bea80f2cc9025a842b46c2f46d0" name="a7e7a4bea80f2cc9025a842b46c2f46d0"></a>
 <a class="el" href="structstar_1_1Vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p_position</b></td></tr>
-<tr class="memitem:aeab08ce7e51e40b02b600435cb654c6f" id="r_aeab08ce7e51e40b02b600435cb654c6f"><td class="memItemLeft" align="right" valign="top"><a id="aeab08ce7e51e40b02b600435cb654c6f" name="aeab08ce7e51e40b02b600435cb654c6f"></a>
-std::vector&lt; <a class="el" href="classstar_1_1Node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>children</b></td></tr>
+<tr class="memitem:a1f7758099f1ebc5f2cfbd124000c3c1e" id="r_a1f7758099f1ebc5f2cfbd124000c3c1e"><td class="memItemLeft" align="right" valign="top"><a id="a1f7758099f1ebc5f2cfbd124000c3c1e" name="a1f7758099f1ebc5f2cfbd124000c3c1e"></a>
+std::vector&lt; <a class="el" href="classstar_1_1Node.html">Node</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>p_children</b></td></tr>
 <tr class="memitem:aefdd10f1dec863c8cc107d12dd311101" id="r_aefdd10f1dec863c8cc107d12dd311101"><td class="memItemLeft" align="right" valign="top"><a id="aefdd10f1dec863c8cc107d12dd311101" name="aefdd10f1dec863c8cc107d12dd311101"></a>
 <a class="el" href="classstar_1_1Node.html">Node</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_parent</b></td></tr>
 <tr class="memitem:a54ded894f1da5d56318d49680dbc742d" id="r_a54ded894f1da5d56318d49680dbc742d"><td class="memItemLeft" align="right" valign="top"><a id="a54ded894f1da5d56318d49680dbc742d" name="a54ded894f1da5d56318d49680dbc742d"></a>
@@ -228,6 +230,32 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b
 <p>Draw the node, in base class does nothing, derived class should override it </p>
 
 <p>Reimplemented in <a class="el" href="classstar_1_1Label.html#aed5ab94d78ccb89fd8f6b9932fdbdf02">star::Label</a>.</p>
+
+</div>
+</div>
+<a id="a4bdef23ee2e31c88ea7faadde086ca3d" name="a4bdef23ee2e31c88ea7faadde086ca3d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4bdef23ee2e31c88ea7faadde086ca3d">&#9670;&#160;</a></span>getChildren()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt; <a class="el" href="classstar_1_1Node.html">Node</a> * &gt; Node::getChildren </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel virtual">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the children array </p>
 
 </div>
 </div>

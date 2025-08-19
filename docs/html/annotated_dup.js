@@ -14,6 +14,7 @@ var annotated_dup =
       [ "Node", "classstar_1_1Node.html", "classstar_1_1Node" ],
       [ "Object", "classstar_1_1Object.html", "classstar_1_1Object" ],
       [ "Scene", "classstar_1_1Scene.html", "classstar_1_1Scene" ],
+      [ "Sprite", "classstar_1_1Sprite.html", null ],
       [ "Vec2", "structstar_1_1Vec2.html", null ]
     ] ]
 ];

@@ -2,6 +2,7 @@ var classstar_1_1Node =
 [
     [ "addChild", "classstar_1_1Node.html#a132699398b350e83b548a5645e69beb0", null ],
     [ "draw", "classstar_1_1Node.html#ab88c83ced58700a56de568f5b1e3c473", null ],
+    [ "getChildren", "classstar_1_1Node.html#a4bdef23ee2e31c88ea7faadde086ca3d", null ],
     [ "getContentSize", "classstar_1_1Node.html#aa51b1c507ee5b0cf2999de66e5ff4d6f", null ],
     [ "getParent", "classstar_1_1Node.html#a220a8d64cb0df1cce083ed38c1260615", null ],
     [ "getPosition", "classstar_1_1Node.html#ab6283ce36200791c85db4d85e52440a8", null ],

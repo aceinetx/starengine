@@ -93,47 +93,52 @@ $(function(){initNavTree('Director_8h_source.html','',''); });
 <div class="contents">
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Scene.h&quot;</span></div>
-<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span> </div>
-<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="keyword">namespace </span>star {</div>
-<div class="foldopen" id="foldopen00010" data-start="{" data-end="};">
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno"><a class="line" href="classstar_1_1Director.html">   10</a></span><span class="keyword">class </span><a class="code hl_class" href="classstar_1_1Director.html">Director</a> {</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>    <span class="keyword">static</span> <a class="code hl_class" href="classstar_1_1Director.html">Director</a>* p_instance;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    std::vector&lt;Scene*&gt; p_sceneStack;</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    <span class="keywordtype">float</span> p_deltaTime;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span> </div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> statsDisplay;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span> </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    <a class="code hl_class" href="classstar_1_1Director.html">~Director</a>();</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="keyword">static</span> <a class="code hl_class" href="classstar_1_1Director.html">Director</a>* <a class="code hl_function" href="classstar_1_1Director.html#a8d2a4ca9e20cd400ddadd516efa111e0">getInstance</a>();</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a">runWithScene</a>(<a class="code hl_class" href="classstar_1_1Scene.html">Scene</a>* scene);</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Director.html#ad113f1a2b5ab297788caa791b57f458b">pushScene</a>(<a class="code hl_class" href="classstar_1_1Scene.html">Scene</a>* scene);</div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Director.html#a92916c5c47d0f0a202fe1a5023841e8b">popScene</a>();</div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span></div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    <a class="code hl_class" href="classstar_1_1Scene.html">Scene</a>* <a class="code hl_function" href="classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a">getRunningScene</a>();</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span></div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> <a class="code hl_function" href="classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1">getVisibleSize</a>();</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span></div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classstar_1_1Director.html#a5498d79afcea1d3f3852eaea9e02c9b5">getDeltaTime</a>();</div>
-<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span></div>
-<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Director.html#a478075cd9b7e11f6c45e2e8929daa823">mainLoop</a>();</div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>};</div>
+<div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span><span class="preprocessor">#include &quot;imgui_internal.h&quot;</span></div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="keyword">namespace </span>star {</div>
+<div class="foldopen" id="foldopen00011" data-start="{" data-end="};">
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno"><a class="line" href="classstar_1_1Director.html">   11</a></span><span class="keyword">class </span><a class="code hl_class" href="classstar_1_1Director.html">Director</a> {</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="keyword">protected</span>:</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keyword">static</span> <a class="code hl_class" href="classstar_1_1Director.html">Director</a>* p_instance;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>    std::vector&lt;Scene*&gt; p_sceneStack;</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <span class="keywordtype">float</span> p_deltaTime;</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> statsDisplay;</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>    <a class="code hl_class" href="classstar_1_1Director.html">~Director</a>();</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    <span class="keyword">static</span> <a class="code hl_class" href="classstar_1_1Director.html">Director</a>* <a class="code hl_function" href="classstar_1_1Director.html#a8d2a4ca9e20cd400ddadd516efa111e0">getInstance</a>();</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a">runWithScene</a>(<a class="code hl_class" href="classstar_1_1Scene.html">Scene</a>* scene);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Director.html#ad113f1a2b5ab297788caa791b57f458b">pushScene</a>(<a class="code hl_class" href="classstar_1_1Scene.html">Scene</a>* scene);</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Director.html#a92916c5c47d0f0a202fe1a5023841e8b">popScene</a>();</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_class" href="classstar_1_1Scene.html">Scene</a>* <a class="code hl_function" href="classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a">getRunningScene</a>();</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span></div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> <a class="code hl_function" href="classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1">getVisibleSize</a>();</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span></div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <span class="keywordtype">float</span> <a class="code hl_function" href="classstar_1_1Director.html#a5498d79afcea1d3f3852eaea9e02c9b5">getDeltaTime</a>();</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span><span class="preprocessor">#ifdef STAR_INSPECTOR</span><span class="preprocessor"></span></div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordtype">void</span> drawInspector();</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span><span class="preprocessor">#endif</span></div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span></div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Director.html#a478075cd9b7e11f6c45e2e8929daa823">mainLoop</a>();</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>};</div>
 </div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>} <span class="comment">// namespace star</span></div>
-<div class="ttc" id="aclassstar_1_1Director_html"><div class="ttname"><a href="classstar_1_1Director.html">star::Director</a></div><div class="ttdef"><b>Definition</b> Director.h:10</div></div>
-<div class="ttc" id="aclassstar_1_1Director_html_a478075cd9b7e11f6c45e2e8929daa823"><div class="ttname"><a href="classstar_1_1Director.html#a478075cd9b7e11f6c45e2e8929daa823">star::Director::mainLoop</a></div><div class="ttdeci">void mainLoop()</div><div class="ttdef"><b>Definition</b> Director.cpp:44</div></div>
-<div class="ttc" id="aclassstar_1_1Director_html_a5498d79afcea1d3f3852eaea9e02c9b5"><div class="ttname"><a href="classstar_1_1Director.html#a5498d79afcea1d3f3852eaea9e02c9b5">star::Director::getDeltaTime</a></div><div class="ttdeci">float getDeltaTime()</div><div class="ttdef"><b>Definition</b> Director.cpp:73</div></div>
-<div class="ttc" id="aclassstar_1_1Director_html_a893e73a440a7832097e858bf8b9dff8a"><div class="ttname"><a href="classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a">star::Director::runWithScene</a></div><div class="ttdeci">void runWithScene(Scene *scene)</div><div class="ttdef"><b>Definition</b> Director.cpp:19</div></div>
-<div class="ttc" id="aclassstar_1_1Director_html_a8d2a4ca9e20cd400ddadd516efa111e0"><div class="ttname"><a href="classstar_1_1Director.html#a8d2a4ca9e20cd400ddadd516efa111e0">star::Director::getInstance</a></div><div class="ttdeci">static Director * getInstance()</div><div class="ttdef"><b>Definition</b> Director.cpp:13</div></div>
-<div class="ttc" id="aclassstar_1_1Director_html_a92916c5c47d0f0a202fe1a5023841e8b"><div class="ttname"><a href="classstar_1_1Director.html#a92916c5c47d0f0a202fe1a5023841e8b">star::Director::popScene</a></div><div class="ttdeci">void popScene()</div><div class="ttdef"><b>Definition</b> Director.cpp:29</div></div>
-<div class="ttc" id="aclassstar_1_1Director_html_aa129bd4639a6c9585a55c39d4ae8a29a"><div class="ttname"><a href="classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a">star::Director::getRunningScene</a></div><div class="ttdeci">Scene * getRunningScene()</div><div class="ttdef"><b>Definition</b> Director.cpp:34</div></div>
-<div class="ttc" id="aclassstar_1_1Director_html_ab72addea91e23055184ce0cef65e2fa1"><div class="ttname"><a href="classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1">star::Director::getVisibleSize</a></div><div class="ttdeci">Vec2 getVisibleSize()</div><div class="ttdef"><b>Definition</b> Director.cpp:40</div></div>
-<div class="ttc" id="aclassstar_1_1Director_html_ad113f1a2b5ab297788caa791b57f458b"><div class="ttname"><a href="classstar_1_1Director.html#ad113f1a2b5ab297788caa791b57f458b">star::Director::pushScene</a></div><div class="ttdeci">void pushScene(Scene *scene)</div><div class="ttdef"><b>Definition</b> Director.cpp:24</div></div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>} <span class="comment">// namespace star</span></div>
+<div class="ttc" id="aclassstar_1_1Director_html"><div class="ttname"><a href="classstar_1_1Director.html">star::Director</a></div><div class="ttdef"><b>Definition</b> Director.h:11</div></div>
+<div class="ttc" id="aclassstar_1_1Director_html_a478075cd9b7e11f6c45e2e8929daa823"><div class="ttname"><a href="classstar_1_1Director.html#a478075cd9b7e11f6c45e2e8929daa823">star::Director::mainLoop</a></div><div class="ttdeci">void mainLoop()</div><div class="ttdef"><b>Definition</b> Director.cpp:45</div></div>
+<div class="ttc" id="aclassstar_1_1Director_html_a5498d79afcea1d3f3852eaea9e02c9b5"><div class="ttname"><a href="classstar_1_1Director.html#a5498d79afcea1d3f3852eaea9e02c9b5">star::Director::getDeltaTime</a></div><div class="ttdeci">float getDeltaTime()</div><div class="ttdef"><b>Definition</b> Director.cpp:84</div></div>
+<div class="ttc" id="aclassstar_1_1Director_html_a893e73a440a7832097e858bf8b9dff8a"><div class="ttname"><a href="classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a">star::Director::runWithScene</a></div><div class="ttdeci">void runWithScene(Scene *scene)</div><div class="ttdef"><b>Definition</b> Director.cpp:20</div></div>
+<div class="ttc" id="aclassstar_1_1Director_html_a8d2a4ca9e20cd400ddadd516efa111e0"><div class="ttname"><a href="classstar_1_1Director.html#a8d2a4ca9e20cd400ddadd516efa111e0">star::Director::getInstance</a></div><div class="ttdeci">static Director * getInstance()</div><div class="ttdef"><b>Definition</b> Director.cpp:14</div></div>
+<div class="ttc" id="aclassstar_1_1Director_html_a92916c5c47d0f0a202fe1a5023841e8b"><div class="ttname"><a href="classstar_1_1Director.html#a92916c5c47d0f0a202fe1a5023841e8b">star::Director::popScene</a></div><div class="ttdeci">void popScene()</div><div class="ttdef"><b>Definition</b> Director.cpp:30</div></div>
+<div class="ttc" id="aclassstar_1_1Director_html_aa129bd4639a6c9585a55c39d4ae8a29a"><div class="ttname"><a href="classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a">star::Director::getRunningScene</a></div><div class="ttdeci">Scene * getRunningScene()</div><div class="ttdef"><b>Definition</b> Director.cpp:35</div></div>
+<div class="ttc" id="aclassstar_1_1Director_html_ab72addea91e23055184ce0cef65e2fa1"><div class="ttname"><a href="classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1">star::Director::getVisibleSize</a></div><div class="ttdeci">Vec2 getVisibleSize()</div><div class="ttdef"><b>Definition</b> Director.cpp:41</div></div>
+<div class="ttc" id="aclassstar_1_1Director_html_ad113f1a2b5ab297788caa791b57f458b"><div class="ttname"><a href="classstar_1_1Director.html#ad113f1a2b5ab297788caa791b57f458b">star::Director::pushScene</a></div><div class="ttdeci">void pushScene(Scene *scene)</div><div class="ttdef"><b>Definition</b> Director.cpp:25</div></div>
 <div class="ttc" id="aclassstar_1_1Scene_html"><div class="ttname"><a href="classstar_1_1Scene.html">star::Scene</a></div><div class="ttdef"><b>Definition</b> Scene.h:13</div></div>
 <div class="ttc" id="astructstar_1_1Vec2_html"><div class="ttname"><a href="structstar_1_1Vec2.html">star::Vec2</a></div><div class="ttdef"><b>Definition</b> Vec2.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->

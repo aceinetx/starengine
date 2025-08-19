@@ -4,8 +4,8 @@
 #include <unordered_map>
 
 namespace star {
-/**
- * FontManager
+/** FontManager
+ *
  * Manages fonts, if a font is already loaded it will not load it again
  */
 class FontManager {

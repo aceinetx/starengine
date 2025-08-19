@@ -6,8 +6,8 @@
 using rlCamera = Camera2D;
 
 namespace star {
-/**
- * Camera
+/** Camera
+ *
  * Controls how the player sees the world
  */
 class Camera : public Node {

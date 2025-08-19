@@ -4,7 +4,9 @@
 
 namespace star {
 /** Autorelease pool
+ *
  * This is a pool that contains objects which were marked as autorelease in the current frame
+ *
  * At the end of a frame the pool is drained (cleared) and all objects are released
  */
 class AutoreleasePool {

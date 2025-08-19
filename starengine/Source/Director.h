@@ -4,6 +4,7 @@
 
 namespace star {
 /** Director
+ *
  * Controls the game, scenes, and objects, draws nodes
  */
 class Director {

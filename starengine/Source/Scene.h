@@ -5,7 +5,9 @@
 
 namespace star {
 /** Scene
+ *
  * Always the parent node of the scene graph
+ *
  * Creates the camera for you
  */
 class Scene : public Node {

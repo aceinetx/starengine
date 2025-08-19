@@ -7,6 +7,7 @@
 
 namespace star {
 /** Label
+ *
  * Display text on the screen
  */
 class Label : public Node {

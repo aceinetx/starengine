@@ -2,6 +2,7 @@
 
 namespace star {
 /** Auto memory managed object
+ *
  * Base class for all nodes
  */
 class Object {
@@ -18,6 +19,7 @@ public:
 	void retain();
 	/**
 	 * Decrement the reference count
+	 *
 	 * Frees itself if the reference count == 0
 	 */
 	void release();

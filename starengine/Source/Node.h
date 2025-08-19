@@ -4,8 +4,10 @@
 #include <vector>
 
 namespace star {
-/**Node
+/** Node
+ *
  * Base class for all nodes
+ *
  * Controls the position, children and drawing
  */
 class Node : public Object {

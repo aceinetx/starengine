@@ -10,6 +10,7 @@ public:
 
 	/**
 	 * Run the application
+	 *
 	 * Calls applicationDidFinishLaunching, runs the main loop, and releases everything at the end
 	 */
 	virtual int run() = 0;

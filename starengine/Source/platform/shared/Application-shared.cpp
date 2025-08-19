@@ -1,4 +1,4 @@
-#include "Application-linux.h"
+#include "Application-shared.h"
 #include "Director.h"
 #include "FontManager.h"
 #include "TextureManager.h"

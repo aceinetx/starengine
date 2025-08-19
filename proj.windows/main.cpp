@@ -1,5 +1,9 @@
-#include <Macros.h>
+#include "../Source/AppDelegate.h"
+#include "windows.h"
 
-int main() {
-	STARASSERT(false, "starengine does not support this platform for now");
+using namespace star;
+
+int WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nShowCmd) {
+	AppDelegate app;
+	return Application::getInstance()->run();
 }

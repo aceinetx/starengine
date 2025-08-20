@@ -18,6 +18,8 @@ void Sprite::draw() {
                  p_texture.height * getScale());
   Vector2 origin((float)p_texture.width / 2 * getScale(), (float)p_texture.height / 2 * getScale());
   DrawTexturePro(p_texture, src, dest, origin, getRotation(), WHITE);
+
+  Node::draw();
 }
 
 Vec2 Sprite::getContentSize() {

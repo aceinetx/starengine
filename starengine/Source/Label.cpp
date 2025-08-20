@@ -35,6 +35,8 @@ void Label::draw() {
   origin.y = size.y / 2;
   DrawTextPro(p_font, p_string.c_str(), rlPos, origin, getRotation(), p_fontSize * getScale(),
               p_spacing, WHITE);
+
+  Node::draw();
 }
 
 void Label::setFont(std::string path) {

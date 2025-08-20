@@ -2,6 +2,7 @@
 #include "EventDispatcher.h"
 #include "EventListenerKeyboard.h"
 #include "Macros.h"
+#include "Scene.h"
 #include "fmt/base.h"
 #include <ClassFormatters.h>
 #include <fmt/format.h>
@@ -32,6 +33,13 @@ bool MainScene::init() {
     m_logo->setScale(0.5f);
     m_logo->setPositionY(m_logo->getContentSize().y * m_logo->getScale() / 1.5f);
     addChild(m_logo);
+
+    {
+      auto logo = Sprite::create("logo.png");
+      logo->setScale(0.5f);
+      logo->setPositionY(50);
+      m_logo->addChild(logo);
+    }
   }
 
   scheduleUpdate();

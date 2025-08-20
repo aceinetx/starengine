@@ -65,6 +65,14 @@ void Node::addChild(Node* child) {
 	child->retain();
 	p_children.push_back(child);
 	child->setParent(this);
+	child->onEnter();
+}
+
+void Node::onEnter() {
+	fmt::println("[star] {} entered", (void*)this);
+}
+void Node::onExit() {
+	fmt::println("[star] {} exited", (void*)this);
 }
 
 void Node::setParent(Node* parent) {
@@ -116,6 +124,7 @@ void Node::removeChild(Node* child) {
 	for (size_t i = 0; i < p_children.size(); i++) {
 		Node* node = p_children.at(i);
 		if (node == child) {
+			child->onExit();
 			child->release();
 			p_children.erase(p_children.begin() + i);
 		}
@@ -129,6 +138,7 @@ void Node::removeChildAndCleanup(Node* child) {
 
 void Node::removeAllChildrenAndCleanup() {
 	for (Node* child : p_children) {
+		child->onExit();
 		child->cleanup();
 		child->removeAllChildrenAndCleanup();
 		child->release();
@@ -139,7 +149,7 @@ void Node::removeAllChildrenAndCleanup() {
 Node* Node::create() {
 	Node* pRet = new Node();
 	pRet->p_refCount = 1;
-	printf("malloc %p\n", pRet);
+	printf("[star] malloc %p\n", pRet);
 	if (pRet && pRet->init()) {
 		pRet->autorelease();
 	} else {

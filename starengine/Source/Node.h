@@ -1,6 +1,7 @@
 #pragma once
 #include "Object.h"
 #include "Vec2.h"
+#include <cstdlib>
 #include <functional>
 #include <vector>
 
@@ -76,6 +77,16 @@ public:
 	 * Retains the child and sets the child's parent to the current node
 	 */
 	virtual void addChild(Node* child);
+
+	/**
+	 * Called when node enters the tree
+	 */
+	virtual void onEnter();
+
+	/**
+	 * Called when node exits the tree
+	 */
+	virtual void onExit();
 
 	/**
 	 * Set the parent of the current node

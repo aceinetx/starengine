@@ -9,5 +9,6 @@ var searchData=
   ['removefromparentandcleanup_6',['removeFromParentAndCleanup',['../classstar_1_1Node.html#a6dd7f6128e5f491b5932ff9870f7e314',1,'star::Node']]],
   ['retain_7',['retain',['../classstar_1_1Object.html#a038b801e069bb74d0be6b262472e02b5',1,'star::Object']]],
   ['run_8',['run',['../classstar_1_1ApplicationProtocol.html#ab068f908d8b0a9dec75829095fd67a69',1,'star::ApplicationProtocol']]],
-  ['runwithscene_9',['runWithScene',['../classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a',1,'star::Director']]]
+  ['runaction_9',['runAction',['../classstar_1_1Node.html#aa443de88aa663c5a24d49262eb079cc0',1,'star::Node']]],
+  ['runwithscene_10',['runWithScene',['../classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a',1,'star::Director']]]
 ];

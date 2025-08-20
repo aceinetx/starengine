@@ -18,6 +18,7 @@ var classstar_1_1Node =
     [ "removeChild", "classstar_1_1Node.html#adb62722d840bfd6a0393ec87d15c9c7a", null ],
     [ "removeChildAndCleanup", "classstar_1_1Node.html#ab15c88aa3d996d3f8082d44adf4fde42", null ],
     [ "removeFromParentAndCleanup", "classstar_1_1Node.html#a6dd7f6128e5f491b5932ff9870f7e314", null ],
+    [ "runAction", "classstar_1_1Node.html#aa443de88aa663c5a24d49262eb079cc0", null ],
     [ "scheduleOnce", "classstar_1_1Node.html#a3d3f9f09f93b96f7044e4a187286c285", null ],
     [ "scheduleUpdate", "classstar_1_1Node.html#aaabfedeca4c915c087c1ce5ee941d7c2", null ],
     [ "setParent", "classstar_1_1Node.html#ab5f0786bcb59591c528efb0b776797fc", null ],

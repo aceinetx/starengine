@@ -1,5 +1,6 @@
 var hierarchy =
 [
+    [ "star::ActionManager", "classstar_1_1ActionManager.html", null ],
     [ "star::ApplicationProtocol", "classstar_1_1ApplicationProtocol.html", null ],
     [ "star::AutoreleasePool", "classstar_1_1AutoreleasePool.html", null ],
     [ "star::Director", "classstar_1_1Director.html", null ],
@@ -8,6 +9,9 @@ var hierarchy =
     [ "fmt::formatter< star::Vec2 >", "classfmt_1_1formatter_3_01star_1_1Vec2_01_4.html", null ],
     [ "fmt::formatter< Vector2 >", "classfmt_1_1formatter_3_01Vector2_01_4.html", null ],
     [ "star::Object", "classstar_1_1Object.html", [
+      [ "star::Action", "classstar_1_1Action.html", [
+        [ "star::MoveTo", "classstar_1_1MoveTo.html", null ]
+      ] ],
       [ "star::EventListener", "classstar_1_1EventListener.html", [
         [ "star::EventListenerKeyboard", "classstar_1_1EventListenerKeyboard.html", null ]
       ] ],
@@ -24,6 +28,7 @@ var hierarchy =
     [ "star::TextureManager", "classstar_1_1TextureManager.html", null ],
     [ "star::Vec2", "structstar_1_1Vec2.html", null ],
     [ "std::vector", null, [
+      [ "star::ObjectVector< star::Action * >", "classstar_1_1ObjectVector.html", null ],
       [ "star::ObjectVector< star::EventListener * >", "classstar_1_1ObjectVector.html", null ],
       [ "star::ObjectVector< star::Node * >", "classstar_1_1ObjectVector.html", null ],
       [ "star::ObjectVector< T >", "classstar_1_1ObjectVector.html", null ]

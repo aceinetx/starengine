@@ -27,11 +27,11 @@ bool MainScene::init() {
     labelSize->setPosition(Vec2(winSize.x / 2, label->getPositionY() - label->getContentSize().y));
     addChild(labelSize);
 
-    logo = Sprite::create("logo.png");
-    logo->setPosition(winSize / 2);
-    logo->setScale(0.5f);
-    logo->setPositionY(logo->getContentSize().y * logo->getScale() / 1.5f);
-    addChild(logo);
+    m_logo = Sprite::create("logo.png");
+    m_logo->setPosition(winSize / 2);
+    m_logo->setScale(0.5f);
+    m_logo->setPositionY(m_logo->getContentSize().y * m_logo->getScale() / 1.5f);
+    addChild(m_logo);
   }
 
   scheduleUpdate();
@@ -48,60 +48,38 @@ void MainScene::update(float dt) {
   static bool increase = false;
   static const float step = 0.05f;
   if (increase) {
-    logo->setScale(logo->getScale() + step * dt);
-    if (logo->getScale() > 0.5f) {
+    m_logo->setScale(m_logo->getScale() + step * dt);
+    if (m_logo->getScale() > 0.5f) {
       increase = false;
     }
   } else {
-    logo->setScale(logo->getScale() - step * dt);
-    if (logo->getScale() < 0.4f) {
+    m_logo->setScale(m_logo->getScale() - step * dt);
+    if (m_logo->getScale() < 0.4f) {
       increase = true;
     }
   }
-  logo->setPosition(logo->getPosition() + direction * dt);
+
+  Vec2 direction = Vec2(0, 0);
+  static constexpr float s_speed = 100.0f;
+  for (KeyboardKey key : m_keysDown) {
+    if (key == KEY_W)
+      direction.y += s_speed;
+    if (key == KEY_S)
+      direction.y -= s_speed;
+    if (key == KEY_D)
+      direction.x += s_speed;
+    if (key == KEY_A)
+      direction.x -= s_speed;
+  }
+  m_logo->setPosition(m_logo->getPosition() + direction * dt);
 }
 
 bool MainScene::onKeyDown(KeyboardKey key) {
-  static float speed = 100.0f;
-  switch (key) {
-  case KEY_W:
-    direction.y = speed;
-    break;
-  case KEY_S:
-    direction.y = -speed;
-    break;
-  case KEY_D:
-    direction.x = speed;
-    break;
-  case KEY_A:
-    direction.x = -speed;
-    break;
-  default:
-    break;
-  }
+  m_keysDown.insert(key);
   return true;
 }
 
 bool MainScene::onKeyUp(KeyboardKey key) {
-  switch (key) {
-  case KEY_W:
-    if (direction.y > 0)
-      direction.y = 0;
-    break;
-  case KEY_S:
-    if (direction.y < 0)
-      direction.y = 0;
-    break;
-  case KEY_D:
-    if (direction.x > 0)
-      direction.x = 0;
-    break;
-  case KEY_A:
-    if (direction.x < 0)
-      direction.x = 0;
-    break;
-  default:
-    break;
-  }
+  m_keysDown.erase(key);
   return true;
 }

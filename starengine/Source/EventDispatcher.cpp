@@ -20,8 +20,8 @@ EventDispatcher::~EventDispatcher() {
 
 bool EventDispatcher::dispatchEvent(const RaylibEvent& event, Node* startNode) {
   //  check for a listener on the node itself
-  // fmt::println("[star] Dispatching event ({}, {}, {})", (int)event.type, (int)event.state,
-  //(int)event.button);
+  fmt::println("[star] Dispatching event ({}, {}, {})", (int)event.type, (int)event.state,
+               (int)event.button);
 
   for (auto* listener : p_listeners) {
     if (listener->p_attachedNode == startNode) {

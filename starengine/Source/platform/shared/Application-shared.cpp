@@ -8,23 +8,25 @@
 #include "TextureManager.h"
 #include <algorithm>
 #include <raylib.h>
+#include <set>
 #ifdef STAR_IMGUI
+#include <imgui.h>
 #include <rlImGui.h>
 #endif
 
 using namespace star;
 
-static std::vector<int> s_downKeys;
-static std::vector<int> s_downMouseButtons;
+static std::set<int> s_downKeys;
+static std::set<int> s_downMouseButtons;
 
 static void processInput(RaylibEvent& ev) {
+
   // TODO: REFACTOR THIS STUPID PIECE OF CODE
-  auto validateButton = [](std::vector<int>& arr, int button) -> bool {
-    auto p = (std::find(arr.begin(), arr.end(), button));
-    if (p == arr.end())
+  auto validateButton = [](std::set<int>& set, int button) -> bool {
+    if (!set.count(button)) {
       return false;
-    else
-      arr.erase(arr.begin() + (p - arr.begin())); // erase it from down buttons since it's up
+    }
+    set.erase(button); // erase it from down buttons since it's up
     return true;
   };
 
@@ -41,9 +43,9 @@ static void processInput(RaylibEvent& ev) {
       if (validateButton(s_downKeys, ev.button))
         ev.state = RaylibEvent::kUp;
     } else if (IsKeyDown(key)) {
-      if (std::find(s_downKeys.begin(), s_downKeys.end(), ev.button) == s_downKeys.end()) {
+      if (!s_downKeys.count(ev.button)) {
         ev.state = RaylibEvent::kDown;
-        s_downKeys.push_back(ev.button);
+        s_downKeys.insert(ev.button);
       }
     } else
       ev.type = RaylibEvent::kNothing;
@@ -66,10 +68,9 @@ static void processInput(RaylibEvent& ev) {
         if (validateButton(s_downMouseButtons, ev.button))
           ev.state = RaylibEvent::kUp;
       } else if (IsMouseButtonDown(mouseButton)) {
-        if (std::find(s_downMouseButtons.begin(), s_downMouseButtons.end(), ev.button) ==
-            s_downMouseButtons.end()) {
+        if (!s_downMouseButtons.count(ev.button)) {
           ev.state = RaylibEvent::kDown;
-          s_downMouseButtons.push_back(ev.button);
+          s_downMouseButtons.insert(ev.button);
         }
       } else
         ev.type = RaylibEvent::kNothing;

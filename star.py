@@ -16,13 +16,18 @@ action = args.action
 def reconfigure():
     os.system("cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug")
 
-if action == "build":
+def build():
     os.makedirs("build", exist_ok=True)
     os.chdir(build_path)
-    reconfigure()
+    reconfigure();
     os.system(f"cmake --build {script_path}/build --config Debug --parallel 4")
-elif action == "run":
-    os.makedirs("build", exist_ok=True)
-    os.chdir(build_path)
-    reconfigure()
+    os.chdir("..")
+
+def run():
+    build()
     os.system(f"cmake --build {script_path}/build --target run --config Debug --parallel 4")
+
+if action == "build":
+    build()
+elif action == "run":
+    run()

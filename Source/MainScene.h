@@ -1,12 +1,13 @@
 #pragma once
 #include "star.h"
 #include <raylib.h>
+#include <set>
 
 class MainScene : public star::Scene {
 private:
-  star::Sprite* logo;
+  star::Sprite* m_logo;
 
-  star::Vec2 direction;
+  std::set<KeyboardKey> m_keysDown;
 
 public:
   bool init() override;

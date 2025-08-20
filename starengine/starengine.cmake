@@ -17,11 +17,11 @@ function(add_raylib)
         # Didn't find raylib - download it
         FetchContent_Declare(
             raylib
-			GIT_REPOSITORY https://github.com/raysan5/raylib
-			GIT_TAG 5.5
-			GIT_SHALLOW ON
-			GIT_PROGRESS ON
-			EXCLUDE_FROM_ALL
+   GIT_REPOSITORY https://github.com/raysan5/raylib
+   GIT_TAG 5.5
+   GIT_SHALLOW ON
+   GIT_PROGRESS ON
+   EXCLUDE_FROM_ALL
         )
         FetchContent_MakeAvailable(raylib)
         include_directories("${raylib_SOURCE_DIR}/src")
@@ -29,13 +29,13 @@ function(add_raylib)
 endfunction()
 
 function(add_fmt)
-	FetchContent_Declare(
-		fmt
-		GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-		GIT_TAG        master
-		GIT_SHALLOW ON
-		EXCLUDE_FROM_ALL
-	)
+    FetchContent_Declare(
+  fmt
+  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+  GIT_TAG        master
+  GIT_SHALLOW ON
+  EXCLUDE_FROM_ALL
+ )
     FetchContent_MakeAvailable(fmt)
 endfunction()
 
@@ -57,7 +57,7 @@ add_custom_target(copy_content ALL
 )
 
 ################
-## FEATURE SETUP 
+## FEATURE SETUP
 ################
 
 # Setup inspector
@@ -66,7 +66,7 @@ if(STAR_INSPECTOR)
     set(STAR_IMGUI ON) # Override since inspector needs imgui
 endif()
 
-# Setup imgui 
+# Setup imgui
 if(STAR_IMGUI)
     add_compile_definitions("STAR_IMGUI")
     include_directories("starengine/imgui")
@@ -83,12 +83,12 @@ endif()
 ###########################
 
 if(LINUX OR ANDROID)
-	# Executable configuration for linux
+    # Executable configuration for linux
     add_compile_definitions("STAR_PLATFORM_LINUX")
-		# Enable sanitizer
-		message("Enabling sanitizer")
-		add_compile_options(-fsanitize=address -Wall -Werror)
-		add_link_options(-fsanitize=address)
+    # Enable sanitizer
+    message("Enabling sanitizer")
+    add_compile_options(-fsanitize=address -Wall -Werror)
+    add_link_options(-fsanitize=address)
 
     add_raylib()
 
@@ -98,7 +98,7 @@ if(LINUX OR ANDROID)
     target_link_libraries(${APP_NAME} raylib)
     add_dependencies(${APP_NAME} copy_content)
 elseif(WIN32)
-	# Executable configuration for windows 
+    # Executable configuration for windows
     add_compile_definitions("STAR_PLATFORM_WINDOWS")
 
     add_raylib()
@@ -114,3 +114,9 @@ target_link_libraries(${APP_NAME} fmt)
 if(STAR_IMGUI)
     target_link_libraries(${APP_NAME} rlImGui imgui)
 endif()
+
+add_custom_target(run
+    COMMAND ${APP_NAME}
+    DEPENDS ${APP_NAME}
+    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
+)

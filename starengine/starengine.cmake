@@ -115,6 +115,10 @@ if(STAR_IMGUI)
     target_link_libraries(${APP_NAME} rlImGui imgui)
 endif()
 
+#############
+## RUN TARGET
+#############
+
 add_custom_target(run
     COMMAND ${APP_NAME}
     DEPENDS ${APP_NAME}

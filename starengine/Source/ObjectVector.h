@@ -4,7 +4,10 @@
 #include <vector>
 
 namespace star {
-
+/** Object vector
+ *
+ * std::vector, but automatically calls release() and retain() on its elements whenever needed
+ */
 template <class T> class ObjectVector : std::vector<T> {
 public:
   using std::vector<T>::begin;
@@ -30,7 +33,7 @@ public:
     }
     std::vector<T>::clear();
   }
-  virtual void erase(std::vector<T>::iterator position) {
+  virtual void erase(typename std::vector<T>::iterator position) {
     (*position)->release();
 
     std::vector<T>::erase(position);

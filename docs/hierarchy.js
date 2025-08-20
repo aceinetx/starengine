@@ -22,5 +22,10 @@ var hierarchy =
     [ "star::ScheduleEntry", "structstar_1_1ScheduleEntry.html", null ],
     [ "star::Scheduler", "classstar_1_1Scheduler.html", null ],
     [ "star::TextureManager", "classstar_1_1TextureManager.html", null ],
-    [ "star::Vec2", "structstar_1_1Vec2.html", null ]
+    [ "star::Vec2", "structstar_1_1Vec2.html", null ],
+    [ "std::vector", null, [
+      [ "star::ObjectVector< star::EventListener * >", "classstar_1_1ObjectVector.html", null ],
+      [ "star::ObjectVector< star::Node * >", "classstar_1_1ObjectVector.html", null ],
+      [ "star::ObjectVector< T >", "classstar_1_1ObjectVector.html", null ]
+    ] ]
 ];

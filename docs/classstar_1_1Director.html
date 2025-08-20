@@ -97,8 +97,6 @@ $(function(){initNavTree('classstar_1_1Director.html','','classstar_1_1Director-
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a893e73a440a7832097e858bf8b9dff8a" id="r_a893e73a440a7832097e858bf8b9dff8a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a893e73a440a7832097e858bf8b9dff8a">runWithScene</a> (<a class="el" href="classstar_1_1Scene.html">Scene</a> *scene)</td></tr>
-<tr class="memitem:ad113f1a2b5ab297788caa791b57f458b" id="r_ad113f1a2b5ab297788caa791b57f458b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad113f1a2b5ab297788caa791b57f458b">pushScene</a> (<a class="el" href="classstar_1_1Scene.html">Scene</a> *scene)</td></tr>
-<tr class="memitem:a92916c5c47d0f0a202fe1a5023841e8b" id="r_a92916c5c47d0f0a202fe1a5023841e8b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a92916c5c47d0f0a202fe1a5023841e8b">popScene</a> ()</td></tr>
 <tr class="memitem:aa129bd4639a6c9585a55c39d4ae8a29a" id="r_aa129bd4639a6c9585a55c39d4ae8a29a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstar_1_1Scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa129bd4639a6c9585a55c39d4ae8a29a">getRunningScene</a> ()</td></tr>
 <tr class="memitem:ab72addea91e23055184ce0cef65e2fa1" id="r_ab72addea91e23055184ce0cef65e2fa1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structstar_1_1Vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab72addea91e23055184ce0cef65e2fa1">getVisibleSize</a> ()</td></tr>
 <tr class="memitem:a5498d79afcea1d3f3852eaea9e02c9b5" id="r_a5498d79afcea1d3f3852eaea9e02c9b5"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5498d79afcea1d3f3852eaea9e02c9b5">getDeltaTime</a> ()</td></tr>
@@ -115,8 +113,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>statsDisplay</b></td>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:abe6e869a1dcc84c8f02b3aabe4a84176" id="r_abe6e869a1dcc84c8f02b3aabe4a84176"><td class="memItemLeft" align="right" valign="top"><a id="abe6e869a1dcc84c8f02b3aabe4a84176" name="abe6e869a1dcc84c8f02b3aabe4a84176"></a>
-std::vector&lt; <a class="el" href="classstar_1_1Scene.html">Scene</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>p_sceneStack</b></td></tr>
+<tr class="memitem:a98d1767ed6ff782a561b1e205fc15e82" id="r_a98d1767ed6ff782a561b1e205fc15e82"><td class="memItemLeft" align="right" valign="top"><a id="a98d1767ed6ff782a561b1e205fc15e82" name="a98d1767ed6ff782a561b1e205fc15e82"></a>
+<a class="el" href="classstar_1_1Scene.html">Scene</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>currentScene</b></td></tr>
 <tr class="memitem:a79bd67ac739af0c7a4d2cf69a5147ce6" id="r_a79bd67ac739af0c7a4d2cf69a5147ce6"><td class="memItemLeft" align="right" valign="top"><a id="a79bd67ac739af0c7a4d2cf69a5147ce6" name="a79bd67ac739af0c7a4d2cf69a5147ce6"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>p_deltaTime</b></td></tr>
 </table><table class="memberdecls">
@@ -227,42 +225,6 @@ static <a class="el" href="classstar_1_1Director.html">Director</a> *&#160;</td>
 
 </div>
 </div>
-<a id="a92916c5c47d0f0a202fe1a5023841e8b" name="a92916c5c47d0f0a202fe1a5023841e8b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a92916c5c47d0f0a202fe1a5023841e8b">&#9670;&#160;</a></span>popScene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Director::popScene </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Pop the scene from the scene stack </p>
-
-</div>
-</div>
-<a id="ad113f1a2b5ab297788caa791b57f458b" name="ad113f1a2b5ab297788caa791b57f458b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad113f1a2b5ab297788caa791b57f458b">&#9670;&#160;</a></span>pushScene()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Director::pushScene </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classstar_1_1Scene.html">Scene</a> *</td>          <td class="paramname"><span class="paramname"><em>scene</em></span></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Push the scene to the scene stack </p>
-
-</div>
-</div>
 <a id="a893e73a440a7832097e858bf8b9dff8a" name="a893e73a440a7832097e858bf8b9dff8a"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a893e73a440a7832097e858bf8b9dff8a">&#9670;&#160;</a></span>runWithScene()</h2>
 
@@ -277,7 +239,7 @@ static <a class="el" href="classstar_1_1Director.html">Director</a> *&#160;</td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Reserves space on the scene stack and push the scene </p>
+<p>Run the game with a scene </p>
 
 </div>
 </div>

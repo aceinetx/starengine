@@ -1,13 +1,22 @@
 var searchData=
 [
-  ['raylibevent_0',['RaylibEvent',['../structstar_1_1RaylibEvent.html',1,'star']]],
-  ['release_1',['release',['../classstar_1_1Object.html#ac2e671032f6b9a12f58d411cff406928',1,'star::Object']]],
-  ['removeallchildrenandcleanup_2',['removeAllChildrenAndCleanup',['../classstar_1_1Node.html#a9bd26fa82ed29f97aea1ab872c31aeb8',1,'star::Node']]],
-  ['removeallschedulesfromtarget_3',['removeAllSchedulesFromTarget',['../classstar_1_1Scheduler.html#a20209b3bb180f78e432bec56d96264ac',1,'star::Scheduler']]],
-  ['removechild_4',['removeChild',['../classstar_1_1Node.html#adb62722d840bfd6a0393ec87d15c9c7a',1,'star::Node']]],
-  ['removechildandcleanup_5',['removeChildAndCleanup',['../classstar_1_1Node.html#ab15c88aa3d996d3f8082d44adf4fde42',1,'star::Node']]],
-  ['removefromparentandcleanup_6',['removeFromParentAndCleanup',['../classstar_1_1Node.html#a6dd7f6128e5f491b5932ff9870f7e314',1,'star::Node']]],
-  ['retain_7',['retain',['../classstar_1_1Object.html#a038b801e069bb74d0be6b262472e02b5',1,'star::Object']]],
-  ['run_8',['run',['../classstar_1_1ApplicationProtocol.html#ab068f908d8b0a9dec75829095fd67a69',1,'star::ApplicationProtocol']]],
-  ['runwithscene_9',['runWithScene',['../classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a',1,'star::Director']]]
+  ['scene_0',['Scene',['../classstar_1_1Scene.html',1,'star']]],
+  ['scheduleentry_1',['ScheduleEntry',['../structstar_1_1ScheduleEntry.html',1,'star']]],
+  ['scheduleonce_2',['scheduleOnce',['../classstar_1_1Node.html#a3d3f9f09f93b96f7044e4a187286c285',1,'star::Node']]],
+  ['scheduleoncefortarget_3',['scheduleOnceForTarget',['../classstar_1_1Scheduler.html#a88cc5cf719b652a9f19f27bbd77fa607',1,'star::Scheduler']]],
+  ['scheduler_4',['Scheduler',['../classstar_1_1Scheduler.html',1,'star']]],
+  ['scheduleupdate_5',['scheduleUpdate',['../classstar_1_1Node.html#aaabfedeca4c915c087c1ce5ee941d7c2',1,'star::Node']]],
+  ['scheduleupdatefortarget_6',['scheduleUpdateForTarget',['../classstar_1_1Scheduler.html#a056aba334cd8061be2605292c6f32511',1,'star::Scheduler']]],
+  ['setfont_7',['setFont',['../classstar_1_1Label.html#a4d69ba1b1c700cdcabf2a3b28d25f96b',1,'star::Label']]],
+  ['setfontsize_8',['setFontSize',['../classstar_1_1Label.html#a1a93f44fb50b45d23b26c12ee4e5e0b7',1,'star::Label']]],
+  ['setparent_9',['setParent',['../classstar_1_1Node.html#ab5f0786bcb59591c528efb0b776797fc',1,'star::Node']]],
+  ['setposition_10',['setPosition',['../classstar_1_1Node.html#adb6f56d19f3966590c90ffe4097d061e',1,'star::Node']]],
+  ['setpositionx_11',['setPositionX',['../classstar_1_1Node.html#ae1dfc73d6122a95778d5d9db3d1fd913',1,'star::Node']]],
+  ['setpositiony_12',['setPositionY',['../classstar_1_1Node.html#a5c97d36655f0daa71a5f6c715d2b0470',1,'star::Node']]],
+  ['setrotation_13',['setRotation',['../classstar_1_1Node.html#a62dda439f77712f0d9b405ce887df676',1,'star::Node']]],
+  ['setscale_14',['setScale',['../classstar_1_1Node.html#acf0955a52f51a9d6c8b0c9267b1e8668',1,'star::Node']]],
+  ['setstring_15',['setString',['../classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65',1,'star::Label']]],
+  ['settexture_16',['setTexture',['../classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9',1,'star::Sprite']]],
+  ['setzoom_17',['setZoom',['../classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5',1,'star::Camera']]],
+  ['sprite_18',['Sprite',['../classstar_1_1Sprite.html',1,'star']]]
 ];

@@ -2,7 +2,9 @@
 #include "EventDispatcher.h"
 #include "EventListenerKeyboard.h"
 #include "Macros.h"
+#include "MoveTo.h"
 #include "Scene.h"
+#include "Vec2.h"
 #include "fmt/base.h"
 #include <ClassFormatters.h>
 #include <fmt/format.h>
@@ -41,6 +43,13 @@ bool MainScene::init() {
       m_logo->addChild(logo);
     }
   }
+
+  scheduleOnce(
+      [this](float) {
+        auto action = MoveTo::create(2.0f, Vec2(0, 0));
+        m_logo->runAction(action);
+      },
+      3.0f);
 
   scheduleUpdate();
 

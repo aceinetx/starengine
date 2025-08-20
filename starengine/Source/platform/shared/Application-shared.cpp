@@ -1,4 +1,5 @@
 #include "Application-shared.h"
+#include "ActionManager.h"
 #include "Director.h"
 #include "EventDispatcher.h"
 #include "FontManager.h"
@@ -99,8 +100,10 @@ int Application::run() {
   auto director = Director::getInstance();
   auto fontManager = FontManager::getInstance();
   auto textureManager = TextureManager::getInstance();
+  auto actionManager = ActionManager::getInstance();
   auto scheduler = Scheduler::getInstance();
   auto eventDispatcher = EventDispatcher::getInstance();
+  (void)actionManager;
 #ifdef STAR_IMGUI
   rlImGuiSetup(true);
   static auto& io = ImGui::GetIO();

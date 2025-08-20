@@ -11,5 +11,8 @@ protected:
 
 public:
   static ActionManager* getInstance();
+
+  void runActionForTarget(Action* action, Node* target);
+  void stepActions(float dt);
 };
 } // namespace star

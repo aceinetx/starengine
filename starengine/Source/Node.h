@@ -7,6 +7,8 @@
 #include <vector>
 
 namespace star {
+class Action;
+
 /** Node
  *
  * Base class for all nodes
@@ -152,6 +154,11 @@ public:
    * Removes all children and calls cleanup() on them
    */
   virtual void removeAllChildrenAndCleanup();
+
+  /**
+   * Runs an action
+   */
+  virtual void runAction(Action* action);
 
   /**
    * Create an autoreleased Node

@@ -1,4 +1,6 @@
 #include "Node.h"
+#include "Action.h"
+#include "ActionManager.h"
 #include "Macros.h"
 #include "Scheduler.h"
 #include <cstdio>
@@ -142,6 +144,10 @@ void Node::removeAllChildrenAndCleanup() {
     child->removeAllChildrenAndCleanup();
   }
   p_children.clear();
+}
+
+void Node::runAction(Action* action) {
+  ActionManager::getInstance()->runActionForTarget(action, this);
 }
 
 Node* Node::create() {

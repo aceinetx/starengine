@@ -2,6 +2,10 @@
 #include "Action.h"
 
 namespace star {
+/** MoveTo
+ *
+ * Action that moves a node to a certain position
+ */
 class MoveTo : public Action {
 protected:
   Vec2 p_position;

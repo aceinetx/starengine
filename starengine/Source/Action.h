@@ -4,6 +4,12 @@
 
 namespace star {
 class ActionManager;
+/** Action
+ *
+ * Base class for every action
+ *
+ * Controls the action flow
+ */
 class Action : public Object {
 protected:
   float p_duration = 0.0f;

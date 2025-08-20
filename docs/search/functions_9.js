@@ -14,5 +14,6 @@ var searchData=
   ['setscale_11',['setScale',['../classstar_1_1Node.html#acf0955a52f51a9d6c8b0c9267b1e8668',1,'star::Node']]],
   ['setstring_12',['setString',['../classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65',1,'star::Label']]],
   ['settexture_13',['setTexture',['../classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9',1,'star::Sprite']]],
-  ['setzoom_14',['setZoom',['../classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5',1,'star::Camera']]]
+  ['setzoom_14',['setZoom',['../classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5',1,'star::Camera']]],
+  ['stepactions_15',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]]
 ];

@@ -4,6 +4,10 @@
 
 namespace star {
 class ActionManager {
+  /** ActionManager
+   *
+   * Manages actions, runs step() method on each action every frame
+   */
 protected:
   static ActionManager p_instance;
 
@@ -12,7 +16,15 @@ protected:
 public:
   static ActionManager* getInstance();
 
+  /**
+   * Run action for a given target
+   *
+   * Adds the action to p_actions vector
+   */
   void runActionForTarget(Action* action, Node* target);
+  /**
+   * Run step() on every added action
+   */
   void stepActions(float dt);
 };
 } // namespace star

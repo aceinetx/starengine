@@ -14,6 +14,8 @@ class Action;
  * Base class for all nodes
  *
  * Controls the position, children and drawing
+ *
+ * This node can run actions and schedule functions
  */
 class Node : public Object {
 protected:

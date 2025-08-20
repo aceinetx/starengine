@@ -9,5 +9,6 @@ var searchData=
   ['retain_6',['retain',['../classstar_1_1Object.html#a038b801e069bb74d0be6b262472e02b5',1,'star::Object']]],
   ['run_7',['run',['../classstar_1_1ApplicationProtocol.html#ab068f908d8b0a9dec75829095fd67a69',1,'star::ApplicationProtocol']]],
   ['runaction_8',['runAction',['../classstar_1_1Node.html#aa443de88aa663c5a24d49262eb079cc0',1,'star::Node']]],
-  ['runwithscene_9',['runWithScene',['../classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a',1,'star::Director']]]
+  ['runactionfortarget_9',['runActionForTarget',['../classstar_1_1ActionManager.html#ad289a059cfb3d67cf3bc4bbff33a5e2d',1,'star::ActionManager']]],
+  ['runwithscene_10',['runWithScene',['../classstar_1_1Director.html#a893e73a440a7832097e858bf8b9dff8a',1,'star::Director']]]
 ];

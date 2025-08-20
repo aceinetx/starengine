@@ -10,22 +10,22 @@ namespace star {
  */
 class FontManager {
 protected:
-	static FontManager p_instance;
+  static FontManager p_instance;
 
-	std::unordered_map<std::string, Font> p_fonts;
+  std::unordered_map<std::string, Font> p_fonts;
 
 public:
-	static FontManager* getInstance();
+  static FontManager* getInstance();
 
-	/**
-	 * Loads or gets the Font raylib resource from a given path
-	 */
-	Font getFont(std::string path);
-	/**
-	 * Unloads all fonts
-	 *
-	 * Automatically called by Application when the game closes
-	 */
-	void unloadAllFonts();
+  /**
+   * Loads or gets the Font raylib resource from a given path
+   */
+  Font getFont(std::string path);
+  /**
+   * Unloads all fonts
+   *
+   * Automatically called by Application when the game closes
+   */
+  void unloadAllFonts();
 };
 } // namespace star

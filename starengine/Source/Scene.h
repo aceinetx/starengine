@@ -12,18 +12,18 @@ namespace star {
  */
 class Scene : public Node {
 protected:
-	Camera* p_camera;
+  Camera* p_camera;
 
 public:
-	virtual ~Scene() override;
+  virtual ~Scene() override;
 
-	bool init() override;
+  bool init() override;
 
-	/**
-	 * Get the current camera
-	 */
-	Camera* getCamera();
+  /**
+   * Get the current camera
+   */
+  Camera* getCamera();
 
-	CREATE_FUNC(Scene);
+  CREATE_FUNC(Scene);
 };
 } // namespace star

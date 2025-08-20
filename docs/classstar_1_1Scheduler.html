@@ -97,6 +97,7 @@ $(function(){initNavTree('classstar_1_1Scheduler.html','','classstar_1_1Schedule
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a056aba334cd8061be2605292c6f32511" id="r_a056aba334cd8061be2605292c6f32511"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a056aba334cd8061be2605292c6f32511">scheduleUpdateForTarget</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *target)</td></tr>
+<tr class="memitem:a88cc5cf719b652a9f19f27bbd77fa607" id="r_a88cc5cf719b652a9f19f27bbd77fa607"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a88cc5cf719b652a9f19f27bbd77fa607">scheduleOnceForTarget</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *target, std::function&lt; void(float)&gt; function, float timeout)</td></tr>
 <tr class="memitem:a20209b3bb180f78e432bec56d96264ac" id="r_a20209b3bb180f78e432bec56d96264ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a20209b3bb180f78e432bec56d96264ac">removeAllSchedulesFromTarget</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *target)</td></tr>
 <tr class="memitem:a3d9a64698431577f91dfb593257842d3" id="r_a3d9a64698431577f91dfb593257842d3"><td class="memItemLeft" align="right" valign="top"><a id="a3d9a64698431577f91dfb593257842d3" name="a3d9a64698431577f91dfb593257842d3"></a>
 size_t&#160;</td><td class="memItemRight" valign="bottom"><b>getSchedulesCount</b> ()</td></tr>
@@ -137,6 +138,33 @@ static <a class="el" href="classstar_1_1Scheduler.html">Scheduler</a>&#160;</td>
       </table>
 </div><div class="memdoc">
 <p>Removes all schedules from a given target </p>
+
+</div>
+</div>
+<a id="a88cc5cf719b652a9f19f27bbd77fa607" name="a88cc5cf719b652a9f19f27bbd77fa607"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88cc5cf719b652a9f19f27bbd77fa607">&#9670;&#160;</a></span>scheduleOnceForTarget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Scheduler::scheduleOnceForTarget </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classstar_1_1Node.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::function&lt; void(float)&gt;</td>          <td class="paramname"><span class="paramname"><em>function</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>timeout</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add a schedule for a given target that runs only once </p>
 
 </div>
 </div>

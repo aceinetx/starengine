@@ -11,25 +11,25 @@ namespace star {
  */
 class AutoreleasePool {
 protected:
-	static AutoreleasePool p_instance;
+  static AutoreleasePool p_instance;
 
 private:
-	std::vector<Object*> objectArray;
+  std::vector<Object*> objectArray;
 
 public:
-	static AutoreleasePool* getInstance();
+  static AutoreleasePool* getInstance();
 
-	/**
-	 * Adds an object to the pool
-	 */
-	void addObject(Object* obj);
-	/**
-	 * Drains (clears) the pool, releasing all of the added objects
-	 */
-	void clear();
-	/**
-	 * Check if the pool contains a certain object
-	 */
-	bool contains(Object* obj);
+  /**
+   * Adds an object to the pool
+   */
+  void addObject(Object* obj);
+  /**
+   * Drains (clears) the pool, releasing all of the added objects
+   */
+  void clear();
+  /**
+   * Check if the pool contains a certain object
+   */
+  bool contains(Object* obj);
 };
 } // namespace star

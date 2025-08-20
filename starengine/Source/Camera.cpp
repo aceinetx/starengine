@@ -6,36 +6,37 @@
 using namespace star;
 
 bool star::Camera::init() {
-	if (!Node::init())
-		return false;
+  if (!Node::init())
+    return false;
 
-	p_zoom = 1.f;
+  p_zoom = 1.f;
 
-	return true;
+  return true;
 }
 
 // We can't use Camera:: since the compiler will confuse it with raylib's camera
 rlCamera star::Camera::getRaylibCamera() {
-	auto director = Director::getInstance();
-	auto winSize = director->getVisibleSize();
-	auto pos = getPosition() - (winSize / 2 / getZoom());
+  auto director = Director::getInstance();
+  auto winSize = director->getVisibleSize();
+  auto pos = getPosition() - (winSize / 2 / getZoom());
 
-	rlCamera camera;
-	camera.zoom = p_zoom;
-	camera.rotation = getRotation(); // FIXME: Currently the camera rotates around (0, 0) in screen world coords, fix this!
-	camera.target = CLITERAL(Vector2){pos.x, pos.y};
-	camera.offset = CLITERAL(Vector2){0, 0};
-	return camera;
+  rlCamera camera;
+  camera.zoom = p_zoom;
+  camera.rotation = getRotation(); // FIXME: Currently the camera rotates around (0, 0) in screen
+                                   // world coords, fix this!
+  camera.target = CLITERAL(Vector2){pos.x, pos.y};
+  camera.offset = CLITERAL(Vector2){0, 0};
+  return camera;
 }
 
 float star::Camera::getZoom() {
-	return p_zoom;
+  return p_zoom;
 }
 
 void star::Camera::setZoom(float zoom) {
-	p_zoom = zoom;
+  p_zoom = zoom;
 }
 
 Vec2 star::Camera::getContentSize() {
-	return Director::getInstance()->getVisibleSize();
+  return Director::getInstance()->getVisibleSize();
 }

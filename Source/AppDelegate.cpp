@@ -8,14 +8,14 @@ AppDelegate::AppDelegate() {
 }
 
 bool AppDelegate::applicationDidFinishLaunching() {
-	// initialize director
-	auto director = Director::getInstance();
+  // initialize director
+  auto director = Director::getInstance();
 
-	InitWindow(1280, 720, "StarEngine");
-	SetTargetFPS(60);
+  InitWindow(1280, 720, "StarEngine");
+  SetTargetFPS(60);
 
-	director->runWithScene(MainScene::create());
-	director->statsDisplay = false;
+  director->runWithScene(MainScene::create());
+  director->statsDisplay = false;
 
-	return true;
+  return true;
 }

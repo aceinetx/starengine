@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['texturemanager_0',['TextureManager',['../classstar_1_1TextureManager.html',1,'star']]]
+  ['raylibevent_0',['RaylibEvent',['../structstar_1_1RaylibEvent.html',1,'star']]]
 ];

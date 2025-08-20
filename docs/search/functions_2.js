@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['draw_0',['draw',['../classstar_1_1Label.html#aed5ab94d78ccb89fd8f6b9932fdbdf02',1,'star::Label::draw()'],['../classstar_1_1Node.html#ab88c83ced58700a56de568f5b1e3c473',1,'star::Node::draw()'],['../classstar_1_1Sprite.html#a51988f16dbb89517ebf3030995325891',1,'star::Sprite::draw()']]]
+  ['dispatchevent_0',['dispatchEvent',['../classstar_1_1EventDispatcher.html#a9485061d4a43d3637985500d4fa87861',1,'star::EventDispatcher']]],
+  ['draw_1',['draw',['../classstar_1_1Label.html#aed5ab94d78ccb89fd8f6b9932fdbdf02',1,'star::Label::draw()'],['../classstar_1_1Node.html#ab88c83ced58700a56de568f5b1e3c473',1,'star::Node::draw()'],['../classstar_1_1Sprite.html#a51988f16dbb89517ebf3030995325891',1,'star::Sprite::draw()']]]
 ];

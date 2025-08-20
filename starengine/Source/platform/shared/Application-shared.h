@@ -4,12 +4,12 @@
 namespace star {
 class Application : protected ApplicationProtocol {
 protected:
-	static Application* p_instance;
+  static Application* p_instance;
 
 public:
-	Application();
-	static Application* getInstance();
+  Application();
+  static Application* getInstance();
 
-	int run() override;
+  int run() override;
 };
 } // namespace star

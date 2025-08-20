@@ -9,59 +9,59 @@ namespace star {
  */
 class Director {
 protected:
-	static Director* p_instance;
+  static Director* p_instance;
 
-	std::vector<Scene*> p_sceneStack;
-	float p_deltaTime;
-
-public:
-	bool statsDisplay;
+  std::vector<Scene*> p_sceneStack;
+  float p_deltaTime;
 
 public:
-	~Director();
-	/**
-	 * Get the instance of a director
-	 */
-	static Director* getInstance();
+  bool statsDisplay;
 
-	/**
-	 * Reserves space on the scene stack and push the scene
-	 */
-	void runWithScene(Scene* scene);
-	/**
-	 * Push the scene to the scene stack
-	 */
-	void pushScene(Scene* scene);
-	/**
-	 * Pop the scene from the scene stack
-	 */
-	void popScene();
+public:
+  ~Director();
+  /**
+   * Get the instance of a director
+   */
+  static Director* getInstance();
 
-	/**
-	 * Get the current running scene
-	 */
-	Scene* getRunningScene();
+  /**
+   * Reserves space on the scene stack and push the scene
+   */
+  void runWithScene(Scene* scene);
+  /**
+   * Push the scene to the scene stack
+   */
+  void pushScene(Scene* scene);
+  /**
+   * Pop the scene from the scene stack
+   */
+  void popScene();
 
-	/**
-	 * Get the screen size
-	 */
-	Vec2 getVisibleSize();
+  /**
+   * Get the current running scene
+   */
+  Scene* getRunningScene();
 
-	/**
-	 * Get the game delta time (time from previous to the current frame)
-	 */
-	float getDeltaTime();
+  /**
+   * Get the screen size
+   */
+  Vec2 getVisibleSize();
+
+  /**
+   * Get the game delta time (time from previous to the current frame)
+   */
+  float getDeltaTime();
 
 #ifdef STAR_INSPECTOR
-	/**
-	 * Draws the inspector
-	 */
-	void drawInspector();
+  /**
+   * Draws the inspector
+   */
+  void drawInspector();
 #endif
 
-	/**
-	 * Main loop of the game, draws nodes and manages memory
-	 */
-	void mainLoop();
+  /**
+   * Main loop of the game, draws nodes and manages memory
+   */
+  void mainLoop();
 };
 } // namespace star

@@ -10,14 +10,14 @@ namespace star {
  */
 class Sprite : public Node {
 protected:
-	Texture2D p_texture;
+  Texture2D p_texture;
 
 public:
-	/** Set the sprite's texture from the path */
-	virtual void setTexture(std::string texturePath);
-	virtual void draw() override;
-	virtual Vec2 getContentSize() override;
+  /** Set the sprite's texture from the path */
+  virtual void setTexture(std::string texturePath);
+  virtual void draw() override;
+  virtual Vec2 getContentSize() override;
 
-	static Sprite* create(std::string texturePath);
+  static Sprite* create(std::string texturePath);
 };
 } // namespace star

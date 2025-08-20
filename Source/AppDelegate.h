@@ -3,6 +3,6 @@
 
 class AppDelegate : private star::Application {
 public:
-	AppDelegate();
-	virtual bool applicationDidFinishLaunching();
+  AppDelegate();
+  virtual bool applicationDidFinishLaunching();
 };

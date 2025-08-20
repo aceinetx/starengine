@@ -17,6 +17,16 @@ Vec2 Vec2::operator*(float v) {
   return Vec2(x * v, y * v);
 }
 
+void Vec2::operator/=(float v) {
+  x /= v;
+  y /= v;
+}
+
+void Vec2::operator*=(float v) {
+  x *= v;
+  y *= v;
+}
+
 Vec2 Vec2::operator-(Vec2 vec) {
   return Vec2(x - vec.x, y - vec.y);
 }

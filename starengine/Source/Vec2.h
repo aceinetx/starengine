@@ -11,6 +11,9 @@ struct Vec2 {
   Vec2 operator/(float v);
   Vec2 operator*(float v);
 
+  void operator/=(float v);
+  void operator*=(float v);
+
   Vec2 operator-(Vec2 vec);
   Vec2 operator+(Vec2 vec);
 

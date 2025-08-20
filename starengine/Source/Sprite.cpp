@@ -9,14 +9,15 @@ void Sprite::setTexture(std::string texturePath) {
 }
 
 void Sprite::draw() {
-  Vec2 pos = getPosition();
+  Vec2 pos = getPosition() * getParent()->getScale();
   pos += getParent()->getPosition();
+  float scale = getScale() / (1.0f / getParent()->getScale());
 
   // Ugly math goin' on here!
   Rectangle src(0, 0, p_texture.width, p_texture.height);
-  Rectangle dest(pos.x, GetScreenHeight() - pos.y, p_texture.width * getScale(),
-                 p_texture.height * getScale());
-  Vector2 origin((float)p_texture.width / 2 * getScale(), (float)p_texture.height / 2 * getScale());
+  Rectangle dest(pos.x, GetScreenHeight() - pos.y, p_texture.width * scale,
+                 p_texture.height * scale);
+  Vector2 origin((float)p_texture.width / 2 * scale, (float)p_texture.height / 2 * scale);
   DrawTexturePro(p_texture, src, dest, origin, getRotation(), WHITE);
 
   Node::draw();

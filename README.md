@@ -11,7 +11,7 @@ A code-only WIP game engine with a raylib rendering backend and cocos2dx-ish fee
 
 ## Limitations of starengine
 - Duct-tape solution for input events, raylib having a poll input system makes it harder to implement input events
-- Node inheritance is broken (i'm talking about nodes inheriting position, scale and rotation of the parent node), while position inherits correctly, position and scale is still broken
+- Node inheritance is broken (i'm talking about nodes inheriting position, scale and rotation of the parent node), while position and scale inherits correctly, rotation is still broken and more likely will be forever
 
 ## Get started
 First of all, this project is WIP and currently not intended for real use, but if you want to check it out, here are the instructions on how to do so:

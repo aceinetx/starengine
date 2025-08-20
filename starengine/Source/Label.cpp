@@ -25,16 +25,18 @@ std::string Label::getString() {
 }
 
 void Label::draw() {
-  Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize * getScale(), p_spacing);
-  Vec2 pos = getPosition();
+  float scale = getScale() / (1.0f / getParent()->getScale());
+
+  Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize * scale, p_spacing);
+  Vec2 pos = getPosition() * getParent()->getScale();
   pos += getParent()->getPosition();
   Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
 
   Vector2 origin;
   origin.x = size.x / 2;
   origin.y = size.y / 2;
-  DrawTextPro(p_font, p_string.c_str(), rlPos, origin, getRotation(), p_fontSize * getScale(),
-              p_spacing, WHITE);
+  DrawTextPro(p_font, p_string.c_str(), rlPos, origin, getRotation(), p_fontSize * scale, p_spacing,
+              WHITE);
 
   Node::draw();
 }

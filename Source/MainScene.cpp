@@ -37,7 +37,7 @@ bool MainScene::init() {
     {
       auto logo = Sprite::create("logo.png");
       logo->setScale(0.5f);
-      logo->setPositionY(50);
+      logo->setPositionY(100);
       m_logo->addChild(logo);
     }
   }

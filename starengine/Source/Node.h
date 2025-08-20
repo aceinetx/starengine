@@ -1,6 +1,7 @@
 #pragma once
 #include "Object.h"
 #include "Vec2.h"
+#include <functional>
 #include <vector>
 
 namespace star {
@@ -109,6 +110,11 @@ public:
 	 * Schedule update
 	 */
 	virtual void scheduleUpdate();
+
+	/**
+	 * Schedule a function that runs only once
+	 */
+	virtual void scheduleOnce(std::function<void(float)> function, float timeout);
 
 	/**
 	 * Cleans schedules

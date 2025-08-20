@@ -96,6 +96,10 @@ void Node::scheduleUpdate() {
 	Scheduler::getInstance()->scheduleUpdateForTarget(this);
 }
 
+void Node::scheduleOnce(std::function<void(float)> function, float timeout) {
+	Scheduler::getInstance()->scheduleOnceForTarget(this, function, timeout);
+}
+
 void Node::cleanup() {
 	Scheduler::getInstance()->removeAllSchedulesFromTarget(this);
 }

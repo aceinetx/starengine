@@ -27,6 +27,8 @@ public:
 
 	/** Add an update schedule for a given target that runs every frame */
 	void scheduleUpdateForTarget(Node* target);
+	/** Add a schedule for a given target that runs only once */
+	void scheduleOnceForTarget(Node* target, std::function<void(float)> function, float timeout);
 	/** Removes all schedules from a given target */
 	void removeAllSchedulesFromTarget(Node* target);
 	size_t getSchedulesCount();

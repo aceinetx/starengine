@@ -21,6 +21,17 @@ void Scheduler::scheduleUpdateForTarget(Node* target) {
 	fmt::println("[star] scheduled update for {}", (void*)target);
 }
 
+void Scheduler::scheduleOnceForTarget(Node* target, std::function<void(float)> function, float timeout) {
+	ScheduleEntry schedule;
+	schedule.target = target;
+	schedule.function = function;
+	schedule.initialTime = 0.0f;
+	schedule.time = timeout;
+	schedule.once = true;
+	p_schedules.push_back(schedule);
+	fmt::println("[star] scheduled once for {}", (void*)target);
+}
+
 void Scheduler::removeAllSchedulesFromTarget(Node* target) {
 	for (size_t i = 0; i < p_schedules.size(); i++) {
 		ScheduleEntry& schedule = p_schedules.at(i);
@@ -48,6 +59,7 @@ void Scheduler::update(float dt) {
 			if (schedule.once) {
 				p_schedules.erase(p_schedules.begin() + i);
 				i--;
+				fmt::println("[star] removed a schedule for {}", (void*)schedule.target);
 			}
 		}
 	}

@@ -1,6 +1,5 @@
 #include "AppDelegate.h"
 #include "MainScene.h"
-#include "star.h"
 #include <raylib.h>
 
 using namespace star;

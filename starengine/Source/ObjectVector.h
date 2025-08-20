@@ -4,7 +4,7 @@
 #include <vector>
 
 namespace star {
-/** Object vector
+/** ObjectVector
  *
  * std::vector, but automatically calls release() and retain() on its elements whenever needed
  */

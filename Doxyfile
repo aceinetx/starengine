@@ -1,6 +1,8 @@
-PROJECT_NAME           = starengine
-OUTPUT_DIRECTORY       = docs
-INPUT                  = starengine/Source
+PROJECT_NAME          = starengine
+OUTPUT_DIRECTORY      = docs
+INPUT                 = starengine/Source
 RECURSIVE             = NO
 GENERATE_HTML         = YES
 GENERATE_LATEX        = NO
+GENERATE_TREEVIEW     = YES 
+HTML_EXTRA_STYLESHEET = doxygen-awesome.css

@@ -18,14 +18,13 @@ bool star::Camera::init() {
 rlCamera star::Camera::getRaylibCamera() {
   auto director = Director::getInstance();
   auto winSize = director->getVisibleSize();
-  auto pos = getPosition() - (winSize / 2 / getZoom());
+  auto pos = getPosition();
 
   rlCamera camera;
   camera.zoom = p_zoom;
-  camera.rotation = getRotation(); // FIXME: Currently the camera rotates around (0, 0) in screen
-                                   // world coords, fix this!
+  camera.rotation = getRotation();
   camera.target = CLITERAL(Vector2){pos.x, pos.y};
-  camera.offset = CLITERAL(Vector2){0, 0};
+  camera.offset = CLITERAL(Vector2){winSize.x / 2, winSize.y / 2};
   return camera;
 }
 

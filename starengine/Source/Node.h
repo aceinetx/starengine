@@ -1,5 +1,6 @@
 #pragma once
 #include "Object.h"
+#include "ObjectVector.h"
 #include "Vec2.h"
 #include <cstdlib>
 #include <functional>
@@ -15,7 +16,7 @@ namespace star {
 class Node : public Object {
 protected:
   Vec2 p_position;
-  std::vector<Node*> p_children;
+  ObjectVector<Node*> p_children;
   Node* p_parent;
   float p_scale;
   float p_rotation;

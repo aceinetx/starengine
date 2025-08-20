@@ -18,6 +18,6 @@ public:
 
   bool listen(const RaylibEvent& event);
 
-  CREATE_FUNC_LISTENER(EventListenerKeyboard);
+  CREATE_FUNC_NO_INIT(EventListenerKeyboard);
 };
 } // namespace star

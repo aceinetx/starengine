@@ -13,9 +13,6 @@ EventDispatcher* EventDispatcher::getInstance() {
 }
 
 EventDispatcher::~EventDispatcher() {
-  for (auto* listener : p_listeners) {
-    listener->release();
-  }
 }
 
 bool EventDispatcher::dispatchEvent(const RaylibEvent& event, Node* startNode) {
@@ -44,7 +41,6 @@ bool EventDispatcher::dispatchEvent(const RaylibEvent& event, Node* startNode) {
 }
 
 void EventDispatcher::addListenerWithSceneGraphPriority(EventListener* listener, Node* node) {
-  listener->retain();
   listener->p_attachedNode = node;
   p_listeners.push_back(listener);
 }

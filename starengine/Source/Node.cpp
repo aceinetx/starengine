@@ -62,7 +62,6 @@ void Node::addChild(Node* child) {
   (void)assertNotSelfChild;
   STARASSERT(assertNotSelfChild(), "A node cannot be the child of his own children");
 
-  child->retain();
   p_children.push_back(child);
   child->setParent(this);
   child->onEnter();
@@ -94,7 +93,7 @@ Vec2 Node::getContentSize() {
 }
 
 const std::vector<Node*> Node::getChildren() {
-  return p_children;
+  return p_children.vector();
 }
 
 void Node::update(float dt) {
@@ -125,10 +124,10 @@ void Node::removeChild(Node* child) {
     Node* node = p_children.at(i);
     if (node == child) {
       child->onExit();
-      child->release();
       p_children.erase(p_children.begin() + i);
     }
   }
+  child->p_children.clear();
 }
 
 void Node::removeChildAndCleanup(Node* child) {
@@ -141,7 +140,6 @@ void Node::removeAllChildrenAndCleanup() {
     child->onExit();
     child->cleanup();
     child->removeAllChildrenAndCleanup();
-    child->release();
   }
   p_children.clear();
 }

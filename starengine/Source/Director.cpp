@@ -21,24 +21,12 @@ Director* Director::getInstance() {
 }
 
 void Director::runWithScene(Scene* scene) {
-  p_sceneStack.reserve(15);
-  pushScene(scene);
-}
-
-void Director::pushScene(Scene* scene) {
-  scene->retain();
-  p_sceneStack.push_back(scene);
-}
-
-void Director::popScene() {
-  p_sceneStack.back()->release();
-  p_sceneStack.pop_back();
+  currentScene = scene;
+  currentScene->retain();
 }
 
 Scene* Director::getRunningScene() {
-  if (p_sceneStack.empty())
-    return nullptr;
-  return p_sceneStack.back();
+  return currentScene;
 }
 
 Vec2 Director::getVisibleSize() {

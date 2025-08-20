@@ -1,5 +1,6 @@
 #pragma once
 #include "Node.h"
+#include "ObjectVector.h"
 #include "RaylibEvent.h"
 #include <raylib.h>
 
@@ -14,7 +15,7 @@ class EventDispatcher {
 protected:
   static EventDispatcher p_instance;
 
-  std::vector<EventListener*> p_listeners;
+  ObjectVector<EventListener*> p_listeners;
 
 public:
   static EventDispatcher* getInstance();

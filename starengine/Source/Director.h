@@ -11,7 +11,7 @@ class Director {
 protected:
   static Director* p_instance;
 
-  std::vector<Scene*> p_sceneStack;
+  Scene* currentScene;
   float p_deltaTime;
 
 public:
@@ -25,17 +25,9 @@ public:
   static Director* getInstance();
 
   /**
-   * Reserves space on the scene stack and push the scene
+   * Run the game with a scene
    */
   void runWithScene(Scene* scene);
-  /**
-   * Push the scene to the scene stack
-   */
-  void pushScene(Scene* scene);
-  /**
-   * Pop the scene from the scene stack
-   */
-  void popScene();
 
   /**
    * Get the current running scene

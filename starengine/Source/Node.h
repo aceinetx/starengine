@@ -31,11 +31,17 @@ private:
   float m_rotation;
 
 protected:
+  /** director instance */
   Director* p_director;
+  /** font manager instance */
   FontManager* p_fontManager;
+  /** texture manager instance */
   TextureManager* p_textureManager;
+  /** scheduler instance */
   Scheduler* p_scheduler;
+  /** event dispatcher instance */
   EventDispatcher* p_eventDispatcher;
+  /** action manager instance */
   ActionManager* p_actionManager;
 
 public:

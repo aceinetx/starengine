@@ -13,11 +13,14 @@ class EventListener;
  */
 class EventDispatcher {
 protected:
+  /** global instance */
   static EventDispatcher p_instance;
 
+  /** array of listeners */
   ObjectVector<EventListener*> p_listeners;
 
 public:
+  /** get the global instance */
   static EventDispatcher* getInstance();
   ~EventDispatcher();
 

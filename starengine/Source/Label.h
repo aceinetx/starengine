@@ -11,10 +11,15 @@ namespace star {
  */
 class Label : public Node {
 protected:
+  /** text of the label */
   std::string p_string;
+  /** font spacing */
   float p_spacing;
+  /** font size */
   float p_fontSize;
+  /** raylib's font resource */
   Font p_font;
+  /** font path */
   std::string p_fontPath;
 
 public:
@@ -58,7 +63,9 @@ public:
    * Create an autoreleased Label
    */
   CREATE_FUNC(Label);
+  /** Create a label with text, font and font size */
   static Label* createWithFont(std::string text, std::string font, float fontSize);
+  /** Create a label with text and font size */
   static Label* createWithDefaultFont(std::string text, float fontSize);
 };
 } // namespace star

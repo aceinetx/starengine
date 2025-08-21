@@ -12,6 +12,7 @@ namespace star {
  */
 class Camera : public Node {
 protected:
+  /** zoom of the camera */
   float p_zoom;
 
 public:

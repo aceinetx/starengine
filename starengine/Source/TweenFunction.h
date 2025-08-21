@@ -154,7 +154,6 @@ inline static constexpr float elasticEaseIn(float time, float period) {
   return newT;
 }
 inline static constexpr float elasticEaseOut(float time, float period) {
-
   float newT = 0;
   if (time == 0 || time == 1) {
     newT = time;

@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['onenter_0',['onEnter',['../classstar_1_1Node.html#a7f51764c4afd5018a052b9ef71c03374',1,'star::Node']]],
-  ['onexit_1',['onExit',['../classstar_1_1Node.html#ac83de835ea315e3179d4293acd8903ac',1,'star::Node']]]
+  ['mainloop_0',['mainLoop',['../classstar_1_1Director.html#a478075cd9b7e11f6c45e2e8929daa823',1,'star::Director']]]
 ];

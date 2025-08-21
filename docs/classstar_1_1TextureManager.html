@@ -102,23 +102,46 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ad54c51d3aa7c0d1f978cdc58cc014f09" id="r_ad54c51d3aa7c0d1f978cdc58cc014f09"><td class="memItemLeft" align="right" valign="top"><a id="ad54c51d3aa7c0d1f978cdc58cc014f09" name="ad54c51d3aa7c0d1f978cdc58cc014f09"></a>
-static <a class="el" href="classstar_1_1TextureManager.html">TextureManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInstance</b> ()</td></tr>
+<tr class="memitem:ad54c51d3aa7c0d1f978cdc58cc014f09" id="r_ad54c51d3aa7c0d1f978cdc58cc014f09"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classstar_1_1TextureManager.html">TextureManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad54c51d3aa7c0d1f978cdc58cc014f09">getInstance</a> ()</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a60dcd95eeb681850bab9c3b7fcd88290" id="r_a60dcd95eeb681850bab9c3b7fcd88290"><td class="memItemLeft" align="right" valign="top"><a id="a60dcd95eeb681850bab9c3b7fcd88290" name="a60dcd95eeb681850bab9c3b7fcd88290"></a>
-std::unordered_map&lt; std::string, Texture2D &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>p_textures</b></td></tr>
+<tr class="memitem:a60dcd95eeb681850bab9c3b7fcd88290" id="r_a60dcd95eeb681850bab9c3b7fcd88290"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; std::string, Texture2D &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a60dcd95eeb681850bab9c3b7fcd88290">p_textures</a></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-static-attribs" class="groupheader"><a id="pro-static-attribs" name="pro-static-attribs"></a>
 Static Protected Attributes</h2></td></tr>
-<tr class="memitem:a14386eddf28a18020bcff24bb3515ce7" id="r_a14386eddf28a18020bcff24bb3515ce7"><td class="memItemLeft" align="right" valign="top"><a id="a14386eddf28a18020bcff24bb3515ce7" name="a14386eddf28a18020bcff24bb3515ce7"></a>
-static <a class="el" href="classstar_1_1TextureManager.html">TextureManager</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p_instance</b></td></tr>
+<tr class="memitem:a14386eddf28a18020bcff24bb3515ce7" id="r_a14386eddf28a18020bcff24bb3515ce7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classstar_1_1TextureManager.html">TextureManager</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a14386eddf28a18020bcff24bb3515ce7">p_instance</a></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classstar_1_1TextureManager.html">TextureManager</a></p>
 <p>Manages textures, if a texture is already loaded it will not load it again </p>
 </div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="ad54c51d3aa7c0d1f978cdc58cc014f09" name="ad54c51d3aa7c0d1f978cdc58cc014f09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad54c51d3aa7c0d1f978cdc58cc014f09">&#9670;&#160;</a></span>getInstance()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstar_1_1TextureManager.html">TextureManager</a> * TextureManager::getInstance </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Get the global instance </p>
+
+</div>
+</div>
 <a id="add8967a2f916e428e71f4539e55affa3" name="add8967a2f916e428e71f4539e55affa3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#add8967a2f916e428e71f4539e55affa3">&#9670;&#160;</a></span>getTexture()</h2>
 
@@ -153,6 +176,53 @@ static <a class="el" href="classstar_1_1TextureManager.html">TextureManager</a>&
 </div><div class="memdoc">
 <p>Unloads all textures</p>
 <p>Automatically called by Application when the game closes </p>
+
+</div>
+</div>
+<a name="doc-variable-members" id="doc-variable-members"></a><h2 id="header-doc-variable-members" class="groupheader">Member Data Documentation</h2>
+<a id="a14386eddf28a18020bcff24bb3515ce7" name="a14386eddf28a18020bcff24bb3515ce7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a14386eddf28a18020bcff24bb3515ce7">&#9670;&#160;</a></span>p_instance</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classstar_1_1TextureManager.html">TextureManager</a> TextureManager::p_instance</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>global instance </p>
+
+</div>
+</div>
+<a id="a60dcd95eeb681850bab9c3b7fcd88290" name="a60dcd95eeb681850bab9c3b7fcd88290"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60dcd95eeb681850bab9c3b7fcd88290">&#9670;&#160;</a></span>p_textures</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::unordered_map&lt;std::string, Texture2D&gt; star::TextureManager::p_textures</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel protected">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>textures map, maps a texture path to the texture resource </p>
 
 </div>
 </div>

@@ -9,11 +9,14 @@ class ActionManager {
    * Manages actions, runs step() method on each action every frame
    */
 protected:
+  /** global instance */
   static ActionManager p_instance;
 
+  /** action array */
   ObjectVector<Action*> p_actions;
 
 public:
+  /** get the global instance */
   static ActionManager* getInstance();
 
   /**

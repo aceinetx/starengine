@@ -9,12 +9,16 @@ namespace star {
  */
 class Director {
 protected:
+  /** global instance */
   static Director* p_instance;
 
+  /** current scene */
   Scene* currentScene;
+  /** delta time */
   float p_deltaTime;
 
 public:
+  /** display stats? */
   bool statsDisplay;
 
 public:

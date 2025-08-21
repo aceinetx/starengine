@@ -10,11 +10,14 @@ namespace star {
  */
 class TextureManager {
 protected:
+  /** global instance */
   static TextureManager p_instance;
 
+  /** textures map, maps a texture path to the texture resource */
   std::unordered_map<std::string, Texture2D> p_textures;
 
 public:
+  /** Get the global instance */
   static TextureManager* getInstance();
 
   /**

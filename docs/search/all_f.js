@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['unloadallfonts_0',['unloadAllFonts',['../classstar_1_1FontManager.html#a6473bdf24e74b10967f377135695400f',1,'star::FontManager']]],
-  ['unloadalltextures_1',['unloadAllTextures',['../classstar_1_1TextureManager.html#a7e052d4ae18e5742511f58f585fd67f2',1,'star::TextureManager']]],
-  ['update_2',['update',['../classstar_1_1Node.html#a61d250c20cbd8bfee499bf93370be43f',1,'star::Node']]]
+  ['target_0',['target',['../structstar_1_1ScheduleEntry.html#a08f790129d5837f1dd396fe2a26e7434',1,'star::ScheduleEntry']]],
+  ['texturemanager_1',['TextureManager',['../classstar_1_1TextureManager.html',1,'star']]],
+  ['time_2',['time',['../structstar_1_1ScheduleEntry.html#a7c094f3c73522d26ac0b086a16639a2f',1,'star::ScheduleEntry']]],
+  ['type_3',['type',['../structstar_1_1RaylibEvent.html#a1a99b43460eaef2861556a4830bcf622',1,'star::RaylibEvent']]]
 ];

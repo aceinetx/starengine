@@ -1,6 +1,10 @@
 #pragma once
 
 namespace star {
+/** ApplicationProtocol
+ *
+ * Bare minimum of what the application needs to implement
+ */
 class ApplicationProtocol {
 public:
   /**

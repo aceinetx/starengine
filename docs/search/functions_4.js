@@ -1,5 +1,27 @@
 var searchData=
 [
-  ['init_0',['init',['../classstar_1_1Camera.html#a301689bba5c35f4ebd6becb466baab2f',1,'star::Camera::init()'],['../classstar_1_1Label.html#ad2fb627fd81a2af45e056239b01d3852',1,'star::Label::init()'],['../classstar_1_1Node.html#a6293815ad5f410cf3e1378fcb98b2ff7',1,'star::Node::init()'],['../classstar_1_1Scene.html#a5afe475d025de4afd4ae430a49cfa8f8',1,'star::Scene::init()']]],
-  ['isdone_1',['isDone',['../classstar_1_1Action.html#a0abcc18df319139410a0ec117c7680ae',1,'star::Action']]]
+  ['getcamera_0',['getCamera',['../classstar_1_1Scene.html#af84c0275edf85ab559bd7ee3ad387cc5',1,'star::Scene']]],
+  ['getchildren_1',['getChildren',['../classstar_1_1Node.html#a4bdef23ee2e31c88ea7faadde086ca3d',1,'star::Node']]],
+  ['getcontentsize_2',['getContentSize',['../classstar_1_1Camera.html#a7b05b28f269c06805d94d1e70bfcdff7',1,'star::Camera::getContentSize()'],['../classstar_1_1Label.html#a819f7e878e83f430ddb6d4eb0b946bc7',1,'star::Label::getContentSize()'],['../classstar_1_1Node.html#aa51b1c507ee5b0cf2999de66e5ff4d6f',1,'star::Node::getContentSize()'],['../classstar_1_1Sprite.html#a80c91164d537f98cd1351c1c5d8177e1',1,'star::Sprite::getContentSize()']]],
+  ['getdeltatime_3',['getDeltaTime',['../classstar_1_1Director.html#a5498d79afcea1d3f3852eaea9e02c9b5',1,'star::Director']]],
+  ['getduration_4',['getDuration',['../classstar_1_1Action.html#ac9e82f89f0866f4c479174f59d3e5a04',1,'star::Action']]],
+  ['getfont_5',['getFont',['../classstar_1_1FontManager.html#a2657dabbf238ddc5fb08c065aae34121',1,'star::FontManager']]],
+  ['getfontpath_6',['getFontPath',['../classstar_1_1Label.html#a1d529b1c7cf5a56b4eded60387387996',1,'star::Label']]],
+  ['getfontsize_7',['getFontSize',['../classstar_1_1Label.html#ae64eb330f89ddc74c417e87cf278c087',1,'star::Label']]],
+  ['getinneraction_8',['getInnerAction',['../classstar_1_1ActionEase.html#a3348f9232944bb9182a8e42544df545b',1,'star::ActionEase']]],
+  ['getinstance_9',['getInstance',['../classstar_1_1ActionManager.html#ab94259fb9a24a4b1c0f1b556e258b8b2',1,'star::ActionManager::getInstance()'],['../classstar_1_1AutoreleasePool.html#a1967b2456933c37bee001b2fb7940601',1,'star::AutoreleasePool::getInstance()'],['../classstar_1_1Director.html#a8d2a4ca9e20cd400ddadd516efa111e0',1,'star::Director::getInstance()'],['../classstar_1_1EventDispatcher.html#a6c45cf49103ce9a2de9e3a354fed0e1b',1,'star::EventDispatcher::getInstance()'],['../classstar_1_1FontManager.html#a958be2e64e4edaf44e03dfbafff450ed',1,'star::FontManager::getInstance()'],['../classstar_1_1Scheduler.html#a3fc3905ac5589d51e464100f3b8c0138',1,'star::Scheduler::getInstance()'],['../classstar_1_1TextureManager.html#ad54c51d3aa7c0d1f978cdc58cc014f09',1,'star::TextureManager::getInstance()']]],
+  ['getparent_10',['getParent',['../classstar_1_1Node.html#a220a8d64cb0df1cce083ed38c1260615',1,'star::Node']]],
+  ['getposition_11',['getPosition',['../classstar_1_1Node.html#ab6283ce36200791c85db4d85e52440a8',1,'star::Node']]],
+  ['getpositionx_12',['getPositionX',['../classstar_1_1Node.html#ae7bb674dab874c64d35dc36ed8f6ac66',1,'star::Node']]],
+  ['getpositiony_13',['getPositionY',['../classstar_1_1Node.html#a5577307b04f360836ca412a5111a0591',1,'star::Node']]],
+  ['getraylibcamera_14',['getRaylibCamera',['../classstar_1_1Camera.html#af0c928910aeebde8a4a05a9ca0e049ee',1,'star::Camera']]],
+  ['getreferencecount_15',['getReferenceCount',['../classstar_1_1Object.html#a7f4406dc81bdc16e353e95f78026ffc7',1,'star::Object']]],
+  ['getrotation_16',['getRotation',['../classstar_1_1Node.html#af915e0f0c8cf0a1a9153ade2d81d8aee',1,'star::Node']]],
+  ['getrunningscene_17',['getRunningScene',['../classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a',1,'star::Director']]],
+  ['getscale_18',['getScale',['../classstar_1_1Node.html#a546d5feb4e89abbd8cdca917fc0b5c7f',1,'star::Node']]],
+  ['getschedulescount_19',['getSchedulesCount',['../classstar_1_1Scheduler.html#a3d9a64698431577f91dfb593257842d3',1,'star::Scheduler']]],
+  ['getstring_20',['getString',['../classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1',1,'star::Label']]],
+  ['gettexture_21',['getTexture',['../classstar_1_1TextureManager.html#add8967a2f916e428e71f4539e55affa3',1,'star::TextureManager']]],
+  ['getvisiblesize_22',['getVisibleSize',['../classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1',1,'star::Director']]],
+  ['getzoom_23',['getZoom',['../classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45',1,'star::Camera']]]
 ];

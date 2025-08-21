@@ -18,7 +18,7 @@ void Scheduler::scheduleUpdateForTarget(Node* target) {
   schedule.time = 0.0f;
   schedule.once = false;
   p_schedules.push_back(schedule);
-  fmt::println("[star] scheduled update for {}", (void*)target);
+  // fmt::println("[star] scheduled update for {}", (void*)target);
 }
 
 void Scheduler::scheduleOnceForTarget(Node* target, std::function<void(float)> function,
@@ -30,7 +30,7 @@ void Scheduler::scheduleOnceForTarget(Node* target, std::function<void(float)> f
   schedule.time = timeout;
   schedule.once = true;
   p_schedules.push_back(schedule);
-  fmt::println("[star] scheduled once for {}", (void*)target);
+  // fmt::println("[star] scheduled once for {}", (void*)target);
 }
 
 void Scheduler::removeAllSchedulesFromTarget(Node* target) {
@@ -39,7 +39,7 @@ void Scheduler::removeAllSchedulesFromTarget(Node* target) {
     if (schedule.target == target) {
       p_schedules.erase(p_schedules.begin() + i);
       i--;
-      fmt::println("[star] removed a schedule for {}", (void*)target);
+      // fmt::println("[star] removed a schedule for {}", (void*)target);
     }
   }
 }
@@ -60,7 +60,7 @@ void Scheduler::update(float dt) {
       if (schedule.once) {
         p_schedules.erase(p_schedules.begin() + i);
         i--;
-        fmt::println("[star] removed a schedule for {}", (void*)schedule.target);
+        // fmt::println("[star] removed a schedule for {}", (void*)schedule.target);
       }
     }
   }

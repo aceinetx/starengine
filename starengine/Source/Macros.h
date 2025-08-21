@@ -6,7 +6,7 @@
 #define CREATE_FUNC(type)                                                                          \
   static type* create() {                                                                          \
     auto* pRet = new type();                                                                       \
-    printf("[star] malloc %p\n", pRet);                                                            \
+    /* printf("[star] malloc %p\n", pRet); */                                                      \
     if (pRet && pRet->init()) {                                                                    \
       pRet->autorelease();                                                                         \
     } else {                                                                                       \
@@ -19,7 +19,7 @@
 #define CREATE_FUNC_NO_INIT(type)                                                                  \
   static type* create() {                                                                          \
     auto* pRet = new type();                                                                       \
-    printf("[star] malloc %p\n", pRet);                                                            \
+    /* printf("[star] malloc %p\n", pRet); */                                                      \
     if (pRet) {                                                                                    \
       pRet->autorelease();                                                                         \
     } else {                                                                                       \

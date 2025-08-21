@@ -10,7 +10,7 @@ AutoreleasePool* AutoreleasePool::getInstance() {
 }
 
 void AutoreleasePool::addObject(Object* obj) {
-  printf("[star] add %p\n", obj);
+  // printf("[star] add %p\n", obj);
   objectArray.emplace_back(obj);
 }
 

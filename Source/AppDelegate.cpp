@@ -12,6 +12,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
   // initialize director
   auto director = Director::getInstance();
 
+  SetTraceLogLevel(TraceLogLevel::LOG_FATAL); // set to LOG_ALL if you want raylib logging
   InitWindow(1280, 720, "StarEngine");
   SetTargetFPS(60);
 

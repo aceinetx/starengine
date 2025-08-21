@@ -80,11 +80,11 @@ void Node::addChild(Node* child) {
 }
 
 void Node::onEnter() {
-  fmt::println("[star] {} entered", (void*)this);
+  // fmt::println("[star] {} entered", (void*)this);
   m_parent->p_sortSceneGraph();
 }
 void Node::onExit() {
-  fmt::println("[star] {} exited", (void*)this);
+  // fmt::println("[star] {} exited", (void*)this);
 }
 
 void Node::setParent(Node* parent) {
@@ -193,13 +193,13 @@ void Node::setZOrder(int zOrder) {
 void Node::p_sortSceneGraph() {
   std::sort(m_children.begin(), m_children.end(),
             [](Node* a, Node* b) { return a->getZOrder() < b->getZOrder(); });
-  fmt::println("[star] scene graph sorted");
+  // fmt::println("[star] scene graph sorted");
 }
 
 Node* Node::create() {
   Node* pRet = new Node();
   pRet->p_refCount = 1;
-  printf("[star] malloc %p\n", pRet);
+  // printf("[star] malloc %p\n", pRet);
   if (pRet && pRet->init()) {
     pRet->autorelease();
   } else {

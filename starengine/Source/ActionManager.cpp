@@ -36,3 +36,12 @@ void ActionManager::stepActions(float dt) {
   }
   removeAllDoneActions();
 }
+
+size_t ActionManager::getNumberOfRunningActions(Node* target) {
+  size_t i = 0;
+  for (Action* action : p_actions) {
+    if (action->p_target == target)
+      i++;
+  }
+  return i;
+}

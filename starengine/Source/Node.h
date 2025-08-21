@@ -197,6 +197,11 @@ public:
   virtual void stopAllActions();
 
   /**
+   * Get the number of running actions on this node
+   */
+  virtual size_t getNumberOfRunningActions();
+
+  /**
    * Insert child at a certain Z order
    *
    * This is a complex operation that also sorts the scene graph so you should avoid calling it many

@@ -37,5 +37,9 @@ public:
    * Run step() on every added action
    */
   void stepActions(float dt);
+  /**
+   * Get the number of running actions on a given target
+   */
+  size_t getNumberOfRunningActions(Node* target);
 };
 } // namespace star

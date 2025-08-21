@@ -12,6 +12,7 @@ var hierarchy =
       [ "star::Action", "classstar_1_1Action.html", [
         [ "star::ActionEase", "classstar_1_1ActionEase.html", null ],
         [ "star::MoveTo", "classstar_1_1MoveTo.html", null ],
+        [ "star::RotateTo", "classstar_1_1RotateTo.html", null ],
         [ "star::ScaleTo", "classstar_1_1ScaleTo.html", null ]
       ] ],
       [ "star::EventListener", "classstar_1_1EventListener.html", [

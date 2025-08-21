@@ -23,7 +23,7 @@ var searchData=
   ['sprite_20',['Sprite',['../classstar_1_1Sprite.html',1,'star']]],
   ['star_21',['star',['../namespacestar.html',1,'']]],
   ['star_3a_3aease_22',['ease',['../namespacestar_1_1ease.html',1,'star']]],
-  ['startwithtarget_23',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
+  ['startwithtarget_23',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1RotateTo.html#a6d31ab7382b1d028b533d89dd1ca1980',1,'star::RotateTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
   ['state_24',['state',['../structstar_1_1RaylibEvent.html#afa19b484061a3ef0430b76c1cd37aa8c',1,'star::RaylibEvent']]],
   ['statsdisplay_25',['statsDisplay',['../classstar_1_1Director.html#a2e7bfbf86aff0dbc224a328e0b23ba26',1,'star::Director']]],
   ['step_26',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],

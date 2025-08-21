@@ -18,6 +18,7 @@ var namespacestar =
     [ "Object", "classstar_1_1Object.html", "classstar_1_1Object" ],
     [ "ObjectVector", "classstar_1_1ObjectVector.html", "classstar_1_1ObjectVector" ],
     [ "RaylibEvent", "structstar_1_1RaylibEvent.html", "structstar_1_1RaylibEvent" ],
+    [ "RotateTo", "classstar_1_1RotateTo.html", "classstar_1_1RotateTo" ],
     [ "ScaleTo", "classstar_1_1ScaleTo.html", "classstar_1_1ScaleTo" ],
     [ "Scene", "classstar_1_1Scene.html", "classstar_1_1Scene" ],
     [ "ScheduleEntry", "structstar_1_1ScheduleEntry.html", "structstar_1_1ScheduleEntry" ],

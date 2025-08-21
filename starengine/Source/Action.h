@@ -4,6 +4,8 @@
 
 namespace star {
 class ActionManager;
+class ActionEase;
+
 /** Action
  *
  * Base class for every action
@@ -21,7 +23,10 @@ public:
   bool isDone();
   virtual void step(float dt);
   virtual void update(float time);
+  virtual void startWithTarget(Node* target);
+  virtual float getDuration();
 
   friend class ActionManager;
+  friend class ActionEase;
 };
 } // namespace star

@@ -1,5 +1,6 @@
 #pragma once
 #include "Action.h"
+#include "ActionEase.h"
 #include "ActionManager.h"
 #include "Application.h"
 #include "ApplicationProtocol.h"
@@ -21,4 +22,5 @@
 #include "Scene.h"
 #include "Sprite.h"
 #include "TextureManager.h"
+#include "TweenFunction.h"
 #include "Vec2.h"

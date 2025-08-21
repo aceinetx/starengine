@@ -148,6 +148,7 @@ void Node::removeAllChildrenAndCleanup() {
 }
 
 void Node::runAction(Action* action) {
+  action->startWithTarget(this);
   ActionManager::getInstance()->runActionForTarget(action, this);
 }
 

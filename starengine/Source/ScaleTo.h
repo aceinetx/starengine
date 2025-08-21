@@ -13,6 +13,7 @@ protected:
 
 public:
   void update(float time) override;
+  void startWithTarget(Node* target) override;
 
   static ScaleTo* create(float duration, float scale);
 };

@@ -6,6 +6,7 @@ var annotated_dup =
     ] ],
     [ "star", null, [
       [ "Action", "classstar_1_1Action.html", null ],
+      [ "ActionEase", "classstar_1_1ActionEase.html", null ],
       [ "ActionManager", "classstar_1_1ActionManager.html", "classstar_1_1ActionManager" ],
       [ "ApplicationProtocol", "classstar_1_1ApplicationProtocol.html", "classstar_1_1ApplicationProtocol" ],
       [ "AutoreleasePool", "classstar_1_1AutoreleasePool.html", "classstar_1_1AutoreleasePool" ],

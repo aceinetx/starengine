@@ -3,14 +3,13 @@
 using namespace star;
 
 void ScaleTo::update(float time) {
-  static bool s_firstTick = true;
-  if (s_firstTick) {
-    p_initial = p_target->getScale();
-    s_firstTick = false;
-  }
-
   float scale = (p_initial + (p_scale - p_initial) * time);
   p_target->setScale(scale);
+}
+
+void ScaleTo::startWithTarget(Node* target) {
+  Action::startWithTarget(target);
+  p_initial = p_target->getScale();
 }
 
 ScaleTo* ScaleTo::create(float duration, float scale) {

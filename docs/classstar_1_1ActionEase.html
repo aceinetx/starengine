@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.14.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>starengine: star::MoveTo Class Reference</title>
+<title>starengine: star::ActionEase Class Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -63,7 +63,7 @@ $(function() {
   </div>
 </div>
 <script type="text/javascript">
-$(function(){initNavTree('classstar_1_1MoveTo.html','','classstar_1_1MoveTo-members'); });
+$(function(){initNavTree('classstar_1_1ActionEase.html','','classstar_1_1ActionEase-members'); });
 </script>
 <div id="container">
 <div id="doc-content">
@@ -89,26 +89,26 @@ $(function(){initNavTree('classstar_1_1MoveTo.html','','classstar_1_1MoveTo-memb
 </div>
 
 <div class="header">
-  <div class="headertitle"><div class="title">star::MoveTo Class Reference</div></div>
+  <div class="headertitle"><div class="title">star::ActionEase Class Reference</div></div>
 </div><!--header-->
 <div class="contents">
-
-<p><code>#include &lt;<a class="el" href="MoveTo_8h_source.html">MoveTo.h</a>&gt;</code></p>
 <div class="dynheader">
-Inheritance diagram for star::MoveTo:</div>
+Inheritance diagram for star::ActionEase:</div>
 <div class="dyncontent">
  <div class="center">
-  <img src="classstar_1_1MoveTo.png" usemap="#star_3A_3AMoveTo_map" alt=""/>
-  <map id="star_3A_3AMoveTo_map" name="star_3A_3AMoveTo_map">
-<area href="classstar_1_1Action.html" alt="star::Action" shape="rect" coords="0,56,85,80"/>
-<area href="classstar_1_1Object.html" alt="star::Object" shape="rect" coords="0,0,85,24"/>
+  <img src="classstar_1_1ActionEase.png" usemap="#star_3A_3AActionEase_map" alt=""/>
+  <map id="star_3A_3AActionEase_map" name="star_3A_3AActionEase_map">
+<area href="classstar_1_1Action.html" alt="star::Action" shape="rect" coords="0,56,103,80"/>
+<area href="classstar_1_1Object.html" alt="star::Object" shape="rect" coords="0,0,103,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pub-methods" class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:acd0452c5986959d763ca4d33422b9b77" id="r_acd0452c5986959d763ca4d33422b9b77"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acd0452c5986959d763ca4d33422b9b77">update</a> (float time) override</td></tr>
-<tr class="memitem:af9f86e7c5d391fe494cf6a597b839b13" id="r_af9f86e7c5d391fe494cf6a597b839b13"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af9f86e7c5d391fe494cf6a597b839b13">startWithTarget</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *target) override</td></tr>
+<tr class="memitem:a3348f9232944bb9182a8e42544df545b" id="r_a3348f9232944bb9182a8e42544df545b"><td class="memItemLeft" align="right" valign="top"><a id="a3348f9232944bb9182a8e42544df545b" name="a3348f9232944bb9182a8e42544df545b"></a>
+virtual <a class="el" href="classstar_1_1Action.html">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>getInnerAction</b> ()</td></tr>
+<tr class="memitem:a04976f42219b97e850043ab9cd182918" id="r_a04976f42219b97e850043ab9cd182918"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a04976f42219b97e850043ab9cd182918">startWithTarget</a> (<a class="el" href="classstar_1_1Node.html">Node</a> *target) override</td></tr>
+<tr class="memitem:a77679f09c02cf75fb54776470c339fc5" id="r_a77679f09c02cf75fb54776470c339fc5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a77679f09c02cf75fb54776470c339fc5">update</a> (float time) override</td></tr>
 <tr class="inherit_header pub_methods_classstar_1_1Action"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pub_methods_classstar_1_1Action')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Public Member Functions inherited from <a class="el" href="classstar_1_1Action.html">star::Action</a></td></tr>
 <tr class="memitem:a0abcc18df319139410a0ec117c7680ae inherit pub_methods_classstar_1_1Action" id="r_a0abcc18df319139410a0ec117c7680ae"><td class="memItemLeft" align="right" valign="top">
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>isDone</b> ()</td></tr>
@@ -122,17 +122,10 @@ virtual float&#160;</td><td class="memItemRight" valign="bottom"><b>getDuration<
 <tr class="memitem:a326dc8bb746267d46e03e3ed58f60bf9 inherit pub_methods_classstar_1_1Object" id="r_a326dc8bb746267d46e03e3ed58f60bf9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classstar_1_1Object.html">Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstar_1_1Object.html#a326dc8bb746267d46e03e3ed58f60bf9">autorelease</a> ()</td></tr>
 <tr class="memitem:a7f4406dc81bdc16e353e95f78026ffc7 inherit pub_methods_classstar_1_1Object" id="r_a7f4406dc81bdc16e353e95f78026ffc7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classstar_1_1Object.html#a7f4406dc81bdc16e353e95f78026ffc7">getReferenceCount</a> ()</td></tr>
 </table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 id="header-pub-static-methods" class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a0e77cec0595cb2994cbd243e6f3a8c03" id="r_a0e77cec0595cb2994cbd243e6f3a8c03"><td class="memItemLeft" align="right" valign="top"><a id="a0e77cec0595cb2994cbd243e6f3a8c03" name="a0e77cec0595cb2994cbd243e6f3a8c03"></a>
-static <a class="el" href="classstar_1_1MoveTo.html">MoveTo</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>create</b> (float duration, <a class="el" href="structstar_1_1Vec2.html">Vec2</a> pos)</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-pro-attribs" class="groupheader"><a id="pro-attribs" name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
-<tr class="memitem:a92a3fd19648bf7256e95598be187d6f5" id="r_a92a3fd19648bf7256e95598be187d6f5"><td class="memItemLeft" align="right" valign="top"><a id="a92a3fd19648bf7256e95598be187d6f5" name="a92a3fd19648bf7256e95598be187d6f5"></a>
-<a class="el" href="structstar_1_1Vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p_position</b></td></tr>
-<tr class="memitem:aa76794efdd1b1f61c968e4f708b7bee3" id="r_aa76794efdd1b1f61c968e4f708b7bee3"><td class="memItemLeft" align="right" valign="top"><a id="aa76794efdd1b1f61c968e4f708b7bee3" name="aa76794efdd1b1f61c968e4f708b7bee3"></a>
-<a class="el" href="structstar_1_1Vec2.html">Vec2</a>&#160;</td><td class="memItemRight" valign="bottom"><b>p_initialPosition</b></td></tr>
+<tr class="memitem:ad025877db615cdb4ea85e7c9817b9823" id="r_ad025877db615cdb4ea85e7c9817b9823"><td class="memItemLeft" align="right" valign="top"><a id="ad025877db615cdb4ea85e7c9817b9823" name="ad025877db615cdb4ea85e7c9817b9823"></a>
+<a class="el" href="classstar_1_1Action.html">Action</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>p_inner</b></td></tr>
 <tr class="inherit_header pro_attribs_classstar_1_1Action"><td colspan="2" onclick="javascript:dynsection.toggleInherit('pro_attribs_classstar_1_1Action')"><span class="dynarrow"><span class="arrowhead closed"></span></span>Protected Attributes inherited from <a class="el" href="classstar_1_1Action.html">star::Action</a></td></tr>
 <tr class="memitem:a46f0d7fea2127a0e672daeb859a593b9 inherit pro_attribs_classstar_1_1Action" id="r_a46f0d7fea2127a0e672daeb859a593b9"><td class="memItemLeft" align="right" valign="top">
 float&#160;</td><td class="memItemRight" valign="bottom"><b>p_duration</b> = 0.0f</td></tr>
@@ -146,12 +139,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>p_done</b> = false</t
 <tr class="memitem:a96787adaca9650cfe61528dbe3b3f248 inherit pro_attribs_classstar_1_1Object" id="r_a96787adaca9650cfe61528dbe3b3f248"><td class="memItemLeft" align="right" valign="top">
 unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b></td></tr>
 </table>
-<a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
-<div class="textblock"><p><a class="el" href="classstar_1_1MoveTo.html">MoveTo</a></p>
-<p><a class="el" href="classstar_1_1Action.html">Action</a> that moves a node by certain position in a given amount of time </p>
-</div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
-<a id="af9f86e7c5d391fe494cf6a597b839b13" name="af9f86e7c5d391fe494cf6a597b839b13"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af9f86e7c5d391fe494cf6a597b839b13">&#9670;&#160;</a></span>startWithTarget()</h2>
+<a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Member Function Documentation</h2>
+<a id="a04976f42219b97e850043ab9cd182918" name="a04976f42219b97e850043ab9cd182918"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a04976f42219b97e850043ab9cd182918">&#9670;&#160;</a></span>startWithTarget()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -160,7 +150,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MoveTo::startWithTarget </td>
+          <td class="memname">void ActionEase::startWithTarget </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="classstar_1_1Node.html">Node</a> *</td>          <td class="paramname"><span class="paramname"><em>target</em></span></td><td>)</td>
           <td></td>
@@ -177,8 +167,8 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b
 
 </div>
 </div>
-<a id="acd0452c5986959d763ca4d33422b9b77" name="acd0452c5986959d763ca4d33422b9b77"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acd0452c5986959d763ca4d33422b9b77">&#9670;&#160;</a></span>update()</h2>
+<a id="a77679f09c02cf75fb54776470c339fc5" name="a77679f09c02cf75fb54776470c339fc5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77679f09c02cf75fb54776470c339fc5">&#9670;&#160;</a></span>update()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -187,7 +177,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void MoveTo::update </td>
+          <td class="memname">void ActionEase::update </td>
           <td>(</td>
           <td class="paramtype">float</td>          <td class="paramname"><span class="paramname"><em>time</em></span></td><td>)</td>
           <td></td>
@@ -205,8 +195,8 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>starengine/Source/<a class="el" href="MoveTo_8h_source.html">MoveTo.h</a></li>
-<li>starengine/Source/<b>MoveTo.cpp</b></li>
+<li>starengine/Source/<a class="el" href="ActionEase_8h_source.html">ActionEase.h</a></li>
+<li>starengine/Source/<b>ActionEase.cpp</b></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -221,7 +211,7 @@ unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>p_refCount</b
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><b>star</b></li><li class="navelem"><a href="classstar_1_1MoveTo.html">MoveTo</a></li>
+    <li class="navelem"><b>star</b></li><li class="navelem"><a href="classstar_1_1ActionEase.html">ActionEase</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.14.0 </li>
   </ul>
 </div>

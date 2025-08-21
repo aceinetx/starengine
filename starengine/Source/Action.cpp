@@ -19,3 +19,11 @@ void Action::step(float dt) {
 
 void Action::update(float time) {
 }
+
+void Action::startWithTarget(Node* target) {
+  p_target = target;
+}
+
+float Action::getDuration() {
+  return p_duration;
+}

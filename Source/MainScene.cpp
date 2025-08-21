@@ -1,4 +1,5 @@
 #include "MainScene.h"
+#include "ActionEase.h"
 #include "MoveTo.h"
 #include "Vec2.h"
 #include "fmt/base.h"
@@ -41,8 +42,9 @@ bool MainScene::init() {
 
   scheduleOnce(
       [this](float) {
-        auto action = MoveTo::create(10.0f, Vec2(0, 0));
-        m_logo->runAction(action);
+        auto action = MoveTo::create(1.0f, Vec2(0, 0));
+        auto ease = BackInOut::create(action);
+        m_logo->runAction(ease);
       },
       3.0f);
 

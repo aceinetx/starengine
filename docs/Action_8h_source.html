@@ -109,20 +109,24 @@ $(function(){initNavTree('Action_8h_source.html','',''); });
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <a class="code hl_class" href="classstar_1_1Node.html">Node</a>* p_target = <span class="keyword">nullptr</span>;</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
 <div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keywordtype">bool</span> isDone();</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> step(<span class="keywordtype">float</span> dt);</div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> time);</div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> startWithTarget(<a class="code hl_class" href="classstar_1_1Node.html">Node</a>* target);</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>  <span class="keyword">virtual</span> <span class="keywordtype">float</span> getDuration();</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>  <span class="keyword">friend</span> <span class="keyword">class </span>ActionManager;</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">friend</span> <span class="keyword">class </span>ActionEase;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>};</div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>  <span class="keywordtype">bool</span> <a class="code hl_function" href="classstar_1_1Action.html#a0abcc18df319139410a0ec117c7680ae">isDone</a>();</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66">step</a>(<span class="keywordtype">float</span> dt);</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> time);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b">startWithTarget</a>(<a class="code hl_class" href="classstar_1_1Node.html">Node</a>* target);</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>  <span class="keyword">virtual</span> <span class="keywordtype">float</span> <a class="code hl_function" href="classstar_1_1Action.html#ac9e82f89f0866f4c479174f59d3e5a04">getDuration</a>();</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span> </div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>  <span class="keyword">friend</span> <span class="keyword">class </span>ActionManager;</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>  <span class="keyword">friend</span> <span class="keyword">class </span>ActionEase;</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>};</div>
 </div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>} <span class="comment">// namespace star</span></div>
-<div class="ttc" id="aclassstar_1_1ActionEase_html"><div class="ttname"><a href="classstar_1_1ActionEase.html">star::ActionEase</a></div><div class="ttdef"><b>Definition</b> ActionEase.h:5</div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>} <span class="comment">// namespace star</span></div>
+<div class="ttc" id="aclassstar_1_1ActionEase_html"><div class="ttname"><a href="classstar_1_1ActionEase.html">star::ActionEase</a></div><div class="ttdef"><b>Definition</b> ActionEase.h:9</div></div>
 <div class="ttc" id="aclassstar_1_1ActionManager_html"><div class="ttname"><a href="classstar_1_1ActionManager.html">star::ActionManager</a></div><div class="ttdef"><b>Definition</b> ActionManager.h:6</div></div>
 <div class="ttc" id="aclassstar_1_1Action_html"><div class="ttname"><a href="classstar_1_1Action.html">star::Action</a></div><div class="ttdef"><b>Definition</b> Action.h:15</div></div>
+<div class="ttc" id="aclassstar_1_1Action_html_a0abcc18df319139410a0ec117c7680ae"><div class="ttname"><a href="classstar_1_1Action.html#a0abcc18df319139410a0ec117c7680ae">star::Action::isDone</a></div><div class="ttdeci">bool isDone()</div><div class="ttdef"><b>Definition</b> Action.cpp:5</div></div>
+<div class="ttc" id="aclassstar_1_1Action_html_a5457090e4a035c6283777c893a9a681b"><div class="ttname"><a href="classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b">star::Action::startWithTarget</a></div><div class="ttdeci">virtual void startWithTarget(Node *target)</div><div class="ttdef"><b>Definition</b> Action.cpp:23</div></div>
+<div class="ttc" id="aclassstar_1_1Action_html_a9a64ee9e8e977672748f70893ebaff66"><div class="ttname"><a href="classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66">star::Action::step</a></div><div class="ttdeci">virtual void step(float dt)</div><div class="ttdef"><b>Definition</b> Action.cpp:9</div></div>
+<div class="ttc" id="aclassstar_1_1Action_html_ac9e82f89f0866f4c479174f59d3e5a04"><div class="ttname"><a href="classstar_1_1Action.html#ac9e82f89f0866f4c479174f59d3e5a04">star::Action::getDuration</a></div><div class="ttdeci">virtual float getDuration()</div><div class="ttdef"><b>Definition</b> Action.cpp:27</div></div>
 <div class="ttc" id="aclassstar_1_1Node_html"><div class="ttname"><a href="classstar_1_1Node.html">star::Node</a></div><div class="ttdef"><b>Definition</b> Node.h:20</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

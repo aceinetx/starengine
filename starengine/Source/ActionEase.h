@@ -2,6 +2,10 @@
 #include "Action.h"
 
 namespace star {
+/** ActionEase
+ *
+ * Represents an action that has an easing
+ */
 class ActionEase : public Action {
 protected:
   Action* p_inner;

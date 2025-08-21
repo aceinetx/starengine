@@ -20,6 +20,8 @@ var searchData=
   ['settexture_17',['setTexture',['../classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9',1,'star::Sprite']]],
   ['setzoom_18',['setZoom',['../classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5',1,'star::Camera']]],
   ['sprite_19',['Sprite',['../classstar_1_1Sprite.html',1,'star']]],
-  ['stepactions_20',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
-  ['stopallactions_21',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
+  ['startwithtarget_20',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
+  ['step_21',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],
+  ['stepactions_22',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
+  ['stopallactions_23',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
 ];

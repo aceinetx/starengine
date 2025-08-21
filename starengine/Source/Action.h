@@ -20,10 +20,23 @@ protected:
   Node* p_target = nullptr;
 
 public:
+  /**
+   * Is the action done?
+   */
   bool isDone();
+  /**
+   * Step the current action by one tick
+   */
   virtual void step(float dt);
   virtual void update(float time);
+  /** Setup an action for a specific target
+   *
+   * ! DOES NOT START THE ACTION, NAME INHERITED FROM COCOS2D-X !
+   */
   virtual void startWithTarget(Node* target);
+  /**
+   * Get the action duration
+   */
   virtual float getDuration();
 
   friend class ActionManager;

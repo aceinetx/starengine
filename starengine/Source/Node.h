@@ -163,6 +163,11 @@ public:
   virtual void runAction(Action* action);
 
   /**
+   * Remove all actions from this node
+   */
+  virtual void stopAllActions();
+
+  /**
    * Create an autoreleased Node
    */
   static Node* create();

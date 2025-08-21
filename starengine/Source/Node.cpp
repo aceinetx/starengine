@@ -111,6 +111,7 @@ void Node::scheduleOnce(std::function<void(float)> function, float timeout) {
 
 void Node::cleanup() {
   Scheduler::getInstance()->removeAllSchedulesFromTarget(this);
+  removeAllChildrenAndCleanup();
 }
 
 void Node::removeFromParentAndCleanup() {
@@ -148,6 +149,10 @@ void Node::removeAllChildrenAndCleanup() {
 
 void Node::runAction(Action* action) {
   ActionManager::getInstance()->runActionForTarget(action, this);
+}
+
+void Node::stopAllActions() {
+  ActionManager::getInstance()->removeAllActionsFromTarget(this);
 }
 
 Node* Node::create() {

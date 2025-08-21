@@ -23,6 +23,10 @@ public:
    */
   void runActionForTarget(Action* action, Node* target);
   /**
+   * Remove all actions from a given target
+   */
+  void removeAllActionsFromTarget(Node* target);
+  /**
    * Run step() on every added action
    */
   void stepActions(float dt);

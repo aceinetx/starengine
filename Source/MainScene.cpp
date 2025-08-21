@@ -1,12 +1,7 @@
 #include "MainScene.h"
-#include "EventDispatcher.h"
-#include "EventListenerKeyboard.h"
-#include "Macros.h"
 #include "MoveTo.h"
-#include "Scene.h"
 #include "Vec2.h"
 #include "fmt/base.h"
-#include <ClassFormatters.h>
 #include <fmt/format.h>
 #include <raylib.h>
 

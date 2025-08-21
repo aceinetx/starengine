@@ -18,6 +18,7 @@
 #include "Node.h"
 #include "Object.h"
 #include "ObjectVector.h"
+#include "RotateTo.h"
 #include "ScaleTo.h"
 #include "Scene.h"
 #include "Sprite.h"

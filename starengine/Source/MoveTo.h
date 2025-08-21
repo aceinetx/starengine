@@ -4,7 +4,7 @@
 namespace star {
 /** MoveTo
  *
- * Action that moves a node by certain position in a given amount of time
+ * Action that moves a node to certain position in a given amount of time
  */
 class MoveTo : public Action {
 protected:

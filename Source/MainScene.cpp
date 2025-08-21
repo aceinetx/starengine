@@ -41,9 +41,15 @@ bool MainScene::init() {
   }
 
   // scale down the logo with an easing
-  auto action = ScaleTo::create(1.0f, 0.5f);
-  auto ease = EaseBackInOut::create(action);
-  m_logo->runAction(ease);
+  {
+    auto action = EaseBackInOut::create(ScaleTo::create(1.0f, 0.5f));
+    m_logo->runAction(action);
+  }
+  // ... and rotate
+  {
+    auto action = EaseBackInOut::create(RotateTo::create(1.0f, 360.0f));
+    m_logo->runAction(action);
+  }
 
   // add a keyboard listener
   auto keyboardListener = EventListenerKeyboard::create();

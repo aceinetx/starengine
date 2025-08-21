@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['vec2_0',['Vec2',['../structstar_1_1Vec2.html',1,'star']]]
+  ['texturemanager_0',['TextureManager',['../classstar_1_1TextureManager.html',1,'star']]]
 ];

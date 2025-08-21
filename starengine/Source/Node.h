@@ -7,11 +7,15 @@
 #include <vector>
 
 namespace star {
+class Action;
+
 /** Node
  *
  * Base class for all nodes
  *
  * Controls the position, children and drawing
+ *
+ * This node can run actions and schedule functions
  */
 class Node : public Object {
 protected:
@@ -152,6 +156,16 @@ public:
    * Removes all children and calls cleanup() on them
    */
   virtual void removeAllChildrenAndCleanup();
+
+  /**
+   * Runs an action
+   */
+  virtual void runAction(Action* action);
+
+  /**
+   * Remove all actions from this node
+   */
+  virtual void stopAllActions();
 
   /**
    * Create an autoreleased Node

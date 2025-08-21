@@ -1,4 +1,5 @@
 #include "Director.h"
+#include "ActionManager.h"
 #include "Application.h"
 #include "AutoreleasePool.h"
 #include "Scheduler.h"
@@ -40,6 +41,7 @@ void Director::mainLoop() {
   ClearBackground(BLACK);
 
   Scheduler::getInstance()->update(getDeltaTime());
+  ActionManager::getInstance()->stepActions(getDeltaTime());
 
   Scene* scene = getRunningScene();
   auto camera = scene->getCamera();

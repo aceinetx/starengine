@@ -12,7 +12,8 @@
 
 using namespace star;
 
-Node::Node() : m_position(Vec2(0, 0)), m_parent(nullptr), m_scale(1.0f), m_rotation(0.0f) {
+Node::Node()
+    : m_position(Vec2(0, 0)), m_parent(nullptr), m_scale(1.0f), m_rotation(0.0f), m_zOrder(0) {
   p_director = Director::getInstance();
   p_fontManager = FontManager::getInstance();
   p_textureManager = TextureManager::getInstance();
@@ -75,11 +76,12 @@ void Node::addChild(Node* child) {
   (void)assertNotSelfChild;
   STARASSERT(assertNotSelfChild(), "A node cannot be the child of his own children");
 
-  insertChild(child, 0);
+  insertChild(child, child->getZOrder());
 }
 
 void Node::onEnter() {
   fmt::println("[star] {} entered", (void*)this);
+  m_parent->p_sortSceneGraph();
 }
 void Node::onExit() {
   fmt::println("[star] {} exited", (void*)this);
@@ -120,6 +122,8 @@ void Node::scheduleOnce(std::function<void(float)> function, float timeout) {
 
 void Node::cleanup() {
   p_scheduler->removeAllSchedulesFromTarget(this);
+  p_eventDispatcher->removeAllListenersFromTarget(this);
+  stopAllActions();
   removeAllChildrenAndCleanup();
 }
 
@@ -172,10 +176,8 @@ size_t Node::getNumberOfRunningActions() {
 void Node::insertChild(Node* child, int zOrder) {
   child->setParent(this);
   child->setZOrder(zOrder);
-  child->onEnter();
   m_children.push_back(child);
-
-  p_sortSceneGraph();
+  child->onEnter();
 }
 
 int Node::getZOrder() {
@@ -183,14 +185,15 @@ int Node::getZOrder() {
 }
 
 void Node::setZOrder(int zOrder) {
-  STARASSERT(m_parent, "This node has no parent");
   m_zOrder = zOrder;
-  m_parent->p_sortSceneGraph();
+  if (m_parent)
+    m_parent->p_sortSceneGraph();
 }
 
 void Node::p_sortSceneGraph() {
   std::sort(m_children.begin(), m_children.end(),
             [](Node* a, Node* b) { return a->getZOrder() < b->getZOrder(); });
+  fmt::println("[star] scene graph sorted");
 }
 
 Node* Node::create() {

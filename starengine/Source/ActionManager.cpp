@@ -18,6 +18,7 @@ void ActionManager::removeAllActionsFromTarget(Node* target) {
   for (size_t i = 0; i < p_actions.size(); i++) {
     if (p_actions[i]->p_target == target) {
       p_actions.erase(p_actions.begin() + i);
+      i--;
     }
   }
 }
@@ -26,6 +27,7 @@ void ActionManager::removeAllDoneActions() {
   for (size_t i = 0; i < p_actions.size(); i++) {
     if (p_actions[i]->isDone()) {
       p_actions.erase(p_actions.begin() + i);
+      i--;
     }
   }
 }

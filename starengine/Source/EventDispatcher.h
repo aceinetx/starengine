@@ -43,5 +43,10 @@ public:
    * see how would it be dispatched
    */
   void addListenerWithSceneGraphPriority(EventListener* listener, Node* node);
+
+  /**
+   * Remove all listeners from a specific node
+   */
+  void removeAllListenersFromTarget(Node* target);
 };
 } // namespace star

@@ -50,19 +50,22 @@ void Director::drawInspector() {
   if (selectedNode) {
     // Position
     float pos[2] = {selectedNode->getPositionX(), selectedNode->getPositionY()};
-    ImGui::DragFloat2("Position", pos);
-    selectedNode->setPositionX(pos[0]);
-    selectedNode->setPositionY(pos[1]);
+    if (ImGui::DragFloat2("Position", pos)) {
+      selectedNode->setPositionX(pos[0]);
+      selectedNode->setPositionY(pos[1]);
+    }
 
     // Scale
     float scale = selectedNode->getScale();
-    ImGui::DragFloat("Scale", &scale, 0.01f);
-    selectedNode->setScale(scale);
+    if (ImGui::DragFloat("Scale", &scale, 0.01f)) {
+      selectedNode->setScale(scale);
+    }
 
     // Rotation
     float rotation = selectedNode->getRotation();
-    ImGui::DragFloat("Rotation", &rotation, 0.1f);
-    selectedNode->setRotation(rotation);
+    if (ImGui::DragFloat("Rotation", &rotation, 0.1f)) {
+      selectedNode->setRotation(rotation);
+    }
 
     // Z Order
     int zOrder = selectedNode->getZOrder();

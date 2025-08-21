@@ -23,13 +23,14 @@ class ActionManager;
  * This node can run actions and schedule functions
  */
 class Node : public Object {
-protected:
-  Vec2 p_position;
-  ObjectVector<Node*> p_children;
-  Node* p_parent;
-  float p_scale;
-  float p_rotation;
+private:
+  Vec2 m_position;
+  ObjectVector<Node*> m_children;
+  Node* m_parent;
+  float m_scale;
+  float m_rotation;
 
+protected:
   Director* p_director;
   FontManager* p_fontManager;
   TextureManager* p_textureManager;

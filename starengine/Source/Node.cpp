@@ -11,7 +11,7 @@
 
 using namespace star;
 
-Node::Node() : p_position(Vec2(0, 0)), p_parent(nullptr), p_scale(1.0f), p_rotation(0.0f) {
+Node::Node() : m_position(Vec2(0, 0)), m_parent(nullptr), m_scale(1.0f), m_rotation(0.0f) {
   p_director = Director::getInstance();
   p_fontManager = FontManager::getInstance();
   p_textureManager = TextureManager::getInstance();
@@ -29,38 +29,38 @@ bool Node::init() {
 }
 
 void Node::setPosition(Vec2 pos) {
-  p_position = pos;
+  m_position = pos;
 }
 void Node::setPositionX(float x) {
-  p_position.x = x;
+  m_position.x = x;
 }
 void Node::setPositionY(float y) {
-  p_position.y = y;
+  m_position.y = y;
 }
 Vec2 Node::getPosition() {
-  return p_position;
+  return m_position;
 }
 float Node::getPositionX() {
-  return p_position.x;
+  return m_position.x;
 }
 float Node::getPositionY() {
-  return p_position.y;
+  return m_position.y;
 }
 
 void Node::setScale(float scale) {
   if (scale < 0)
     return; // Why would you want negative scale?
-  p_scale = scale;
+  m_scale = scale;
 }
 float Node::getScale() {
-  return p_scale;
+  return m_scale;
 }
 
 void Node::setRotation(float rotation) {
-  p_rotation = rotation;
+  m_rotation = rotation;
 }
 float Node::getRotation() {
-  return p_rotation;
+  return m_rotation;
 }
 
 void Node::addChild(Node* child) {
@@ -74,7 +74,7 @@ void Node::addChild(Node* child) {
   (void)assertNotSelfChild;
   STARASSERT(assertNotSelfChild(), "A node cannot be the child of his own children");
 
-  p_children.push_back(child);
+  m_children.push_back(child);
   child->setParent(this);
   child->onEnter();
 }
@@ -87,15 +87,15 @@ void Node::onExit() {
 }
 
 void Node::setParent(Node* parent) {
-  p_parent = parent;
+  m_parent = parent;
 }
 
 Node* Node::getParent() {
-  return p_parent;
+  return m_parent;
 }
 
 void Node::draw() {
-  for (auto child : p_children) {
+  for (auto child : m_children) {
     child->draw();
   }
 }
@@ -105,7 +105,7 @@ Vec2 Node::getContentSize() {
 }
 
 const std::vector<Node*> Node::getChildren() {
-  return p_children.vector();
+  return m_children.vector();
 }
 
 void Node::update(float dt) {
@@ -133,14 +133,14 @@ void Node::removeFromParentAndCleanup() {
 }
 
 void Node::removeChild(Node* child) {
-  for (size_t i = 0; i < p_children.size(); i++) {
-    Node* node = p_children.at(i);
+  for (size_t i = 0; i < m_children.size(); i++) {
+    Node* node = m_children.at(i);
     if (node == child) {
       child->onExit();
-      p_children.erase(p_children.begin() + i);
+      m_children.erase(m_children.begin() + i);
     }
   }
-  child->p_children.clear();
+  child->m_children.clear();
 }
 
 void Node::removeChildAndCleanup(Node* child) {
@@ -149,12 +149,12 @@ void Node::removeChildAndCleanup(Node* child) {
 }
 
 void Node::removeAllChildrenAndCleanup() {
-  for (Node* child : p_children) {
+  for (Node* child : m_children) {
     child->onExit();
     child->cleanup();
     child->removeAllChildrenAndCleanup();
   }
-  p_children.clear();
+  m_children.clear();
 }
 
 void Node::runAction(Action* action) {

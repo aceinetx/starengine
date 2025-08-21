@@ -64,6 +64,12 @@ void Director::drawInspector() {
     ImGui::DragFloat("Rotation", &rotation, 0.1f);
     selectedNode->setRotation(rotation);
 
+    // Z Order
+    int zOrder = selectedNode->getZOrder();
+    if (ImGui::InputInt("Z Order", &zOrder)) {
+      selectedNode->setZOrder(zOrder);
+    }
+
     // Zoom (if camera)
     if (auto camera = dynamic_cast<Camera*>(selectedNode)) {
       float zoom = camera->getZoom();

@@ -7,7 +7,8 @@
 #include "Macros.h"
 #include "Scheduler.h"
 #include "TextureManager.h"
-#include <cstdio>
+#include <algorithm>
+#include <filesystem>
 
 using namespace star;
 
@@ -74,9 +75,7 @@ void Node::addChild(Node* child) {
   (void)assertNotSelfChild;
   STARASSERT(assertNotSelfChild(), "A node cannot be the child of his own children");
 
-  m_children.push_back(child);
-  child->setParent(this);
-  child->onEnter();
+  insertChild(child, 0);
 }
 
 void Node::onEnter() {
@@ -164,6 +163,30 @@ void Node::runAction(Action* action) {
 
 void Node::stopAllActions() {
   p_actionManager->removeAllActionsFromTarget(this);
+}
+
+void Node::insertChild(Node* child, int zOrder) {
+  child->setParent(this);
+  child->setZOrder(zOrder);
+  child->onEnter();
+  m_children.push_back(child);
+
+  p_sortSceneGraph();
+}
+
+int Node::getZOrder() {
+  return m_zOrder;
+}
+
+void Node::setZOrder(int zOrder) {
+  STARASSERT(m_parent, "This node has no parent");
+  m_zOrder = zOrder;
+  m_parent->p_sortSceneGraph();
+}
+
+void Node::p_sortSceneGraph() {
+  std::sort(m_children.begin(), m_children.end(),
+            [](Node* a, Node* b) { return a->getZOrder() < b->getZOrder(); });
 }
 
 Node* Node::create() {

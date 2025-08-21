@@ -24,11 +24,18 @@ class ActionManager;
  */
 class Node : public Object {
 private:
+  /** position of the node */
   Vec2 m_position;
+  /** vector of the node's children */
   ObjectVector<Node*> m_children;
+  /** node's parent */
   Node* m_parent;
+  /** node's scale */
   float m_scale;
+  /** node's rotation */
   float m_rotation;
+  /** node's z order */
+  int m_zOrder;
 
 protected:
   /** director instance */
@@ -43,6 +50,9 @@ protected:
   EventDispatcher* p_eventDispatcher;
   /** action manager instance */
   ActionManager* p_actionManager;
+
+private:
+  void p_sortSceneGraph();
 
 public:
   Node();
@@ -185,6 +195,24 @@ public:
    * Remove all actions from this node
    */
   virtual void stopAllActions();
+
+  /**
+   * Insert child at a certain Z order
+   *
+   * This is a complex operation that also sorts the scene graph so you should avoid calling it many
+   * times
+   */
+  virtual void insertChild(Node* child, int zOrder);
+
+  /**
+   * Set Z Order of the node
+   */
+  virtual void setZOrder(int zOrder);
+
+  /**
+   * Get Z Order of the node
+   */
+  virtual int getZOrder();
 
   /**
    * Create an autoreleased Node

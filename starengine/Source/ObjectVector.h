@@ -53,6 +53,14 @@ public:
     std::vector<T>::erase(position);
   }
   /**
+   * Insert an retain an object at a given position
+   */
+  virtual void insert(typename std::vector<T>::iterator position, T object) {
+    object->retain();
+
+    std::vector<T>::insert(position, object);
+  }
+  /**
    * Get a std::vector equivalent of the current vector
    */
   virtual std::vector<T> vector() {

@@ -165,6 +165,10 @@ void Node::stopAllActions() {
   p_actionManager->removeAllActionsFromTarget(this);
 }
 
+size_t Node::getNumberOfRunningActions() {
+  return p_actionManager->getNumberOfRunningActions(this);
+}
+
 void Node::insertChild(Node* child, int zOrder) {
   child->setParent(this);
   child->setZOrder(zOrder);

@@ -11,18 +11,21 @@ void Sprite::setTexture(std::string texturePath) {
 
 void Sprite::draw() {
   Vec2 pos = getPosition();
-  pos *= getParent()->getScale();
+  float parentRotDeg = -getParent()->getRotation();
+  float r = parentRotDeg * (M_PI / 180.0f);
+  float s = getParent()->getScale();
 
-  // Multiply the local coordinates by the rotation matrix
-  float parentRot = getParent()->getRotation();
-  pos = Vec2(pos.x * cosf(parentRot) + pos.y * -sinf(parentRot),
-             pos.x * sinf(parentRot) + pos.y * cosf(parentRot));
-  pos += getParent()->getPosition();
+  // Scale then rotate then translate
+  pos *= s;
+  Vec2 rotated = Vec2(pos.x * cosf(r) - pos.y * sinf(r), pos.x * sinf(r) + pos.y * cosf(r));
+  rotated += getParent()->getPosition();
+  pos = rotated;
 
+  // Translated scale and rotation
   float scale = getScale() / (1.0f / getParent()->getScale());
   float rotation = getRotation() + getParent()->getRotation();
 
-  // Ugly math goin' on here!
+  // Ugly stuff goin' on here!
   Rectangle src(0, 0, p_texture.width, p_texture.height);
   Rectangle dest(pos.x, GetScreenHeight() - pos.y, p_texture.width * scale,
                  p_texture.height * scale);

@@ -30,7 +30,7 @@
 
 #define STARASSERT(expr, ...)                                                                      \
   if (!(expr)) {                                                                                   \
-    fmt::println(__VA_ARGS__);                                                                     \
+    fmt::println("[star] Assertion failed {}: {}", #expr, __VA_ARGS__);                            \
     std::abort();                                                                                  \
   }
 

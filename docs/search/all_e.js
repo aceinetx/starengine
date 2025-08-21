@@ -19,13 +19,14 @@ var searchData=
   ['setstring_16',['setString',['../classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65',1,'star::Label']]],
   ['settexture_17',['setTexture',['../classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9',1,'star::Sprite']]],
   ['setzoom_18',['setZoom',['../classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5',1,'star::Camera']]],
-  ['sprite_19',['Sprite',['../classstar_1_1Sprite.html',1,'star']]],
-  ['star_20',['star',['../namespacestar.html',1,'']]],
-  ['star_3a_3aease_21',['ease',['../namespacestar_1_1ease.html',1,'star']]],
-  ['startwithtarget_22',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
-  ['state_23',['state',['../structstar_1_1RaylibEvent.html#afa19b484061a3ef0430b76c1cd37aa8c',1,'star::RaylibEvent']]],
-  ['statsdisplay_24',['statsDisplay',['../classstar_1_1Director.html#a2e7bfbf86aff0dbc224a328e0b23ba26',1,'star::Director']]],
-  ['step_25',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],
-  ['stepactions_26',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
-  ['stopallactions_27',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
+  ['setzorder_19',['setZOrder',['../classstar_1_1Node.html#ad51ad5397df1c97fe7e95a25f5f78714',1,'star::Node']]],
+  ['sprite_20',['Sprite',['../classstar_1_1Sprite.html',1,'star']]],
+  ['star_21',['star',['../namespacestar.html',1,'']]],
+  ['star_3a_3aease_22',['ease',['../namespacestar_1_1ease.html',1,'star']]],
+  ['startwithtarget_23',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
+  ['state_24',['state',['../structstar_1_1RaylibEvent.html#afa19b484061a3ef0430b76c1cd37aa8c',1,'star::RaylibEvent']]],
+  ['statsdisplay_25',['statsDisplay',['../classstar_1_1Director.html#a2e7bfbf86aff0dbc224a328e0b23ba26',1,'star::Director']]],
+  ['step_26',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],
+  ['stepactions_27',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
+  ['stopallactions_28',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
 ];

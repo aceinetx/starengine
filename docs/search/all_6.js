@@ -23,5 +23,6 @@ var searchData=
   ['getstring_20',['getString',['../classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1',1,'star::Label']]],
   ['gettexture_21',['getTexture',['../classstar_1_1TextureManager.html#add8967a2f916e428e71f4539e55affa3',1,'star::TextureManager']]],
   ['getvisiblesize_22',['getVisibleSize',['../classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1',1,'star::Director']]],
-  ['getzoom_23',['getZoom',['../classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45',1,'star::Camera']]]
+  ['getzoom_23',['getZoom',['../classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45',1,'star::Camera']]],
+  ['getzorder_24',['getZOrder',['../classstar_1_1Node.html#a5473582320dae3aeca20330a1ff87ee3',1,'star::Node']]]
 ];

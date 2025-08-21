@@ -15,8 +15,9 @@ var searchData=
   ['setstring_12',['setString',['../classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65',1,'star::Label']]],
   ['settexture_13',['setTexture',['../classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9',1,'star::Sprite']]],
   ['setzoom_14',['setZoom',['../classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5',1,'star::Camera']]],
-  ['startwithtarget_15',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
-  ['step_16',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],
-  ['stepactions_17',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
-  ['stopallactions_18',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
+  ['setzorder_15',['setZOrder',['../classstar_1_1Node.html#ad51ad5397df1c97fe7e95a25f5f78714',1,'star::Node']]],
+  ['startwithtarget_16',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
+  ['step_17',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],
+  ['stepactions_18',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
+  ['stopallactions_19',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
 ];

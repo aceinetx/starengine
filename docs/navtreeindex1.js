@@ -1,5 +1,9 @@
 var NAVTREEINDEX1 =
 {
+"classstar_1_1Node.html#aa6ebdf02cb1997f6e13b7a61d9f62191":[1,0,1,13,34],
+"classstar_1_1Node.html#aaabfedeca4c915c087c1ce5ee941d7c2":[0,0,0,14,23],
+"classstar_1_1Node.html#aaabfedeca4c915c087c1ce5ee941d7c2":[1,0,1,13,23],
+"classstar_1_1Node.html#ab084382dd9416ffeeb3aaca9b671b696":[0,0,0,14,38],
 "classstar_1_1Node.html#ab084382dd9416ffeeb3aaca9b671b696":[1,0,1,13,38],
 "classstar_1_1Node.html#ab15c88aa3d996d3f8082d44adf4fde42":[0,0,0,14,19],
 "classstar_1_1Node.html#ab15c88aa3d996d3f8082d44adf4fde42":[1,0,1,13,19],

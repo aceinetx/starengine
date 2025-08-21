@@ -1,7 +1,6 @@
 #include "Label.h"
 #include "FontManager.h"
 #include <raylib.h>
-#include <rlgl.h>
 
 using namespace star;
 

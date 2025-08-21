@@ -41,7 +41,7 @@ bool MainScene::init() {
   }
 
   // scale down the logo with an easing
-  static float action_time = 10.0f;
+  static float action_time = 2.0f;
   {
     auto action = EaseBackInOut::create(ScaleTo::create(action_time, 0.5f));
     m_logo->runAction(action);

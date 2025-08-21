@@ -1,4 +1,5 @@
 #include "AppDelegate.h"
+#include "ActionScene.h"
 #include "MainScene.h"
 #include <raylib.h>
 
@@ -14,7 +15,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
   InitWindow(1280, 720, "StarEngine");
   SetTargetFPS(60);
 
-  director->runWithScene(MainScene::create());
+  director->runWithScene(ActionScene::create());
   director->statsDisplay = false;
 
   return true;

@@ -1,8 +1,4 @@
 #include "MainScene.h"
-#include "ActionEase.h"
-#include "MoveTo.h"
-#include "Vec2.h"
-#include "fmt/base.h"
 #include <fmt/format.h>
 #include <raylib.h>
 
@@ -12,26 +8,34 @@ bool MainScene::init() {
   if (!Scene::init())
     return false;
 
+  // get the director instance
   auto director = Director::getInstance();
+
+  // get the window size
   auto winSize = director->getVisibleSize();
 
   {
+    // create a hello label
     auto label = Label::createWithDefaultFont("Hello from starengine", 30.0f);
     label->setPosition(winSize / 2);
     addChild(label);
 
+    // create another label
     auto labelSize = Label::create();
     labelSize->setFont("Mecha.ttf");
     labelSize->setString(fmt::format("The window size is {}", winSize));
     labelSize->setPosition(Vec2(winSize.x / 2, label->getPositionY() - label->getContentSize().y));
     addChild(labelSize);
 
+    // create a sprite with the starengine logo on it
     m_logo = Sprite::create("logo.png");
     m_logo->setPosition(winSize / 2);
     m_logo->setScale(0.5f);
     m_logo->setPositionY(m_logo->getContentSize().y * m_logo->getScale() / 1.5f);
+    m_logo->setScale(1.5f);
     addChild(m_logo);
 
+    // create another sprite within the logo
     {
       auto logo = Sprite::create("logo.png");
       logo->setScale(0.5f);
@@ -40,20 +44,19 @@ bool MainScene::init() {
     }
   }
 
-  scheduleOnce(
-      [this](float) {
-        auto action = MoveTo::create(1.0f, Vec2(0, 0));
-        auto ease = BackInOut::create(action);
-        m_logo->runAction(ease);
-      },
-      3.0f);
+  // scale down the logo with an easing
+  auto action = ScaleTo::create(1.0f, 0.5f);
+  auto ease = EaseBackInOut::create(action);
+  m_logo->runAction(ease);
 
-  scheduleUpdate();
-
+  // add a keyboard listener
   auto keyboardListener = EventListenerKeyboard::create();
   keyboardListener->onKeyDown = CALLBACK_1(MainScene::onKeyDown, this);
   keyboardListener->onKeyUp = CALLBACK_1(MainScene::onKeyUp, this);
   EventDispatcher::getInstance()->addListenerWithSceneGraphPriority(keyboardListener, this);
+
+  // call update() every single frame
+  scheduleUpdate();
 
   return true;
 }

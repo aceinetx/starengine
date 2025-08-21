@@ -15,7 +15,7 @@ bool AppDelegate::applicationDidFinishLaunching() {
   InitWindow(1280, 720, "StarEngine");
   SetTargetFPS(60);
 
-  director->runWithScene(ActionScene::create());
+  director->runWithScene(MainScene::create());
   director->statsDisplay = false;
 
   return true;

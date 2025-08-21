@@ -1,4 +1,5 @@
 #include "MainScene.h"
+#include "ActionScene.h"
 #include <fmt/format.h>
 #include <raylib.h>
 
@@ -12,16 +13,19 @@ bool MainScene::init() {
 
   {
     // create a hello label, it's an autorelease object
-    auto label = Label::createWithDefaultFont("Hello from starengine", 30.0f);
-    label->setPosition(winSize / 2);
-    addChild(label);
+    auto helloLabel = Label::createWithDefaultFont("Hello from starengine", 30.0f);
+    helloLabel->setPosition(winSize / 2);
+    addChild(helloLabel);
 
     // create another label
-    auto labelSize = Label::create();
-    labelSize->setFont("Mecha.ttf");
-    labelSize->setString(fmt::format("The window size is {}", winSize));
-    labelSize->setPosition(Vec2(winSize.x / 2, label->getPositionY() - label->getContentSize().y));
-    addChild(labelSize);
+    {
+      auto labelSize = Label::create();
+      labelSize->setFont("Mecha.ttf");
+      labelSize->setString(fmt::format("The window size is {}", winSize));
+      labelSize->setPosition(
+          Vec2(winSize.x / 2, helloLabel->getPositionY() - helloLabel->getContentSize().y));
+      addChild(labelSize);
+    }
 
     // create a sprite with the starengine logo on it
     m_logo = Sprite::create("logo.png");
@@ -29,6 +33,7 @@ bool MainScene::init() {
     m_logo->setScale(0.5f);
     m_logo->setPositionY(m_logo->getContentSize().y * m_logo->getScale() / 1.5f);
     m_logo->setScale(1.5f);
+    m_logo->setZOrder(1);
     addChild(m_logo);
 
     // create another sprite within the logo
@@ -37,6 +42,12 @@ bool MainScene::init() {
       logo->setScale(0.5f);
       logo->setPositionY(100);
       m_logo->addChild(logo);
+    }
+
+    {
+      auto label = Label::createWithDefaultFont("Press Q to change scene", 40.0f);
+      label->setPosition(Vec2(winSize.x / 2, label->getContentSize().y / 2));
+      addChild(label);
     }
   }
 
@@ -95,6 +106,10 @@ void MainScene::update(float dt) {
 }
 
 bool MainScene::onKeyDown(KeyboardKey key) {
+  if (key == KEY_Q) {
+    p_director->replaceScene(ActionScene::create());
+    return true;
+  }
   m_keysDown.insert(key);
   return true;
 }

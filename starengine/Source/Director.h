@@ -34,6 +34,11 @@ public:
   void runWithScene(Scene* scene);
 
   /**
+   * Replaces a scene with another scene
+   */
+  void replaceScene(Scene* scene);
+
+  /**
    * Get the current running scene
    */
   Scene* getRunningScene();

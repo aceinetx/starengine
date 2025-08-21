@@ -44,3 +44,12 @@ void EventDispatcher::addListenerWithSceneGraphPriority(EventListener* listener,
   listener->p_attachedNode = node;
   p_listeners.push_back(listener);
 }
+
+void EventDispatcher::removeAllListenersFromTarget(Node* target) {
+  for (size_t i = 0; i < p_listeners.size(); i++) {
+    if (p_listeners[i]->p_attachedNode == target) {
+      p_listeners.erase(p_listeners.begin() + i);
+      i--;
+    }
+  }
+}

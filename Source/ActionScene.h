@@ -9,6 +9,7 @@ private:
 public:
   bool init() override;
 
+  void update(float dt) override;
   bool onKeyPressed(KeyboardKey key);
 
   CREATE_FUNC(ActionScene);

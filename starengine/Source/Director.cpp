@@ -26,6 +26,13 @@ void Director::runWithScene(Scene* scene) {
   currentScene->retain();
 }
 
+void Director::replaceScene(Scene* scene) {
+  currentScene->removeFromParentAndCleanup();
+
+  currentScene = scene;
+  scene->retain();
+}
+
 Scene* Director::getRunningScene() {
   return currentScene;
 }

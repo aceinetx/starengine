@@ -1,9 +1,12 @@
 #pragma once
-
 #include "Node.h"
 #include <functional>
-namespace star {
 
+namespace star {
+/** ScheduleEntry
+ *
+ * Contains data about a certain schedule
+ */
 struct ScheduleEntry {
   std::function<void(float)> function;
   float initialTime;

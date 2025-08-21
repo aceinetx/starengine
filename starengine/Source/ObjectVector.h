@@ -1,5 +1,4 @@
 #pragma once
-#include "Object.h"
 #include <fmt/base.h>
 #include <vector>
 
@@ -14,6 +13,7 @@ public:
   using std::vector<T>::end;
   using std::vector<T>::size;
   using std::vector<T>::at;
+  using std::vector<T>::operator[];
 
   ~ObjectVector() {
     clear();

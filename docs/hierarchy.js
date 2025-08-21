@@ -10,7 +10,8 @@ var hierarchy =
     [ "fmt::formatter< Vector2 >", "classfmt_1_1formatter_3_01Vector2_01_4.html", null ],
     [ "star::Object", "classstar_1_1Object.html", [
       [ "star::Action", "classstar_1_1Action.html", [
-        [ "star::MoveTo", "classstar_1_1MoveTo.html", null ]
+        [ "star::MoveTo", "classstar_1_1MoveTo.html", null ],
+        [ "star::ScaleTo", "classstar_1_1ScaleTo.html", null ]
       ] ],
       [ "star::EventListener", "classstar_1_1EventListener.html", [
         [ "star::EventListenerKeyboard", "classstar_1_1EventListenerKeyboard.html", null ]

@@ -27,6 +27,10 @@ public:
    */
   void removeAllActionsFromTarget(Node* target);
   /**
+   * Remove all done actions
+   */
+  void removeAllDoneActions();
+  /**
    * Run step() on every added action
    */
   void stepActions(float dt);

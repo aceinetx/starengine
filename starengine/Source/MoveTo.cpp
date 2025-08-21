@@ -3,9 +3,14 @@
 using namespace star;
 
 void MoveTo::update(float time) {
-  p_initialPosition = p_target->getPosition() - p_diff;
-  p_diff = (p_initialPosition + (p_position - p_initialPosition) * time) - p_target->getPosition();
-  p_target->setPosition(p_target->getPosition() + p_diff);
+  static bool s_firstTick = true;
+  if (s_firstTick) {
+    p_initialPosition = p_target->getPosition();
+    s_firstTick = false;
+  }
+
+  Vec2 pos = (p_initialPosition + (p_position - p_initialPosition) * time);
+  p_target->setPosition(pos);
 }
 
 MoveTo* MoveTo::create(float duration, Vec2 pos) {

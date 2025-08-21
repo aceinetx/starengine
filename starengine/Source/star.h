@@ -17,6 +17,7 @@
 #include "Node.h"
 #include "Object.h"
 #include "ObjectVector.h"
+#include "ScaleTo.h"
 #include "Scene.h"
 #include "Sprite.h"
 #include "TextureManager.h"

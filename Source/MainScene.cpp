@@ -41,7 +41,7 @@ bool MainScene::init() {
 
   scheduleOnce(
       [this](float) {
-        auto action = MoveTo::create(2.0f, Vec2(0, 0));
+        auto action = MoveTo::create(10.0f, Vec2(0, 0));
         m_logo->runAction(action);
       },
       3.0f);

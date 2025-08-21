@@ -17,7 +17,14 @@ void ActionManager::runActionForTarget(Action* action, Node* target) {
 void ActionManager::removeAllActionsFromTarget(Node* target) {
   for (size_t i = 0; i < p_actions.size(); i++) {
     if (p_actions[i]->p_target == target) {
-      p_actions[i]->release();
+      p_actions.erase(p_actions.begin() + i);
+    }
+  }
+}
+
+void ActionManager::removeAllDoneActions() {
+  for (size_t i = 0; i < p_actions.size(); i++) {
+    if (p_actions[i]->isDone()) {
       p_actions.erase(p_actions.begin() + i);
     }
   }
@@ -27,4 +34,5 @@ void ActionManager::stepActions(float dt) {
   for (Action* action : p_actions) {
     action->step(dt);
   }
+  removeAllDoneActions();
 }

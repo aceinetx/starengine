@@ -4,13 +4,12 @@
 namespace star {
 /** MoveTo
  *
- * Action that moves a node to a certain position
+ * Action that moves a node by certain position in a given amount of time
  */
 class MoveTo : public Action {
 protected:
   Vec2 p_position;
   Vec2 p_initialPosition;
-  Vec2 p_diff;
 
 public:
   void update(float time) override;

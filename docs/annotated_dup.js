@@ -21,6 +21,7 @@ var annotated_dup =
       [ "Object", "classstar_1_1Object.html", "classstar_1_1Object" ],
       [ "ObjectVector", "classstar_1_1ObjectVector.html", null ],
       [ "RaylibEvent", "structstar_1_1RaylibEvent.html", null ],
+      [ "ScaleTo", "classstar_1_1ScaleTo.html", null ],
       [ "Scene", "classstar_1_1Scene.html", "classstar_1_1Scene" ],
       [ "ScheduleEntry", "structstar_1_1ScheduleEntry.html", null ],
       [ "Scheduler", "classstar_1_1Scheduler.html", "classstar_1_1Scheduler" ],

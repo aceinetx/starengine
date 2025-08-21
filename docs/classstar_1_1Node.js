@@ -27,5 +27,6 @@ var classstar_1_1Node =
     [ "setPositionY", "classstar_1_1Node.html#a5c97d36655f0daa71a5f6c715d2b0470", null ],
     [ "setRotation", "classstar_1_1Node.html#a62dda439f77712f0d9b405ce887df676", null ],
     [ "setScale", "classstar_1_1Node.html#acf0955a52f51a9d6c8b0c9267b1e8668", null ],
+    [ "stopAllActions", "classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d", null ],
     [ "update", "classstar_1_1Node.html#a61d250c20cbd8bfee499bf93370be43f", null ]
 ];

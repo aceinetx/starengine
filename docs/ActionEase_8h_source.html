@@ -95,87 +95,91 @@ $(function(){initNavTree('ActionEase_8h_source.html','',''); });
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Action.h&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>star {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacestar.html">star</a> {</div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classstar_1_1ActionEase.html">    9</a></span><span class="keyword">class </span>ActionEase : <span class="keyword">public</span> <a class="code hl_class" href="classstar_1_1Action.html">Action</a> {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_class" href="classstar_1_1Action.html">Action</a>* p_inner;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>  ~ActionEase();</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classstar_1_1Action.html">Action</a>* getInnerAction();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918">startWithTarget</a>(<a class="code hl_class" href="classstar_1_1Node.html">Node</a>* target) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> time) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>};</div>
-</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classstar_1_1ActionEase.html#ad025877db615cdb4ea85e7c9817b9823">   12</a></span>  <a class="code hl_class" href="classstar_1_1Action.html">Action</a>* <a class="code hl_variable" href="classstar_1_1ActionEase.html#ad025877db615cdb4ea85e7c9817b9823">p_inner</a>;</div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  ~ActionEase();</div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>  <span class="keyword">virtual</span> <a class="code hl_class" href="classstar_1_1Action.html">Action</a>* <a class="code hl_function" href="classstar_1_1ActionEase.html#a3348f9232944bb9182a8e42544df545b">getInnerAction</a>();</div>
 <div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span> </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span><span class="preprocessor">#define DECLARE_EASING_CLASS(name)                                                                 \</span></div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">  class name : public ActionEase {                                                                 \</span></div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span><span class="preprocessor">  public:                                                                                          \</span></div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span><span class="preprocessor">    static name* create(Action* inner);                                                            \</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">    virtual void update(float dt);                                                                 \</span></div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">  }</span></div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">#define DECLARE_EASING_CLASS_RATE(name)                                                            \</span></div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">  class name : public ActionEase {                                                                 \</span></div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">  protected:                                                                                       \</span></div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span><span class="preprocessor">    float p_rate;                                                                                  \</span></div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">                                                                                                   \</span></div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">  public:                                                                                          \</span></div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">    static name* create(Action* inner, float rate);                                                \</span></div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">    virtual void update(float dt);                                                                 \</span></div>
-<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">  }</span></div>
-<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
-<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>DECLARE_EASING_CLASS_RATE(EaseIn);</div>
-<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>DECLARE_EASING_CLASS_RATE(EaseOut);</div>
-<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>DECLARE_EASING_CLASS_RATE(EaseInOut);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918">startWithTarget</a>(<a class="code hl_class" href="classstar_1_1Node.html">Node</a>* target) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1ActionEase.html#a77679f09c02cf75fb54776470c339fc5">update</a>(<span class="keywordtype">float</span> time) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span>};</div>
+</div>
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span> </div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span><span class="preprocessor">#define DECLARE_EASING_CLASS(name)                                                                 \</span></div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="preprocessor">  class name : public ActionEase {                                                                 \</span></div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span><span class="preprocessor">  public:                                                                                          \</span></div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="preprocessor">    static name* create(Action* inner);                                                            \</span></div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span><span class="preprocessor">    virtual void update(float dt);                                                                 \</span></div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span><span class="preprocessor">  }</span></div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span> </div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span><span class="preprocessor">#define DECLARE_EASING_CLASS_RATE(name)                                                            \</span></div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span><span class="preprocessor">  class name : public ActionEase {                                                                 \</span></div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span><span class="preprocessor">  protected:                                                                                       \</span></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">    float p_rate;                                                                                  \</span></div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="preprocessor">                                                                                                   \</span></div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span><span class="preprocessor">  public:                                                                                          \</span></div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span><span class="preprocessor">    static name* create(Action* inner, float rate);                                                \</span></div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span><span class="preprocessor">    virtual void update(float dt);                                                                 \</span></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="preprocessor">  }</span></div>
 <div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
-<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>DECLARE_EASING_CLASS(EaseQuadraticIn);</div>
-<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>DECLARE_EASING_CLASS(EaseQuadraticOut);</div>
-<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>DECLARE_EASING_CLASS(EaseQuadraticInOut);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>DECLARE_EASING_CLASS_RATE(EaseIn);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>DECLARE_EASING_CLASS_RATE(EaseOut);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>DECLARE_EASING_CLASS_RATE(EaseInOut);</div>
 <div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span> </div>
-<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>DECLARE_EASING_CLASS(EaseSineIn);</div>
-<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>DECLARE_EASING_CLASS(EaseSineOut);</div>
-<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>DECLARE_EASING_CLASS(EaseSineInOut);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>DECLARE_EASING_CLASS(EaseQuadraticIn);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>DECLARE_EASING_CLASS(EaseQuadraticOut);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>DECLARE_EASING_CLASS(EaseQuadraticInOut);</div>
 <div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
-<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>DECLARE_EASING_CLASS(EaseQuadIn);</div>
-<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>DECLARE_EASING_CLASS(EaseQuadOut);</div>
-<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>DECLARE_EASING_CLASS(EaseQuadInOut);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>DECLARE_EASING_CLASS(EaseSineIn);</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>DECLARE_EASING_CLASS(EaseSineOut);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>DECLARE_EASING_CLASS(EaseSineInOut);</div>
 <div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span> </div>
-<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>DECLARE_EASING_CLASS(EaseCubicIn);</div>
-<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>DECLARE_EASING_CLASS(EaseCubicOut);</div>
-<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>DECLARE_EASING_CLASS(EaseCubicInOut);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>DECLARE_EASING_CLASS(EaseQuadIn);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>DECLARE_EASING_CLASS(EaseQuadOut);</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>DECLARE_EASING_CLASS(EaseQuadInOut);</div>
 <div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span> </div>
-<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>DECLARE_EASING_CLASS(EaseQuartIn);</div>
-<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>DECLARE_EASING_CLASS(EaseQuartOut);</div>
-<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>DECLARE_EASING_CLASS(EaseQuartInOut);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>DECLARE_EASING_CLASS(EaseCubicIn);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>DECLARE_EASING_CLASS(EaseCubicOut);</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>DECLARE_EASING_CLASS(EaseCubicInOut);</div>
 <div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
-<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>DECLARE_EASING_CLASS(EaseQuintIn);</div>
-<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>DECLARE_EASING_CLASS(EaseQuintOut);</div>
-<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>DECLARE_EASING_CLASS(EaseQuintInOut);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>DECLARE_EASING_CLASS(EaseQuartIn);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>DECLARE_EASING_CLASS(EaseQuartOut);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>DECLARE_EASING_CLASS(EaseQuartInOut);</div>
 <div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> </div>
-<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>DECLARE_EASING_CLASS(EaseExpoIn);</div>
-<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>DECLARE_EASING_CLASS(EaseExpoOut);</div>
-<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>DECLARE_EASING_CLASS(EaseExpoInOut);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>DECLARE_EASING_CLASS(EaseQuintIn);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>DECLARE_EASING_CLASS(EaseQuintOut);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>DECLARE_EASING_CLASS(EaseQuintInOut);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>DECLARE_EASING_CLASS(EaseCircIn);</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>DECLARE_EASING_CLASS(EaseCircOut);</div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>DECLARE_EASING_CLASS(EaseCircInOut);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>DECLARE_EASING_CLASS(EaseExpoIn);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>DECLARE_EASING_CLASS(EaseExpoOut);</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>DECLARE_EASING_CLASS(EaseExpoInOut);</div>
 <div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span> </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>DECLARE_EASING_CLASS(EaseBackIn);</div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>DECLARE_EASING_CLASS(EaseBackOut);</div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>DECLARE_EASING_CLASS(EaseBackInOut);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>DECLARE_EASING_CLASS(EaseCircIn);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>DECLARE_EASING_CLASS(EaseCircOut);</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>DECLARE_EASING_CLASS(EaseCircInOut);</div>
 <div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span> </div>
-<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>DECLARE_EASING_CLASS(EaseBounceIn);</div>
-<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>DECLARE_EASING_CLASS(EaseBounceOut);</div>
-<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>DECLARE_EASING_CLASS(EaseBounceInOut);</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span>DECLARE_EASING_CLASS(EaseBackIn);</div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span>DECLARE_EASING_CLASS(EaseBackOut);</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>DECLARE_EASING_CLASS(EaseBackInOut);</div>
 <div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span> </div>
-<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>} <span class="comment">// namespace star</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>DECLARE_EASING_CLASS(EaseBounceIn);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>DECLARE_EASING_CLASS(EaseBounceOut);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>DECLARE_EASING_CLASS(EaseBounceInOut);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span> </div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>} <span class="comment">// namespace star</span></div>
 <div class="ttc" id="aclassstar_1_1ActionEase_html_a04976f42219b97e850043ab9cd182918"><div class="ttname"><a href="classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918">star::ActionEase::startWithTarget</a></div><div class="ttdeci">virtual void startWithTarget(Node *target) override</div><div class="ttdef"><b>Definition</b> ActionEase.cpp:16</div></div>
+<div class="ttc" id="aclassstar_1_1ActionEase_html_a3348f9232944bb9182a8e42544df545b"><div class="ttname"><a href="classstar_1_1ActionEase.html#a3348f9232944bb9182a8e42544df545b">star::ActionEase::getInnerAction</a></div><div class="ttdeci">virtual Action * getInnerAction()</div><div class="ttdef"><b>Definition</b> ActionEase.cpp:12</div></div>
+<div class="ttc" id="aclassstar_1_1ActionEase_html_a77679f09c02cf75fb54776470c339fc5"><div class="ttname"><a href="classstar_1_1ActionEase.html#a77679f09c02cf75fb54776470c339fc5">star::ActionEase::update</a></div><div class="ttdeci">virtual void update(float time) override</div><div class="ttdef"><b>Definition</b> ActionEase.cpp:22</div></div>
+<div class="ttc" id="aclassstar_1_1ActionEase_html_ad025877db615cdb4ea85e7c9817b9823"><div class="ttname"><a href="classstar_1_1ActionEase.html#ad025877db615cdb4ea85e7c9817b9823">star::ActionEase::p_inner</a></div><div class="ttdeci">Action * p_inner</div><div class="ttdef"><b>Definition</b> ActionEase.h:12</div></div>
 <div class="ttc" id="aclassstar_1_1Action_html"><div class="ttname"><a href="classstar_1_1Action.html">star::Action</a></div><div class="ttdef"><b>Definition</b> Action.h:15</div></div>
 <div class="ttc" id="aclassstar_1_1Node_html"><div class="ttname"><a href="classstar_1_1Node.html">star::Node</a></div><div class="ttdef"><b>Definition</b> Node.h:25</div></div>
+<div class="ttc" id="anamespacestar_html"><div class="ttname"><a href="namespacestar.html">star</a></div><div class="ttdoc">StarEngine&#39;s base namespace.</div><div class="ttdef"><b>Definition</b> Action.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 </div><!-- container -->

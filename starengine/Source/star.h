@@ -24,3 +24,7 @@
 #include "TextureManager.h"
 #include "TweenFunction.h"
 #include "Vec2.h"
+/**
+ * @brief StarEngine's base namespace
+ */
+namespace star {}

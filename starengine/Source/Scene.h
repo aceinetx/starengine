@@ -12,6 +12,7 @@ namespace star {
  */
 class Scene : public Node {
 protected:
+  /** current camera of the scene */
   Camera* p_camera;
 
 public:

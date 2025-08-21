@@ -8,13 +8,16 @@ namespace star {
  */
 class ScaleTo : public Action {
 protected:
+  /** initial scale of the target */
   float p_initial;
+  /** goal scale */
   float p_scale;
 
 public:
   void update(float time) override;
   void startWithTarget(Node* target) override;
 
+  /** Create an autoreleased action */
   static ScaleTo* create(float duration, float scale);
 };
 } // namespace star

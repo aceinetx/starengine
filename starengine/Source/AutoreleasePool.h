@@ -11,12 +11,15 @@ namespace star {
  */
 class AutoreleasePool {
 protected:
+  /** global instance */
   static AutoreleasePool p_instance;
 
 private:
+  /** array of autoreleased objects */
   std::vector<Object*> objectArray;
 
 public:
+  /** get the global instance */
   static AutoreleasePool* getInstance();
 
   /**

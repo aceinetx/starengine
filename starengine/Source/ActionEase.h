@@ -8,11 +8,15 @@ namespace star {
  */
 class ActionEase : public Action {
 protected:
+  /** inner action */
   Action* p_inner;
 
 public:
   ~ActionEase();
 
+  /**
+   * Get the inner action
+   */
   virtual Action* getInnerAction();
 
   virtual void startWithTarget(Node* target) override;

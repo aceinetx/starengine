@@ -28,5 +28,11 @@ var classstar_1_1Node =
     [ "setRotation", "classstar_1_1Node.html#a62dda439f77712f0d9b405ce887df676", null ],
     [ "setScale", "classstar_1_1Node.html#acf0955a52f51a9d6c8b0c9267b1e8668", null ],
     [ "stopAllActions", "classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d", null ],
-    [ "update", "classstar_1_1Node.html#a61d250c20cbd8bfee499bf93370be43f", null ]
+    [ "update", "classstar_1_1Node.html#a61d250c20cbd8bfee499bf93370be43f", null ],
+    [ "p_actionManager", "classstar_1_1Node.html#a1742cbf29da3bdefea70674da8fc508f", null ],
+    [ "p_director", "classstar_1_1Node.html#aa6ebdf02cb1997f6e13b7a61d9f62191", null ],
+    [ "p_eventDispatcher", "classstar_1_1Node.html#a485b41c938991cfa690566406443b69a", null ],
+    [ "p_fontManager", "classstar_1_1Node.html#a03611920bbfde85c2f9e924f91f404b7", null ],
+    [ "p_scheduler", "classstar_1_1Node.html#a4b52d9b9f3a02f37f4ce51ffd2bb8898", null ],
+    [ "p_textureManager", "classstar_1_1Node.html#ab084382dd9416ffeeb3aaca9b671b696", null ]
 ];

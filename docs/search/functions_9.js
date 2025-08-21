@@ -1,22 +1,5 @@
 var searchData=
 [
-  ['scheduleonce_0',['scheduleOnce',['../classstar_1_1Node.html#a3d3f9f09f93b96f7044e4a187286c285',1,'star::Node']]],
-  ['scheduleoncefortarget_1',['scheduleOnceForTarget',['../classstar_1_1Scheduler.html#a88cc5cf719b652a9f19f27bbd77fa607',1,'star::Scheduler']]],
-  ['scheduleupdate_2',['scheduleUpdate',['../classstar_1_1Node.html#aaabfedeca4c915c087c1ce5ee941d7c2',1,'star::Node']]],
-  ['scheduleupdatefortarget_3',['scheduleUpdateForTarget',['../classstar_1_1Scheduler.html#a056aba334cd8061be2605292c6f32511',1,'star::Scheduler']]],
-  ['setfont_4',['setFont',['../classstar_1_1Label.html#a4d69ba1b1c700cdcabf2a3b28d25f96b',1,'star::Label']]],
-  ['setfontsize_5',['setFontSize',['../classstar_1_1Label.html#a1a93f44fb50b45d23b26c12ee4e5e0b7',1,'star::Label']]],
-  ['setparent_6',['setParent',['../classstar_1_1Node.html#ab5f0786bcb59591c528efb0b776797fc',1,'star::Node']]],
-  ['setposition_7',['setPosition',['../classstar_1_1Node.html#adb6f56d19f3966590c90ffe4097d061e',1,'star::Node']]],
-  ['setpositionx_8',['setPositionX',['../classstar_1_1Node.html#ae1dfc73d6122a95778d5d9db3d1fd913',1,'star::Node']]],
-  ['setpositiony_9',['setPositionY',['../classstar_1_1Node.html#a5c97d36655f0daa71a5f6c715d2b0470',1,'star::Node']]],
-  ['setrotation_10',['setRotation',['../classstar_1_1Node.html#a62dda439f77712f0d9b405ce887df676',1,'star::Node']]],
-  ['setscale_11',['setScale',['../classstar_1_1Node.html#acf0955a52f51a9d6c8b0c9267b1e8668',1,'star::Node']]],
-  ['setstring_12',['setString',['../classstar_1_1Label.html#a0f1228f3515597cdeff40438ff2a7b65',1,'star::Label']]],
-  ['settexture_13',['setTexture',['../classstar_1_1Sprite.html#ab7d65700421342b5ce39d908ec6fcee9',1,'star::Sprite']]],
-  ['setzoom_14',['setZoom',['../classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5',1,'star::Camera']]],
-  ['startwithtarget_15',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
-  ['step_16',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],
-  ['stepactions_17',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
-  ['stopallactions_18',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
+  ['pop_5fback_0',['pop_back',['../classstar_1_1ObjectVector.html#ac6c8be68fb243bc6c69e22636551b6dc',1,'star::ObjectVector']]],
+  ['push_5fback_1',['push_back',['../classstar_1_1ObjectVector.html#a81299d55d69612d69aa682c97f4f0ddb',1,'star::ObjectVector']]]
 ];

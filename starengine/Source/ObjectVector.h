@@ -19,25 +19,42 @@ public:
     clear();
   }
 
+  /**
+   * Add an element to the vector
+   *
+   * Retains the object
+   */
   virtual void push_back(T object) {
     object->retain();
     std::vector<T>::push_back(object);
   }
+  /**
+   * Pop and release the last element in the vector
+   */
   virtual void pop_back() {
     std::vector<T>::back()->release();
     std::vector<T>::pop_back();
   }
+  /**
+   * Clear the entire vector and release all objects
+   */
   virtual void clear() {
     for (T obj : *this) {
       obj->release();
     }
     std::vector<T>::clear();
   }
+  /**
+   * Erase an object from a position and release it
+   */
   virtual void erase(typename std::vector<T>::iterator position) {
     (*position)->release();
 
     std::vector<T>::erase(position);
   }
+  /**
+   * Get a std::vector equivalent of the current vector
+   */
   virtual std::vector<T> vector() {
     std::vector<T> vec;
     for (T obj : *this) {

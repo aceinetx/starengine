@@ -1,25 +1,7 @@
 var searchData=
 [
-  ['getcamera_0',['getCamera',['../classstar_1_1Scene.html#af84c0275edf85ab559bd7ee3ad387cc5',1,'star::Scene']]],
-  ['getchildren_1',['getChildren',['../classstar_1_1Node.html#a4bdef23ee2e31c88ea7faadde086ca3d',1,'star::Node']]],
-  ['getcontentsize_2',['getContentSize',['../classstar_1_1Camera.html#a7b05b28f269c06805d94d1e70bfcdff7',1,'star::Camera::getContentSize()'],['../classstar_1_1Label.html#a819f7e878e83f430ddb6d4eb0b946bc7',1,'star::Label::getContentSize()'],['../classstar_1_1Node.html#aa51b1c507ee5b0cf2999de66e5ff4d6f',1,'star::Node::getContentSize()'],['../classstar_1_1Sprite.html#a80c91164d537f98cd1351c1c5d8177e1',1,'star::Sprite::getContentSize()']]],
-  ['getdeltatime_3',['getDeltaTime',['../classstar_1_1Director.html#a5498d79afcea1d3f3852eaea9e02c9b5',1,'star::Director']]],
-  ['getduration_4',['getDuration',['../classstar_1_1Action.html#ac9e82f89f0866f4c479174f59d3e5a04',1,'star::Action']]],
-  ['getfont_5',['getFont',['../classstar_1_1FontManager.html#a2657dabbf238ddc5fb08c065aae34121',1,'star::FontManager']]],
-  ['getfontpath_6',['getFontPath',['../classstar_1_1Label.html#a1d529b1c7cf5a56b4eded60387387996',1,'star::Label']]],
-  ['getfontsize_7',['getFontSize',['../classstar_1_1Label.html#ae64eb330f89ddc74c417e87cf278c087',1,'star::Label']]],
-  ['getinstance_8',['getInstance',['../classstar_1_1Director.html#a8d2a4ca9e20cd400ddadd516efa111e0',1,'star::Director']]],
-  ['getparent_9',['getParent',['../classstar_1_1Node.html#a220a8d64cb0df1cce083ed38c1260615',1,'star::Node']]],
-  ['getposition_10',['getPosition',['../classstar_1_1Node.html#ab6283ce36200791c85db4d85e52440a8',1,'star::Node']]],
-  ['getpositionx_11',['getPositionX',['../classstar_1_1Node.html#ae7bb674dab874c64d35dc36ed8f6ac66',1,'star::Node']]],
-  ['getpositiony_12',['getPositionY',['../classstar_1_1Node.html#a5577307b04f360836ca412a5111a0591',1,'star::Node']]],
-  ['getraylibcamera_13',['getRaylibCamera',['../classstar_1_1Camera.html#af0c928910aeebde8a4a05a9ca0e049ee',1,'star::Camera']]],
-  ['getreferencecount_14',['getReferenceCount',['../classstar_1_1Object.html#a7f4406dc81bdc16e353e95f78026ffc7',1,'star::Object']]],
-  ['getrotation_15',['getRotation',['../classstar_1_1Node.html#af915e0f0c8cf0a1a9153ade2d81d8aee',1,'star::Node']]],
-  ['getrunningscene_16',['getRunningScene',['../classstar_1_1Director.html#aa129bd4639a6c9585a55c39d4ae8a29a',1,'star::Director']]],
-  ['getscale_17',['getScale',['../classstar_1_1Node.html#a546d5feb4e89abbd8cdca917fc0b5c7f',1,'star::Node']]],
-  ['getstring_18',['getString',['../classstar_1_1Label.html#adc668e922c657e0c317430cbd65080a1',1,'star::Label']]],
-  ['gettexture_19',['getTexture',['../classstar_1_1TextureManager.html#add8967a2f916e428e71f4539e55affa3',1,'star::TextureManager']]],
-  ['getvisiblesize_20',['getVisibleSize',['../classstar_1_1Director.html#ab72addea91e23055184ce0cef65e2fa1',1,'star::Director']]],
-  ['getzoom_21',['getZoom',['../classstar_1_1Camera.html#a4cfd026ff2a7c316028cdeab591e8b45',1,'star::Camera']]]
+  ['fontmanager_0',['FontManager',['../classstar_1_1FontManager.html',1,'star']]],
+  ['formatter_3c_20star_3a_3avec2_20_3e_1',['formatter&lt; star::Vec2 &gt;',['../classfmt_1_1formatter_3_01star_1_1Vec2_01_4.html',1,'fmt']]],
+  ['formatter_3c_20vector2_20_3e_2',['formatter&lt; Vector2 &gt;',['../classfmt_1_1formatter_3_01Vector2_01_4.html',1,'fmt']]],
+  ['function_3',['function',['../structstar_1_1ScheduleEntry.html#a171715e851fc87a659621643c2f6df7e',1,'star::ScheduleEntry']]]
 ];

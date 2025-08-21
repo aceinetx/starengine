@@ -7,6 +7,7 @@ namespace star {
  */
 class Object {
 protected:
+  /** reference count of the current object */
   unsigned int p_refCount;
 
 public:

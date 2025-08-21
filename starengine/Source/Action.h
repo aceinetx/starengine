@@ -14,9 +14,13 @@ class ActionEase;
  */
 class Action : public Object {
 protected:
+  /** duration of the action */
   float p_duration = 0.0f;
+  /** elapsed time */
   float p_elapsed = 0.0f;
+  /** is done? */
   bool p_done = false;
+  /** target of the action */
   Node* p_target = nullptr;
 
 public:
@@ -28,6 +32,9 @@ public:
    * Step the current action by one tick
    */
   virtual void step(float dt);
+  /**
+   * Update the action
+   */
   virtual void update(float time);
   /** Setup an action for a specific target
    *

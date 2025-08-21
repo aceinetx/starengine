@@ -10,6 +10,7 @@ namespace star {
  */
 class EventListener : public Object {
 protected:
+  /** node attached to the listener */
   Node* p_attachedNode;
 
 public:

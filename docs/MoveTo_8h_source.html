@@ -95,25 +95,30 @@ $(function(){initNavTree('MoveTo_8h_source.html','',''); });
 <div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span><span class="preprocessor">#pragma once</span></div>
 <div class="line"><a id="l00002" name="l00002"></a><span class="lineno">    2</span><span class="preprocessor">#include &quot;Action.h&quot;</span></div>
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
-<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span>star {</div>
+<div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="keyword">namespace </span><a class="code hl_namespace" href="namespacestar.html">star</a> {</div>
 <div class="foldopen" id="foldopen00009" data-start="{" data-end="};">
 <div class="line"><a id="l00009" name="l00009"></a><span class="lineno"><a class="line" href="classstar_1_1MoveTo.html">    9</a></span><span class="keyword">class </span><a class="code hl_class" href="classstar_1_1MoveTo.html">MoveTo</a> : <span class="keyword">public</span> <a class="code hl_class" href="classstar_1_1Action.html">Action</a> {</div>
 <div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">protected</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>  <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> p_position;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>  <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> p_initialPosition;</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span> </div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span>  <span class="keywordtype">void</span> update(<span class="keywordtype">float</span> time) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13">startWithTarget</a>(<a class="code hl_class" href="classstar_1_1Node.html">Node</a>* target) <span class="keyword">override</span>;</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keyword">static</span> <a class="code hl_class" href="classstar_1_1MoveTo.html">MoveTo</a>* create(<span class="keywordtype">float</span> duration, <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> pos);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>};</div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno"><a class="line" href="classstar_1_1MoveTo.html#a92a3fd19648bf7256e95598be187d6f5">   12</a></span>  <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> <a class="code hl_variable" href="classstar_1_1MoveTo.html#a92a3fd19648bf7256e95598be187d6f5">p_position</a>;</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno"><a class="line" href="classstar_1_1MoveTo.html#aa76794efdd1b1f61c968e4f708b7bee3">   14</a></span>  <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> <a class="code hl_variable" href="classstar_1_1MoveTo.html#aa76794efdd1b1f61c968e4f708b7bee3">p_initialPosition</a>;</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1MoveTo.html#acd0452c5986959d763ca4d33422b9b77">update</a>(<span class="keywordtype">float</span> time) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>  <span class="keywordtype">void</span> <a class="code hl_function" href="classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13">startWithTarget</a>(<a class="code hl_class" href="classstar_1_1Node.html">Node</a>* target) <span class="keyword">override</span>;</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span></div>
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>  <span class="keyword">static</span> <a class="code hl_class" href="classstar_1_1MoveTo.html">MoveTo</a>* <a class="code hl_function" href="classstar_1_1MoveTo.html#a0e77cec0595cb2994cbd243e6f3a8c03">create</a>(<span class="keywordtype">float</span> duration, <a class="code hl_struct" href="structstar_1_1Vec2.html">Vec2</a> pos);</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>};</div>
 </div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>} <span class="comment">// namespace star</span></div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>} <span class="comment">// namespace star</span></div>
 <div class="ttc" id="aclassstar_1_1Action_html"><div class="ttname"><a href="classstar_1_1Action.html">star::Action</a></div><div class="ttdef"><b>Definition</b> Action.h:15</div></div>
 <div class="ttc" id="aclassstar_1_1MoveTo_html"><div class="ttname"><a href="classstar_1_1MoveTo.html">star::MoveTo</a></div><div class="ttdef"><b>Definition</b> MoveTo.h:9</div></div>
+<div class="ttc" id="aclassstar_1_1MoveTo_html_a0e77cec0595cb2994cbd243e6f3a8c03"><div class="ttname"><a href="classstar_1_1MoveTo.html#a0e77cec0595cb2994cbd243e6f3a8c03">star::MoveTo::create</a></div><div class="ttdeci">static MoveTo * create(float duration, Vec2 pos)</div><div class="ttdef"><b>Definition</b> MoveTo.cpp:15</div></div>
+<div class="ttc" id="aclassstar_1_1MoveTo_html_a92a3fd19648bf7256e95598be187d6f5"><div class="ttname"><a href="classstar_1_1MoveTo.html#a92a3fd19648bf7256e95598be187d6f5">star::MoveTo::p_position</a></div><div class="ttdeci">Vec2 p_position</div><div class="ttdef"><b>Definition</b> MoveTo.h:12</div></div>
+<div class="ttc" id="aclassstar_1_1MoveTo_html_aa76794efdd1b1f61c968e4f708b7bee3"><div class="ttname"><a href="classstar_1_1MoveTo.html#aa76794efdd1b1f61c968e4f708b7bee3">star::MoveTo::p_initialPosition</a></div><div class="ttdeci">Vec2 p_initialPosition</div><div class="ttdef"><b>Definition</b> MoveTo.h:14</div></div>
+<div class="ttc" id="aclassstar_1_1MoveTo_html_acd0452c5986959d763ca4d33422b9b77"><div class="ttname"><a href="classstar_1_1MoveTo.html#acd0452c5986959d763ca4d33422b9b77">star::MoveTo::update</a></div><div class="ttdeci">void update(float time) override</div><div class="ttdef"><b>Definition</b> MoveTo.cpp:5</div></div>
 <div class="ttc" id="aclassstar_1_1MoveTo_html_af9f86e7c5d391fe494cf6a597b839b13"><div class="ttname"><a href="classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13">star::MoveTo::startWithTarget</a></div><div class="ttdeci">void startWithTarget(Node *target) override</div><div class="ttdef"><b>Definition</b> MoveTo.cpp:10</div></div>
 <div class="ttc" id="aclassstar_1_1Node_html"><div class="ttname"><a href="classstar_1_1Node.html">star::Node</a></div><div class="ttdef"><b>Definition</b> Node.h:25</div></div>
+<div class="ttc" id="anamespacestar_html"><div class="ttname"><a href="namespacestar.html">star</a></div><div class="ttdoc">StarEngine&#39;s base namespace.</div><div class="ttdef"><b>Definition</b> Action.h:5</div></div>
 <div class="ttc" id="astructstar_1_1Vec2_html"><div class="ttname"><a href="structstar_1_1Vec2.html">star::Vec2</a></div><div class="ttdef"><b>Definition</b> Vec2.h:5</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->

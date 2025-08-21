@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['mainloop_0',['mainLoop',['../classstar_1_1Director.html#a478075cd9b7e11f6c45e2e8929daa823',1,'star::Director']]]
+  ['listen_0',['listen',['../classstar_1_1EventListener.html#ad19c578884880cb36c3c9d58e850de6a',1,'star::EventListener::listen()'],['../classstar_1_1EventListenerKeyboard.html#a28b2c91093b6cd1b90bb2a72422b93c6',1,'star::EventListenerKeyboard::listen()']]]
 ];

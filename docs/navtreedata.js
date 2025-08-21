@@ -25,6 +25,9 @@
 var NAVTREE =
 [
   [ "starengine", "index.html", [
+    [ "Namespaces", "namespaces.html", [
+      [ "Namespace List", "namespaces.html", "namespaces_dup" ]
+    ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Index", "classes.html", null ],
@@ -43,7 +46,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"ActionEase_8h_source.html"
+"ActionEase_8h_source.html",
+"classstar_1_1Node.html#ab88c83ced58700a56de568f5b1e3c473"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronization';

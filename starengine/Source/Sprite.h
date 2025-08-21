@@ -10,6 +10,7 @@ namespace star {
  */
 class Sprite : public Node {
 protected:
+  /** texture of the sprite */
   Texture2D p_texture;
 
 public:

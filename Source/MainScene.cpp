@@ -7,15 +7,11 @@ using namespace star;
 bool MainScene::init() {
   if (!Scene::init())
     return false;
-
-  // get the director instance
-  auto director = Director::getInstance();
-
   // get the window size
-  auto winSize = director->getVisibleSize();
+  auto winSize = p_director->getVisibleSize();
 
   {
-    // create a hello label
+    // create a hello label, it's an autorelease object
     auto label = Label::createWithDefaultFont("Hello from starengine", 30.0f);
     label->setPosition(winSize / 2);
     addChild(label);

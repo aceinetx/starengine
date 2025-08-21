@@ -5,7 +5,7 @@
 using namespace star;
 
 void Sprite::setTexture(std::string texturePath) {
-  p_texture = TextureManager::getInstance()->getTexture(texturePath);
+  p_texture = p_textureManager->getTexture(texturePath);
 }
 
 void Sprite::draw() {

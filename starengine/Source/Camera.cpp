@@ -16,8 +16,7 @@ bool star::Camera::init() {
 
 // We can't use Camera:: since the compiler will confuse it with raylib's camera
 rlCamera star::Camera::getRaylibCamera() {
-  auto director = Director::getInstance();
-  auto winSize = director->getVisibleSize();
+  auto winSize = p_director->getVisibleSize();
   auto pos = getPosition();
 
   rlCamera camera;
@@ -37,5 +36,5 @@ void star::Camera::setZoom(float zoom) {
 }
 
 Vec2 star::Camera::getContentSize() {
-  return Director::getInstance()->getVisibleSize();
+  return p_director->getVisibleSize();
 }

@@ -42,7 +42,7 @@ void Label::draw() {
 }
 
 void Label::setFont(std::string path) {
-  p_font = FontManager::getInstance()->getFont(path);
+  p_font = p_fontManager->getFont(path);
   p_fontPath = path;
 }
 

@@ -2,12 +2,17 @@
 #include "Object.h"
 #include "ObjectVector.h"
 #include "Vec2.h"
-#include <cstdlib>
 #include <functional>
 #include <vector>
 
 namespace star {
 class Action;
+class Director;
+class FontManager;
+class TextureManager;
+class Scheduler;
+class EventDispatcher;
+class ActionManager;
 
 /** Node
  *
@@ -24,6 +29,13 @@ protected:
   Node* p_parent;
   float p_scale;
   float p_rotation;
+
+  Director* p_director;
+  FontManager* p_fontManager;
+  TextureManager* p_textureManager;
+  Scheduler* p_scheduler;
+  EventDispatcher* p_eventDispatcher;
+  ActionManager* p_actionManager;
 
 public:
   Node();

@@ -1,13 +1,23 @@
 #include "Node.h"
 #include "Action.h"
 #include "ActionManager.h"
+#include "Director.h"
+#include "EventDispatcher.h"
+#include "FontManager.h"
 #include "Macros.h"
 #include "Scheduler.h"
+#include "TextureManager.h"
 #include <cstdio>
 
 using namespace star;
 
 Node::Node() : p_position(Vec2(0, 0)), p_parent(nullptr), p_scale(1.0f), p_rotation(0.0f) {
+  p_director = Director::getInstance();
+  p_fontManager = FontManager::getInstance();
+  p_textureManager = TextureManager::getInstance();
+  p_scheduler = Scheduler::getInstance();
+  p_eventDispatcher = EventDispatcher::getInstance();
+  p_actionManager = ActionManager::getInstance();
 }
 
 Node::~Node() {
@@ -102,15 +112,15 @@ void Node::update(float dt) {
 }
 
 void Node::scheduleUpdate() {
-  Scheduler::getInstance()->scheduleUpdateForTarget(this);
+  p_scheduler->scheduleUpdateForTarget(this);
 }
 
 void Node::scheduleOnce(std::function<void(float)> function, float timeout) {
-  Scheduler::getInstance()->scheduleOnceForTarget(this, function, timeout);
+  p_scheduler->scheduleOnceForTarget(this, function, timeout);
 }
 
 void Node::cleanup() {
-  Scheduler::getInstance()->removeAllSchedulesFromTarget(this);
+  p_scheduler->removeAllSchedulesFromTarget(this);
   removeAllChildrenAndCleanup();
 }
 
@@ -149,11 +159,11 @@ void Node::removeAllChildrenAndCleanup() {
 
 void Node::runAction(Action* action) {
   action->startWithTarget(this);
-  ActionManager::getInstance()->runActionForTarget(action, this);
+  p_actionManager->runActionForTarget(action, this);
 }
 
 void Node::stopAllActions() {
-  ActionManager::getInstance()->removeAllActionsFromTarget(this);
+  p_actionManager->removeAllActionsFromTarget(this);
 }
 
 Node* Node::create() {

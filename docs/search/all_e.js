@@ -21,10 +21,11 @@ var searchData=
   ['setzoom_18',['setZoom',['../classstar_1_1Camera.html#a9670237954712b194944a4c88520c0a5',1,'star::Camera']]],
   ['sprite_19',['Sprite',['../classstar_1_1Sprite.html',1,'star']]],
   ['star_20',['star',['../namespacestar.html',1,'']]],
-  ['startwithtarget_21',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
-  ['state_22',['state',['../structstar_1_1RaylibEvent.html#afa19b484061a3ef0430b76c1cd37aa8c',1,'star::RaylibEvent']]],
-  ['statsdisplay_23',['statsDisplay',['../classstar_1_1Director.html#a2e7bfbf86aff0dbc224a328e0b23ba26',1,'star::Director']]],
-  ['step_24',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],
-  ['stepactions_25',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
-  ['stopallactions_26',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
+  ['star_3a_3aease_21',['ease',['../namespacestar_1_1ease.html',1,'star']]],
+  ['startwithtarget_22',['startWithTarget',['../classstar_1_1Action.html#a5457090e4a035c6283777c893a9a681b',1,'star::Action::startWithTarget()'],['../classstar_1_1ActionEase.html#a04976f42219b97e850043ab9cd182918',1,'star::ActionEase::startWithTarget()'],['../classstar_1_1MoveTo.html#af9f86e7c5d391fe494cf6a597b839b13',1,'star::MoveTo::startWithTarget()'],['../classstar_1_1ScaleTo.html#a2591cf6fc3d966d7799bac46acce04d7',1,'star::ScaleTo::startWithTarget()']]],
+  ['state_23',['state',['../structstar_1_1RaylibEvent.html#afa19b484061a3ef0430b76c1cd37aa8c',1,'star::RaylibEvent']]],
+  ['statsdisplay_24',['statsDisplay',['../classstar_1_1Director.html#a2e7bfbf86aff0dbc224a328e0b23ba26',1,'star::Director']]],
+  ['step_25',['step',['../classstar_1_1Action.html#a9a64ee9e8e977672748f70893ebaff66',1,'star::Action']]],
+  ['stepactions_26',['stepActions',['../classstar_1_1ActionManager.html#a8c0a3d28cbe76858841d2ca2c888822a',1,'star::ActionManager']]],
+  ['stopallactions_27',['stopAllActions',['../classstar_1_1Node.html#a1d542784d864cffe325e9e32d180aa6d',1,'star::Node']]]
 ];

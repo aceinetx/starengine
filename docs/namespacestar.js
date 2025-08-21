@@ -1,5 +1,6 @@
 var namespacestar =
 [
+    [ "ease", "namespacestar_1_1ease.html", null ],
     [ "Action", "classstar_1_1Action.html", "classstar_1_1Action" ],
     [ "ActionEase", "classstar_1_1ActionEase.html", "classstar_1_1ActionEase" ],
     [ "ActionManager", "classstar_1_1ActionManager.html", "classstar_1_1ActionManager" ],

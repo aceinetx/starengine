@@ -27,4 +27,9 @@
 /**
  * @brief StarEngine's base namespace
  */
-namespace star {}
+namespace star {
+/**
+ * @brief Inline easing functions
+ */
+namespace ease {}
+} // namespace star

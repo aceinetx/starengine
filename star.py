@@ -14,14 +14,14 @@ platform = args.platform
 action = args.action
 
 def reconfigure():
-    os.system("cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug")
-
-def build():
     os.makedirs("build", exist_ok=True)
     os.chdir(build_path)
+    os.system("cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug")
+    os.chdir("..")
+
+def build():
     reconfigure();
     os.system(f"cmake --build {script_path}/build --config Debug --parallel 4")
-    os.chdir("..")
 
 def run():
     build()

@@ -21,7 +21,8 @@ bool ActionScene::init() {
   addChild(label);
 
   auto background = DrawNode::create();
-  background->clear(Color4B(0, 255, 0, 255));
+  background->clear(Color4B(255, 255, 255, 50));
+  background->setZOrder(-1);
   addChild(background);
 
   auto keyboardListener = EventListenerKeyboard::create();

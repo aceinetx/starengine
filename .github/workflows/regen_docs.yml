@@ -30,7 +30,7 @@ jobs:
         uses: actions/configure-pages@v4
 
       - name: Install Doxygen
-        run: sudo apt install doxygen && doxygen --version
+        run: sudo apt install doxygen graphviz && doxygen --version
         
       - name: Regenerate documentation     
         run: ./regen_docs 

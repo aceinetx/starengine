@@ -32,8 +32,8 @@ jobs:
       - name: Install Doxygen
         run: sudo apt install doxygen && doxygen --version
         
-      - name: Create documentation     
-        run: doxygen
+      - name: Regenerate documentation     
+        run: ./regen_docs 
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

@@ -33,7 +33,7 @@ jobs:
         run: sudo apt install doxygen graphviz && doxygen --version
         
       - name: Regenerate documentation     
-        run: ./regen_docs 
+        run: ./regen_docs.sh
         
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

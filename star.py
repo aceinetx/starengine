@@ -5,7 +5,7 @@ script_path = os.path.dirname(os.path.realpath(__file__))
 build_path = script_path+"/build"
 
 parser = argparse.ArgumentParser(prog="star", description="starengine cli")
-parser.add_argument('action', help="What to do with the project? build, run", choices=['build', 'run'])
+parser.add_argument('action', help="What to do with the project? build, run", choices=['reconfigure', 'build', 'run'])
 parser.add_argument('-p', '--platform', help="Which platform to build the project for?", choices=['host'])
 parser.add_argument('-c', '--parallel', help="Specify the value of --parallel for cmake", type=int, default=3)
 
@@ -36,7 +36,9 @@ def run():
     print("\x1b[1;93m[star] running...\x1b[0m")
     command(f"cmake --build {script_path}/build --target run --config Debug --parallel {parallel}")
 
-if action == "build":
+if action == "reconfigure":
+    reconfigure()
+elif action == "build":
     build()
 elif action == "run":
     run()

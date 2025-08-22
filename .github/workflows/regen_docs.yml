@@ -2,7 +2,7 @@ name: Regenerate Documentation
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "master" ]
 
   workflow_dispatch:
 

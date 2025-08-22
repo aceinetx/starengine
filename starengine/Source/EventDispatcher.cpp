@@ -28,10 +28,16 @@ bool EventDispatcher::dispatchEvent(const RaylibEvent& event, Node* startNode) {
 
   // check for a listener on the node's children
   for (auto* listener : p_listeners) {
-    for (auto* child : startNode->getChildren()) {
-      if (listener->p_attachedNode == child) {
-        if (listener->listen(event))
-          return true;
+    // since the last node has the highest draw priority, we need to loop through the children in
+    // reverse
+    auto children = startNode->getChildren();
+    for (int i = children.size() - 1; i >= 0; i--) {
+      auto* child = children[i];
+      if (!dispatchEvent(event, child)) {
+        if (listener->p_attachedNode == child) {
+          if (listener->listen(event))
+            return true;
+        }
       }
     }
   }

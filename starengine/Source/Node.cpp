@@ -8,7 +8,7 @@
 #include "Scheduler.h"
 #include "TextureManager.h"
 #include <algorithm>
-#include <filesystem>
+#include <raymath.h>
 
 using namespace star;
 
@@ -81,7 +81,7 @@ void Node::addChild(Node* child) {
 
 void Node::onEnter() {
   // fmt::println("[star] {} entered", (void*)this);
-  m_parent->p_sortSceneGraph();
+  m_parent->m_sortSceneGraph();
 }
 void Node::onExit() {
   // fmt::println("[star] {} exited", (void*)this);
@@ -187,13 +187,43 @@ int Node::getZOrder() {
 void Node::setZOrder(int zOrder) {
   m_zOrder = zOrder;
   if (m_parent)
-    m_parent->p_sortSceneGraph();
+    m_parent->m_sortSceneGraph();
 }
 
-void Node::p_sortSceneGraph() {
+void Node::m_sortSceneGraph() {
   std::sort(m_children.begin(), m_children.end(),
             [](Node* a, Node* b) { return a->getZOrder() < b->getZOrder(); });
   // fmt::println("[star] scene graph sorted");
+}
+
+float Node::p_getScaleTransform() {
+  if (getParent() == nullptr)
+    return getScale();
+  float scale = getScale() / (1.0f / getParent()->p_getScaleTransform());
+  return scale;
+}
+
+float Node::p_getRotationTransform() {
+  if (getParent() == nullptr)
+    return getRotation();
+  float rotation = getRotation() + getParent()->p_getRotationTransform();
+  return rotation;
+}
+
+Vec2 Node::p_getPositionTransform() {
+  if (getParent() == nullptr)
+    return getPosition();
+  Vec2 pos = getPosition();
+  float parentRotDeg = -getParent()->p_getRotationTransform();
+  float r = parentRotDeg * (M_PI / 180.0f);
+  float s = getParent()->p_getScaleTransform();
+
+  // Scale then rotate then translate
+  pos *= s;
+  Vec2 rotated = Vec2(pos.x * cosf(r) - pos.y * sinf(r), pos.x * sinf(r) + pos.y * cosf(r));
+  rotated += getParent()->p_getPositionTransform();
+  pos = rotated;
+  return pos;
 }
 
 Node* Node::create() {

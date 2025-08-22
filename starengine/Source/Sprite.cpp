@@ -10,20 +10,9 @@ void Sprite::setTexture(std::string texturePath) {
 }
 
 void Sprite::draw() {
-  Vec2 pos = getPosition();
-  float parentRotDeg = -getParent()->getRotation();
-  float r = parentRotDeg * (M_PI / 180.0f);
-  float s = getParent()->getScale();
-
-  // Scale then rotate then translate
-  pos *= s;
-  Vec2 rotated = Vec2(pos.x * cosf(r) - pos.y * sinf(r), pos.x * sinf(r) + pos.y * cosf(r));
-  rotated += getParent()->getPosition();
-  pos = rotated;
-
-  // Translated scale and rotation
-  float scale = getScale() / (1.0f / getParent()->getScale());
-  float rotation = getRotation() + getParent()->getRotation();
+  Vec2 pos = p_getPositionTransform();
+  float scale = p_getScaleTransform();
+  float rotation = p_getRotationTransform();
 
   // Ugly stuff goin' on here!
   Rectangle src(0, 0, p_texture.width, p_texture.height);

@@ -52,7 +52,12 @@ protected:
   ActionManager* p_actionManager;
 
 private:
-  void p_sortSceneGraph();
+  void m_sortSceneGraph();
+
+protected:
+  float p_getScaleTransform();
+  float p_getRotationTransform();
+  Vec2 p_getPositionTransform();
 
 public:
   Node();

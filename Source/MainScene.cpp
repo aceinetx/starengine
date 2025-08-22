@@ -13,8 +13,10 @@ bool MainScene::init() {
 
   {
     // create a hello label, it's an autorelease object
-    auto helloLabel = Label::createWithDefaultFont("Hello from starengine", 30.0f);
+    auto helloLabel = Label::createWithDefaultFont(
+        "Hello from starengine\nThis demo shows almost everything\nstarengine has to offer", 30.0f);
     helloLabel->setPosition(winSize / 2);
+    helloLabel->setPositionY(helloLabel->getPositionY() + helloLabel->getContentSize().y / 2);
     addChild(helloLabel);
 
     // create another label

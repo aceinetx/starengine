@@ -15,8 +15,6 @@ class DrawNode : public Node {
 protected:
   /** Render texture to draw on */
   RenderTexture p_renderTexture;
-  /** p_renderTexture.texture. ! DON'T UNLOAD THIS, UNLOAD p_renderTexture INSTEAD ! */
-  Texture p_texture;
 
 public:
   ~DrawNode();

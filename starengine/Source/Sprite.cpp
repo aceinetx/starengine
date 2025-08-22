@@ -14,7 +14,6 @@ void Sprite::draw() {
   float scale = p_getScaleTransform();
   float rotation = p_getRotationTransform();
 
-  // Ugly stuff goin' on here!
   Rectangle src(0, 0, p_texture.width, p_texture.height);
   Rectangle dest(pos.x, GetScreenHeight() - pos.y, p_texture.width * scale,
                  p_texture.height * scale);

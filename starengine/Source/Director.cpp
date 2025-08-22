@@ -44,11 +44,11 @@ Vec2 Director::getVisibleSize() {
 void Director::mainLoop() {
   p_deltaTime = GetFrameTime();
 
-  BeginDrawing();
-  ClearBackground(BLACK);
-
   Scheduler::getInstance()->update(getDeltaTime());
   ActionManager::getInstance()->stepActions(getDeltaTime());
+
+  BeginDrawing();
+  ClearBackground(BLACK);
 
   Scene* scene = getRunningScene();
   auto camera = scene->getCamera();

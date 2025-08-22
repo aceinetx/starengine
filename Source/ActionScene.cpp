@@ -20,6 +20,10 @@ bool ActionScene::init() {
   label->setPosition(Vec2(winSize.x / 2, label->getContentSize().y / 2));
   addChild(label);
 
+  auto background = DrawNode::create();
+  background->clear(Color4B(0, 255, 0, 255));
+  addChild(background);
+
   auto keyboardListener = EventListenerKeyboard::create();
   keyboardListener->onKeyPressed = CALLBACK_1(ActionScene::onKeyPressed, this);
   EventDispatcher::getInstance()->addListenerWithSceneGraphPriority(keyboardListener, this);

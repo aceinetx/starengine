@@ -128,12 +128,12 @@ int Application::run() {
 #ifdef STAR_IMGUI
   rlImGuiShutdown();
 #endif
-  CloseWindow();
 
   director->getRunningScene()->removeFromParentAndCleanup();
   STARASSERT(scheduler->getSchedulesCount() == 0,
              "Some schedules are still not deleted, this shouldn't do anything bad, but you should "
              "be concerned.");
+  CloseWindow();
   if (Director::getInstance())
     delete Director::getInstance();
 

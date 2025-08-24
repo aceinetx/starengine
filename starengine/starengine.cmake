@@ -14,11 +14,6 @@ include(FetchContent)
 set(FETCHCONTENT_QUIET FALSE)
 
 if(SWITCH)
-    set(PLATFORM NX)
-    include(/opt/devkitpro/cmake/Switch.cmake)
-    include(/opt/devkitpro/cmake/Platform/NintendoSwitch.cmake)
-    include_directories(${DEVKITPRO}/portlibs/switch/include)
-
     include("starengine/cmake/switch.cmake")
 else()
     include("starengine/cmake/host.cmake")
@@ -77,15 +72,16 @@ endif()
 ## EXECUTABLE CONFIGURATION
 ###########################
 
+add_raylib()
+
 if(LINUX OR ANDROID AND(NOT SWITCH))
     # Executable configuration for linux
+    message("[star] platform: linux")
     add_compile_definitions("STAR_PLATFORM_LINUX")
     # Enable sanitizer
     message("Enabling sanitizer")
     add_compile_options(-fsanitize=address -Wall -Werror)
     add_link_options(-fsanitize=address)
-
-    add_raylib()
 
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
@@ -94,9 +90,8 @@ if(LINUX OR ANDROID AND(NOT SWITCH))
     add_dependencies(${APP_NAME} copy_content)
 elseif(WIN32)
     # Executable configuration for windows
+    message("[star] platform: windows")
     add_compile_definitions("STAR_PLATFORM_WINDOWS")
-
-    add_raylib()
 
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
@@ -104,10 +99,9 @@ elseif(WIN32)
     target_link_libraries(${APP_NAME} raylib)
     add_dependencies(${APP_NAME} copy_content)
 elseif(SWITCH)
+    message("[star] platform: nintendo switch")
     # Executable configuration for nintendo switch 
     add_compile_definitions("STAR_PLATFORM_SWITCH")
-
-    add_raylib()
 
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
@@ -120,7 +114,6 @@ elseif(SWITCH)
     nx_create_nro(${APP_NAME}
         NACP ${APP_NAME}.nacp
     )
-
 endif()
 
 target_link_libraries(${APP_NAME} fmt)

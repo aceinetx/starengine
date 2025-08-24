@@ -1,5 +1,5 @@
 #include "AutoreleasePool.h"
-#include <cstdio>
+#include <algorithm>
 
 using namespace star;
 

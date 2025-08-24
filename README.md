@@ -28,3 +28,11 @@ First of all, this project is WIP and currently not intended for real use, but i
 - Change the project's name in the CMakeLists.txt to the game name
 - Build: ```./star.py build```
 - Run: ```./star.py run```
+### Build for nintendo switch
+Currently starengine only supports building for switch under docker
+- Pull the docker image: ```./star.py pull_nx_docker```
+- Run the docker image: ```./star.py run_nx_docker```
+
+(In docker)
+- Cd to the workspace: ```cd /workspace```
+- Build: ```./star.py build -p switch```

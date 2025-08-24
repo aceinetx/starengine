@@ -22,7 +22,7 @@ if(platform == 'switch'):
     def err(msg):
         print(f"\x1b[1;91m[star] {msg}\x1b[0m")
 
-    if not os.path.exists(".dockerenv"):
+    if not os.path.exists("/.dockerenv"):
         err("It's detected that you are building starengine for nintendo switch without docker.")
         err("I'll let it be known for you that building with devkitpro without docker is unsupported")
         err("and most likely NEVER will be.")

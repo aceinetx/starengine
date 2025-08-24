@@ -5,8 +5,8 @@ A code-only WIP game engine with a raylib rendering backend and cocos2dx-ish fee
 
 ## Platform support (top to bottom most supported):
 - Linux
+- Nintendo Switch
 - Windows
-- Nintendo Switch (Planned)
 - Android (Not planned, but i'm thinking of it)
 
 ## Limitations of starengine

@@ -1,5 +1,8 @@
-#include <Macros.h>
+#include "../Source/AppDelegate.h"
+
+using namespace star;
 
 int main() {
-	STARASSERT(false, "starengine does not support this platform for now");
+  AppDelegate app;
+  return Application::getInstance()->run();
 }

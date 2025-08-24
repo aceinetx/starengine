@@ -50,6 +50,11 @@ add_custom_target(copy_content ALL
 ## FEATURE SETUP
 ################
 
+if(SWITCH) # nx doesn't support this for now
+    set(STAR_IMGUI OFF)
+    set(STAR_INSPECTOR OFF)
+endif()
+
 # Setup inspector
 if(STAR_INSPECTOR)
     add_compile_definitions("STAR_INSPECTOR")

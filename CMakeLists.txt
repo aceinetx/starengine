@@ -1,4 +1,12 @@
 cmake_minimum_required(VERSION 3.20)
+# Devkitpro includes, don't mind this
+if(SWITCH)
+    set(PLATFORM NX)
+    include(/opt/devkitpro/cmake/Switch.cmake)
+    include(/opt/devkitpro/cmake/Platform/NintendoSwitch.cmake)
+    include_directories(${DEVKITPRO}/portlibs/switch/include)
+endif()
+
 project(hello) # Change this to your project name
 
 set(APP_NAME ${PROJECT_NAME})

@@ -14,6 +14,9 @@ TextureManager* TextureManager::getInstance() {
 Texture2D TextureManager::getTexture(std::string path) {
   if (!p_textures.contains(path)) {
     std::string fullPath = ("Content/" + path);
+#ifdef STAR_PLATFORM_SWITCH
+    fullPath = ("romfs:/Content/" + path);
+#endif
     fmt::println("[star] load texture from {}", fullPath);
     p_textures[path] = LoadTexture(fullPath.c_str());
   }

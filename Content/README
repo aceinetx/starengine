@@ -1,0 +1,2 @@
+This is the content directory for your game
+Don't put subdirectories into it if you plan on building for nintendo switch, starengine doesn't currently account for subdirectories on the nx target

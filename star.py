@@ -1,5 +1,5 @@
 #!/usr/bin/python
-import os, sys, argparse
+import os, sys, argparse, time
 
 script_path = os.path.dirname(os.path.realpath(__file__))
 build_path = script_path+"/build"
@@ -18,6 +18,20 @@ parallel = args.parallel
 cmake_configure_args = f""
 if(platform == 'switch'):
     cmake_configure_args += " -DSWITCH=1"
+
+    def err(msg):
+        print(f"\x1b[1;91m[star] {msg}\x1b[0m")
+
+    if not os.path.exists(".dockerenv"):
+        err("It's detected that you are building starengine for nintendo switch without docker.")
+        err("I'll let it be known for you that building with devkitpro without docker is unsupported")
+        err("and most likely NEVER will be.")
+        err("Proceed with caution, any further errors will not be reviewed in github issues.")
+        timeout = 8
+        for i in range(0, timeout):
+            print(f"{timeout-i}..", end="", flush=True)
+            time.sleep(1)
+        print()
 
 def command(cmd):
     print(f"\x1b[1;93m[star] executing command: \x1b[1;39m{cmd}\x1b[0m")

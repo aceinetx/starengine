@@ -108,11 +108,29 @@ elseif(SWITCH)
     add_executable(${APP_NAME} "proj.switch/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
     target_link_libraries(${APP_NAME} raylib)
 
+    # Resources
+    dkp_add_asset_target(${APP_NAME}_romfs ${CMAKE_CURRENT_BINARY_DIR}/romfs)
+
+    file(GLOB_RECURSE STAR_CONTENT "Content/*")
+    set(TARGET_ID 0)
+    foreach(f IN LISTS STAR_CONTENT)
+        MATH(EXPR TARGET_ID "${TARGET_ID}+1")
+        set(TARGET_NAME "dkp_content_${TARGET_ID}")
+
+        add_custom_target(${TARGET_NAME})
+        dkp_set_target_file(${TARGET_NAME} ${f})
+
+        dkp_install_assets(${APP_NAME}_romfs DESTINATION Content TARGETS ${TARGET_NAME})
+        message("[star] installed asset ${f}")
+    endforeach()
+
+    # nacp & nro
     nx_generate_nacp(${APP_NAME}.nacp
         NAME ${APP_NAME}
     )
     nx_create_nro(${APP_NAME}
         NACP ${APP_NAME}.nacp
+        ROMFS ${APP_NAME}_romfs
     )
 endif()
 

@@ -5,8 +5,8 @@ script_path = os.path.dirname(os.path.realpath(__file__))
 build_path = script_path+"/build"
 
 parser = argparse.ArgumentParser(prog="star", description="starengine cli")
-parser.add_argument('action', help="What to do with the project? build, run", choices=['reconfigure', 'build', 'run'])
-parser.add_argument('-p', '--platform', help="Which platform to build the project for?", choices=['host'])
+parser.add_argument('action', help="What to do with the project? build, run", choices=['reconfigure', 'build', 'run', 'pull_nx_docker', 'run_nx_docker'])
+parser.add_argument('-p', '--platform', help="Which platform to build the project for?", choices=['host', 'switch'], default='host')
 parser.add_argument('-c', '--parallel', help="Specify the value of --parallel for cmake", type=int, default=3)
 
 args = parser.parse_args()
@@ -14,6 +14,10 @@ args = parser.parse_args()
 platform = args.platform
 action = args.action
 parallel = args.parallel
+
+cmake_configure_args = f""
+if(platform == 'switch'):
+    cmake_configure_args += " -DSWITCH=1"
 
 def command(cmd):
     print(f"\x1b[1;93m[star] executing command: \x1b[1;39m{cmd}\x1b[0m")
@@ -23,7 +27,7 @@ def reconfigure():
     print("\x1b[1;93m[star] reconfiguring...\x1b[0m")
     os.makedirs("build", exist_ok=True)
     os.chdir(build_path)
-    command("cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug")
+    command(f"cmake .. -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug {cmake_configure_args}")
     os.chdir("..")
 
 def build():
@@ -42,3 +46,7 @@ elif action == "build":
     build()
 elif action == "run":
     run()
+elif action == "pull_docker":
+    command("sudo docker pull devkitpro/devkita64")
+elif action == "run_nx_docker":
+    command("sudo docker run -it --rm -v \"$(pwd)\":/workspace devkitpro/devkita64")

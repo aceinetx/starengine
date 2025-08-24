@@ -11,31 +11,26 @@ file(GLOB ENGINE_SOURCE CONFIGURE_DEPENDS "starengine/Source/*.cpp")
 #####################################
 
 include(FetchContent)
-function(add_raylib)
-    find_package(raylib 5.5)
-    if(NOT raylib_FOUND)
-        # Didn't find raylib - download it
-        FetchContent_Declare(
-            raylib
-   GIT_REPOSITORY https://github.com/raysan5/raylib
-   GIT_TAG 5.5
-   GIT_SHALLOW ON
-   GIT_PROGRESS ON
-   EXCLUDE_FROM_ALL
-        )
-        FetchContent_MakeAvailable(raylib)
-        include_directories("${raylib_SOURCE_DIR}/src")
-    endif()
-endfunction()
+set(FETCHCONTENT_QUIET FALSE)
+
+if(SWITCH)
+    set(PLATFORM NX)
+    include(/opt/devkitpro/cmake/Switch.cmake)
+    include(/opt/devkitpro/cmake/Platform/NintendoSwitch.cmake)
+    include_directories(${DEVKITPRO}/portlibs/switch/include)
+
+    include("starengine/cmake/switch.cmake")
+else()
+    include("starengine/cmake/host.cmake")
+endif()
 
 function(add_fmt)
-    FetchContent_Declare(
-  fmt
-  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-  GIT_TAG        master
-  GIT_SHALLOW ON
-  EXCLUDE_FROM_ALL
- )
+    FetchContent_Declare(fmt
+        GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+        GIT_TAG        master
+        GIT_SHALLOW ON
+        EXCLUDE_FROM_ALL
+    )
     FetchContent_MakeAvailable(fmt)
 endfunction()
 
@@ -82,7 +77,7 @@ endif()
 ## EXECUTABLE CONFIGURATION
 ###########################
 
-if(LINUX OR ANDROID)
+if(LINUX OR ANDROID AND(NOT SWITCH))
     # Executable configuration for linux
     add_compile_definitions("STAR_PLATFORM_LINUX")
     # Enable sanitizer
@@ -108,6 +103,24 @@ elseif(WIN32)
     add_executable(${APP_NAME} WIN32 "proj.windows/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
     target_link_libraries(${APP_NAME} raylib)
     add_dependencies(${APP_NAME} copy_content)
+elseif(SWITCH)
+    # Executable configuration for nintendo switch 
+    add_compile_definitions("STAR_PLATFORM_SWITCH")
+
+    add_raylib()
+
+    file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
+
+    add_executable(${APP_NAME} "proj.switch/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
+    target_link_libraries(${APP_NAME} raylib)
+
+    nx_generate_nacp(${APP_NAME}.nacp
+        NAME ${APP_NAME}
+    )
+    nx_create_nro(${APP_NAME}
+        NACP ${APP_NAME}.nacp
+    )
+
 endif()
 
 target_link_libraries(${APP_NAME} fmt)
@@ -119,8 +132,10 @@ endif()
 ## RUN TARGET
 #############
 
-add_custom_target(run
-    COMMAND ${APP_NAME}
-    DEPENDS ${APP_NAME}
-    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
-)
+if(NOT SWITCH)
+    add_custom_target(run
+        COMMAND ${APP_NAME}
+        DEPENDS ${APP_NAME}
+        WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
+    )
+endif()

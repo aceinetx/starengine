@@ -34,7 +34,7 @@ void DrawNode::draw() {
   Rectangle src(0, 0, texture.width, texture.height);
   Rectangle dest(pos.x, GetScreenHeight() - pos.y, texture.width * scale, texture.height * scale);
   Vector2 origin((float)texture.width / 2 * scale, (float)texture.height / 2 * scale);
-  DrawTexturePro(texture, src, dest, origin, rotation, WHITE);
+  DrawTexturePro(texture, src, dest, origin, rotation, getColor().toRaylib());
 
   Node::draw();
 }

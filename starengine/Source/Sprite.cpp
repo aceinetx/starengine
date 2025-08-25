@@ -19,7 +19,7 @@ void Sprite::draw() {
   Rectangle dest(pos.x, GetScreenHeight() - pos.y, p_texture.width * scale,
                  p_texture.height * scale);
   Vector2 origin((float)p_texture.width / 2 * scale, (float)p_texture.height / 2 * scale);
-  DrawTexturePro(p_texture, src, dest, origin, rotation, WHITE);
+  DrawTexturePro(p_texture, src, dest, origin, rotation, getColor().toRaylib());
 
   Node::draw();
 }

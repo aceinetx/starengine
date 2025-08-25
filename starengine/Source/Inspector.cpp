@@ -79,6 +79,17 @@ void Director::drawInspector() {
       ImGui::DragFloat("Zoom", &zoom, 0.01f);
       camera->setZoom(zoom);
     }
+
+    // Color
+    Color4B color = selectedNode->getColor();
+    float imguiCol[] = {color.r / 255.0f, color.g / 255.0f, color.b / 255.0f, color.a / 255.0f};
+    if (ImGui::ColorEdit4("Color", imguiCol)) {
+      color.r = imguiCol[0] * 255.0f;
+      color.g = imguiCol[1] * 255.0f;
+      color.b = imguiCol[2] * 255.0f;
+      color.a = imguiCol[3] * 255.0f;
+      selectedNode->setColor(color);
+    }
   }
 
   ImGui::End();

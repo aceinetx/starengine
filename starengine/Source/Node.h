@@ -1,4 +1,5 @@
 #pragma once
+#include "Color.h"
 #include "Object.h"
 #include "ObjectVector.h"
 #include "Vec2.h"
@@ -36,6 +37,8 @@ private:
   float m_rotation;
   /** node's z order */
   int m_zOrder;
+  /** node's color */
+  Color4B m_color;
 
 protected:
   /** director instance */
@@ -223,6 +226,26 @@ public:
    * Get Z Order of the node
    */
   virtual int getZOrder();
+
+  /**
+   * Get color of the node
+   */
+  virtual Color4B getColor();
+
+  /**
+   * Set color of the node
+   */
+  virtual void setColor(Color4B color);
+
+  /**
+   * Get the opacity of the node
+   */
+  virtual uint8_t getOpacity();
+
+  /**
+   * Set the opacity of the node
+   */
+  virtual void setOpacity(uint8_t opacity);
 
   /**
    * Create an autoreleased Node

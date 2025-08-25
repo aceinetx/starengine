@@ -31,7 +31,7 @@ bool ActionScene::init() {
 
 void ActionScene::update(float dt) {
   if (m_logo->getNumberOfRunningActions() == 0) {
-    m_logo->setScale(sm_logoDefaultScale);
+    // m_logo->setScale(sm_logoDefaultScale);
     m_logo->setRotation(0.0f);
   }
 }

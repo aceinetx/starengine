@@ -1,6 +1,7 @@
 #include "Label.h"
 #include "FontManager.h"
 #include <raylib.h>
+#include <rlgl.h>
 
 using namespace star;
 
@@ -27,15 +28,17 @@ void Label::draw() {
   float scale = p_getScaleTransform();
   float rotation = p_getRotationTransform();
 
-  Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize * scale, p_spacing);
+  Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize, p_spacing);
   Vec2 pos = p_getPositionTransform();
   Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
+  rlPos.x /= scale;
+  rlPos.y /= scale;
 
-  Vector2 origin;
-  origin.x = size.x / 2;
-  origin.y = size.y / 2;
-  DrawTextPro(p_font, p_string.c_str(), rlPos, origin, rotation, p_fontSize * scale, p_spacing,
-              WHITE);
+  rlPushMatrix();
+  rlScalef(scale, scale, 1.0f);
+  DrawTextPro(p_font, p_string.c_str(), rlPos, Vector2(size.x / 2, size.y / 2), rotation,
+              p_fontSize, p_spacing, WHITE);
+  rlPopMatrix();
 
   Node::draw();
 }

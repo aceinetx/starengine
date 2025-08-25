@@ -24,6 +24,9 @@ public:
   void clear(Color4B color);
   void drawRectangleOutline(float x, float y, float width, float height, float outlineWidth,
                             Color4B outlineColor);
+  void drawRectangleFill(float x, float y, float width, float height, Color4B color);
+  void drawCircleOutline(float x, float y, float radius, float outlineWidth, Color4B outlineColor);
+  void drawCircleFill(float x, float y, float radius, Color4B color);
 
   CREATE_FUNC(DrawNode);
 };

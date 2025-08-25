@@ -57,3 +57,27 @@ void DrawNode::drawRectangleOutline(float x, float y, float width, float height,
   DrawRectangleLinesEx(rec, outlineWidth, outlineColor.toRaylib());
   EndTextureMode();
 }
+
+void DrawNode::drawRectangleFill(float x, float y, float width, float height, Color4B color) {
+  BeginTextureMode(p_renderTexture);
+  Rectangle rec;
+  rec.x = x;
+  rec.y = y;
+  rec.width = width;
+  rec.height = height;
+  DrawRectangleRec(rec, color.toRaylib());
+  EndTextureMode();
+}
+
+void DrawNode::drawCircleOutline(float x, float y, float radius, float outlineWidth,
+                                 Color4B outlineColor) {
+  BeginTextureMode(p_renderTexture);
+  DrawCircleLines(x, y, radius, outlineColor.toRaylib());
+  EndTextureMode();
+}
+
+void DrawNode::drawCircleFill(float x, float y, float radius, Color4B color) {
+  BeginTextureMode(p_renderTexture);
+  DrawCircle(x, y, radius, color.toRaylib());
+  EndTextureMode();
+}

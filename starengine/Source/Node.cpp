@@ -1,6 +1,7 @@
 #include "Node.h"
 #include "Action.h"
 #include "ActionManager.h"
+#include "Color.h"
 #include "Director.h"
 #include "EventDispatcher.h"
 #include "FontManager.h"
@@ -13,7 +14,8 @@
 using namespace star;
 
 Node::Node()
-    : m_position(Vec2(0, 0)), m_parent(nullptr), m_scale(1.0f), m_rotation(0.0f), m_zOrder(0) {
+    : m_position(Vec2(0, 0)), m_parent(nullptr), m_scale(1.0f), m_rotation(0.0f), m_zOrder(0),
+      m_color(255, 255, 255, 255) {
   p_director = Director::getInstance();
   p_fontManager = FontManager::getInstance();
   p_textureManager = TextureManager::getInstance();
@@ -180,14 +182,30 @@ void Node::insertChild(Node* child, int zOrder) {
   child->onEnter();
 }
 
-int Node::getZOrder() {
-  return m_zOrder;
-}
-
 void Node::setZOrder(int zOrder) {
   m_zOrder = zOrder;
   if (m_parent)
     m_parent->m_sortSceneGraph();
+}
+
+int Node::getZOrder() {
+  return m_zOrder;
+}
+
+Color4B Node::getColor() {
+  return m_color;
+}
+
+void Node::setColor(Color4B color) {
+  m_color = color;
+}
+
+uint8_t Node::getOpacity() {
+  return m_color.a;
+}
+
+void Node::setOpacity(uint8_t opacity) {
+  m_color.a = opacity;
 }
 
 void Node::m_sortSceneGraph() {

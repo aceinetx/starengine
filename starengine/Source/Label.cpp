@@ -37,7 +37,7 @@ void Label::draw() {
   rlPushMatrix();
   rlScalef(scale, scale, 1.0f);
   DrawTextPro(p_font, p_string.c_str(), rlPos, Vector2(size.x / 2, size.y / 2), rotation,
-              p_fontSize, p_spacing, WHITE);
+              p_fontSize, p_spacing, getColor().toRaylib());
   rlPopMatrix();
 
   Node::draw();

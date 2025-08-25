@@ -13,6 +13,9 @@ FontManager* FontManager::getInstance() {
 Font FontManager::getFont(std::string path) {
   if (!p_fonts.contains(path)) {
     std::string fullPath = ("Content/" + path);
+#ifdef STAR_PLATFORM_SWITCH
+    fullPath = ("romfs:/Content/" + path);
+#endif
     fmt::println("[star] load font from {}", fullPath);
     p_fonts[path] = LoadFont(fullPath.c_str());
   }

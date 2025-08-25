@@ -11,31 +11,21 @@ file(GLOB ENGINE_SOURCE CONFIGURE_DEPENDS "starengine/Source/*.cpp")
 #####################################
 
 include(FetchContent)
-function(add_raylib)
-    find_package(raylib 5.5)
-    if(NOT raylib_FOUND)
-        # Didn't find raylib - download it
-        FetchContent_Declare(
-            raylib
-   GIT_REPOSITORY https://github.com/raysan5/raylib
-   GIT_TAG 5.5
-   GIT_SHALLOW ON
-   GIT_PROGRESS ON
-   EXCLUDE_FROM_ALL
-        )
-        FetchContent_MakeAvailable(raylib)
-        include_directories("${raylib_SOURCE_DIR}/src")
-    endif()
-endfunction()
+set(FETCHCONTENT_QUIET FALSE)
+
+if(SWITCH)
+    include("starengine/cmake/switch.cmake")
+else()
+    include("starengine/cmake/host.cmake")
+endif()
 
 function(add_fmt)
-    FetchContent_Declare(
-  fmt
-  GIT_REPOSITORY https://github.com/fmtlib/fmt.git
-  GIT_TAG        master
-  GIT_SHALLOW ON
-  EXCLUDE_FROM_ALL
- )
+    FetchContent_Declare(fmt
+        GIT_REPOSITORY https://github.com/fmtlib/fmt.git
+        GIT_TAG        master
+        GIT_SHALLOW ON
+        EXCLUDE_FROM_ALL
+    )
     FetchContent_MakeAvailable(fmt)
 endfunction()
 
@@ -60,6 +50,11 @@ add_custom_target(copy_content ALL
 ## FEATURE SETUP
 ################
 
+if(SWITCH) # nx doesn't support this for now
+    set(STAR_IMGUI OFF)
+    set(STAR_INSPECTOR OFF)
+endif()
+
 # Setup inspector
 if(STAR_INSPECTOR)
     add_compile_definitions("STAR_INSPECTOR")
@@ -82,15 +77,16 @@ endif()
 ## EXECUTABLE CONFIGURATION
 ###########################
 
-if(LINUX OR ANDROID)
+add_raylib()
+
+if(LINUX OR ANDROID AND(NOT SWITCH))
     # Executable configuration for linux
+    message("[star] platform: linux")
     add_compile_definitions("STAR_PLATFORM_LINUX")
     # Enable sanitizer
     message("Enabling sanitizer")
     add_compile_options(-fsanitize=address -Wall -Werror)
     add_link_options(-fsanitize=address)
-
-    add_raylib()
 
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
@@ -99,15 +95,48 @@ if(LINUX OR ANDROID)
     add_dependencies(${APP_NAME} copy_content)
 elseif(WIN32)
     # Executable configuration for windows
+    message("[star] platform: windows")
     add_compile_definitions("STAR_PLATFORM_WINDOWS")
-
-    add_raylib()
 
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
     add_executable(${APP_NAME} WIN32 "proj.windows/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
     target_link_libraries(${APP_NAME} raylib)
     add_dependencies(${APP_NAME} copy_content)
+elseif(SWITCH)
+    message("[star] platform: nintendo switch")
+    # Executable configuration for nintendo switch 
+    add_compile_definitions("STAR_PLATFORM_SWITCH")
+
+    file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
+
+    add_executable(${APP_NAME} "proj.switch/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
+    target_link_libraries(${APP_NAME} raylib)
+
+    # Resources
+    dkp_add_asset_target(${APP_NAME}_romfs ${CMAKE_CURRENT_BINARY_DIR}/romfs)
+
+    file(GLOB_RECURSE STAR_CONTENT "Content/*")
+    set(TARGET_ID 0)
+    foreach(f IN LISTS STAR_CONTENT)
+        MATH(EXPR TARGET_ID "${TARGET_ID}+1")
+        set(TARGET_NAME "dkp_content_${TARGET_ID}")
+
+        add_custom_target(${TARGET_NAME})
+        dkp_set_target_file(${TARGET_NAME} ${f})
+
+        dkp_install_assets(${APP_NAME}_romfs DESTINATION Content TARGETS ${TARGET_NAME})
+        message("[star] installed asset ${f}")
+    endforeach()
+
+    # nacp & nro
+    nx_generate_nacp(${APP_NAME}.nacp
+        NAME ${APP_NAME}
+    )
+    nx_create_nro(${APP_NAME}
+        NACP ${APP_NAME}.nacp
+        ROMFS ${APP_NAME}_romfs
+    )
 endif()
 
 target_link_libraries(${APP_NAME} fmt)
@@ -119,8 +148,10 @@ endif()
 ## RUN TARGET
 #############
 
-add_custom_target(run
-    COMMAND ${APP_NAME}
-    DEPENDS ${APP_NAME}
-    WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
-)
+if(NOT SWITCH)
+    add_custom_target(run
+        COMMAND ${APP_NAME}
+        DEPENDS ${APP_NAME}
+        WORKING_DIRECTORY ${CMAKE_PROJECT_DIR}
+    )
+endif()

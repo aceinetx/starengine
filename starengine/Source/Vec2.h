@@ -1,5 +1,4 @@
 #pragma once
-#include <raylib.h>
 
 namespace star {
 struct Vec2 {

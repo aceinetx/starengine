@@ -1,5 +1,4 @@
 #include "Vec2.h"
-#include <raylib.h>
 
 using namespace star;
 

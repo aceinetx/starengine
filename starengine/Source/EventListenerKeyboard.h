@@ -12,14 +12,14 @@ namespace star {
 class EventListenerKeyboard : public EventListener {
 public:
   /** callback to run when a key is pressed */
-  std::function<bool(KeyboardKey)> onKeyPressed;
+  // std::function<bool(KeyboardKey)> onKeyPressed;
   /** callback to run when a key is down */
-  std::function<bool(KeyboardKey)> onKeyDown;
+  // std::function<bool(KeyboardKey)> onKeyDown;
   /** callback to run when a key is up */
-  std::function<bool(KeyboardKey)> onKeyUp;
+  // std::function<bool(KeyboardKey)> onKeyUp;
 
-  /** Listen to an event, true if successfully dispatched, false if we should continue dispatching
-   * events */
+  /** Listen to an event, true if successfully dispatched, false if we should continue
+   * dispatching events */
   bool listen(const SDL_Event& event);
 
   CREATE_FUNC_NO_INIT(EventListenerKeyboard);

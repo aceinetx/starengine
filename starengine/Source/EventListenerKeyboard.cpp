@@ -1,5 +1,4 @@
 #include "EventListenerKeyboard.h"
-#include <raylib.h>
 
 bool star::EventListenerKeyboard::listen(const SDL_Event& event) {
   /*

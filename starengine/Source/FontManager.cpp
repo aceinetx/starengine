@@ -1,6 +1,5 @@
 #include "FontManager.h"
 #include "Macros.h"
-#include <raylib.h>
 
 using namespace star;
 

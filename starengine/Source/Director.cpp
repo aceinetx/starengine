@@ -41,17 +41,18 @@ Vec2 Director::getVisibleSize() {
   return Vec2(w, h);
 }
 
-static uint64_t now = SDL_GetPerformanceCounter();
-static uint64_t last = 0;
+static uint64_t s_currentTime = SDL_GetPerformanceCounter();
+static uint64_t s_lastFrameTime = 0;
 
 void Director::mainLoop() {
   auto application = Application::getInstance();
   auto renderer = application->getRenderer();
 
-  last = now;
-  now = SDL_GetPerformanceCounter();
+  s_lastFrameTime = s_currentTime;
+  s_currentTime = SDL_GetPerformanceCounter();
 
-  p_deltaTime = (float)((now - last) * 1000 / (float)SDL_GetPerformanceFrequency());
+  p_deltaTime = (float)(s_currentTime - s_lastFrameTime) / SDL_GetPerformanceFrequency();
+  // fmt::println("{}", p_deltaTime);
 
   Scheduler::getInstance()->update(getDeltaTime());
   ActionManager::getInstance()->stepActions(getDeltaTime());

@@ -1,7 +1,6 @@
 #include "MainScene.h"
 #include "ActionScene.h"
 #include <fmt/format.h>
-#include <raylib.h>
 
 using namespace star;
 
@@ -66,10 +65,12 @@ bool MainScene::init() {
   }
 
   // add a keyboard listener
+  /*
   auto keyboardListener = EventListenerKeyboard::create();
   keyboardListener->onKeyDown = CALLBACK_1(MainScene::onKeyDown, this);
   keyboardListener->onKeyUp = CALLBACK_1(MainScene::onKeyUp, this);
   EventDispatcher::getInstance()->addListenerWithSceneGraphPriority(keyboardListener, this);
+  */
 
   // call update() every single frame
   scheduleUpdate();
@@ -94,29 +95,5 @@ void MainScene::update(float dt) {
 
   Vec2 direction = Vec2(0, 0);
   static constexpr float s_speed = 100.0f;
-  for (KeyboardKey key : m_keysDown) {
-    if (key == KEY_W)
-      direction.y += s_speed;
-    if (key == KEY_S)
-      direction.y -= s_speed;
-    if (key == KEY_D)
-      direction.x += s_speed;
-    if (key == KEY_A)
-      direction.x -= s_speed;
-  }
   m_logo->setPosition(m_logo->getPosition() + direction * dt);
-}
-
-bool MainScene::onKeyDown(KeyboardKey key) {
-  if (key == KEY_Q) {
-    p_director->replaceScene(ActionScene::create());
-    return true;
-  }
-  m_keysDown.insert(key);
-  return true;
-}
-
-bool MainScene::onKeyUp(KeyboardKey key) {
-  m_keysDown.erase(key);
-  return true;
 }

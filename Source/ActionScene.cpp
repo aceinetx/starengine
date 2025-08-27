@@ -25,9 +25,11 @@ bool ActionScene::init() {
   background->setZOrder(-1);
   addChild(background);
 
+  /*
   auto keyboardListener = EventListenerKeyboard::create();
   keyboardListener->onKeyPressed = CALLBACK_1(ActionScene::onKeyPressed, this);
   EventDispatcher::getInstance()->addListenerWithSceneGraphPriority(keyboardListener, this);
+  */
 
   scheduleUpdate();
 
@@ -41,6 +43,7 @@ void ActionScene::update(float dt) {
   }
 }
 
+/*G
 bool ActionScene::onKeyPressed(KeyboardKey key) {
   if (key == KEY_R && m_logo->getScale() == sm_logoDefaultScale) {
     static constexpr float s_duration = 2.0f;
@@ -51,3 +54,4 @@ bool ActionScene::onKeyPressed(KeyboardKey key) {
   }
   return true;
 }
+*/

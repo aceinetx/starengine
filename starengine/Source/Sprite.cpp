@@ -18,17 +18,16 @@ void Sprite::draw() {
   auto window = p_application->getWindow();
   SDL_Point windowSize;
   SDL_GetWindowSize(window, &windowSize.x, &windowSize.y);
+  pos.y = windowSize.y - pos.y;
 
-  // Rectangle src(0, 0, p_texture.width, p_texture.height);
-  // Rectangle dest(pos.x, GetScreenHeight() - pos.y, p_texture.width * scale,
-  // p_texture.height * scale);
-  // Vector2 origin((float)p_texture.width / 2 * scale, (float)p_texture.height / 2 * scale);
-  // DrawTexturePro(p_texture, src, dest, origin, rotation, getColor().toRaylib());
-  SDL_Rect srcrect(0, 0, 0, 0);
-  SDL_QueryTexture(p_texture, NULL, NULL, &srcrect.w, &srcrect.h);
-  SDL_Rect dstrect(pos.x, windowSize.y - pos.y, srcrect.w * scale, srcrect.h * scale);
-  SDL_Point center(0, 0);
-  SDL_RenderCopyEx(renderer, p_texture, &srcrect, &dstrect, rotation, &center,
+  int texW, texH; // texture size
+  SDL_QueryTexture(p_texture, NULL, NULL, &texW, &texH);
+
+  SDL_Rect dstrect(pos.x, pos.y, ((float)texW * scale), ((float)texH * scale));
+  dstrect.x -= texW / 2.0f * scale;
+  dstrect.y -= texH / 2.0f * scale;
+  SDL_Point center(texW / 2.0f * scale, texH / 2.0f * scale);
+  SDL_RenderCopyEx(renderer, p_texture, NULL, &dstrect, rotation, &center,
                    SDL_RendererFlip::SDL_FLIP_NONE);
 
   Node::draw();

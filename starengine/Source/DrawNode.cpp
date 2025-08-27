@@ -3,7 +3,6 @@
 #include "Color.h"
 #include "Director.h"
 #include "Scheduler.h"
-#include <raylib.h>
 
 using namespace star;
 

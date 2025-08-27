@@ -1,7 +1,6 @@
 #include "Camera.h"
 #include "Director.h"
 #include <fmt/base.h>
-#include <raylib.h>
 
 using namespace star;
 
@@ -15,6 +14,7 @@ bool star::Camera::init() {
 }
 
 // We can't use Camera:: since the compiler will confuse it with raylib's camera
+/*
 rlCamera star::Camera::getRaylibCamera() {
   auto winSize = p_director->getVisibleSize();
   auto pos = getPosition();
@@ -26,6 +26,7 @@ rlCamera star::Camera::getRaylibCamera() {
   camera.offset = CLITERAL(Vector2){winSize.x / 2, winSize.y / 2};
   return camera;
 }
+  */
 
 float star::Camera::getZoom() {
   return p_zoom;

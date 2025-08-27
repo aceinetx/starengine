@@ -29,10 +29,12 @@ function(add_fmt)
     FetchContent_MakeAvailable(fmt)
 endfunction()
 
-find_package(SDL2 REQUIRED)
-include_directories(${SDL2_INCLUDE_DIRS})
-find_package(SDL2_image REQUIRED)
-include_directories(${SDL2_image_INCLUDE_DIRS})
+if(NOT SWITCH)
+    find_package(SDL2 REQUIRED)
+    include_directories(${SDL2_INCLUDE_DIRS})
+    find_package(SDL2_image REQUIRED)
+    include_directories(${SDL2_image_INCLUDE_DIRS})
+endif()
 
 ######################
 ## COPY CONTENT TARGET
@@ -80,7 +82,8 @@ endif()
 ## EXECUTABLE CONFIGURATION
 ###########################
 
-add_raylib()
+#add_raylib()
+add_fmt()
 
 if(LINUX OR ANDROID AND(NOT SWITCH))
     # Executable configuration for linux
@@ -114,7 +117,7 @@ elseif(SWITCH)
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
     add_executable(${APP_NAME} "proj.switch/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
-    target_link_libraries(${APP_NAME} ${SDL2_LIBRARIES} ${SDL2_image_LIBRARIES})
+    target_link_libraries(${APP_NAME} SDL2 SDL2_image png16 webp jpeg ogg EGL modplug mpg123 opusfile opus glapi drm_nouveau harfbuzz freetype bz2 z)
 
     # Resources
     dkp_add_asset_target(${APP_NAME}_romfs ${CMAKE_CURRENT_BINARY_DIR}/romfs)

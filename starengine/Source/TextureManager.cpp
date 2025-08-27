@@ -1,7 +1,8 @@
 #include "TextureManager.h"
+#include "Application.h"
 #include "Macros.h"
 #include "fmt/base.h"
-#include <raylib.h>
+#include <SDL2/SDL_image.h>
 
 using namespace star;
 
@@ -11,21 +12,27 @@ TextureManager* TextureManager::getInstance() {
   return &p_instance;
 }
 
-Texture2D TextureManager::getTexture(std::string path) {
+SDL_Texture* TextureManager::getTexture(std::string path) {
   if (!p_textures.contains(path)) {
     std::string fullPath = ("Content/" + path);
 #ifdef STAR_PLATFORM_SWITCH
     fullPath = ("romfs:/Content/" + path);
 #endif
     fmt::println("[star] load texture from {}", fullPath);
-    p_textures[path] = LoadTexture(fullPath.c_str());
+    // = IMG_LoadTexture(Application::getInstance()->getRenderer(), fullPath.c_str());
+    auto surface = IMG_Load(fullPath.c_str());
+    STARASSERT(surface, "{}", SDL_GetError());
+    p_textures[path] =
+        SDL_CreateTextureFromSurface(Application::getInstance()->getRenderer(), surface);
+    SDL_FreeSurface(surface);
   }
-  STARASSERT(p_textures[path].width > 0, "p_textures[path].width <= 0, is the texture path valid?");
+  STARASSERT(p_textures[path], "{} {}", SDL_GetError(),
+             (void*)Application::getInstance()->getRenderer());
   return p_textures[path];
 }
 
 void TextureManager::unloadAllTextures() {
   for (const auto& [_, texture] : p_textures) {
-    UnloadTexture(texture);
+    SDL_DestroyTexture(texture);
   }
 }

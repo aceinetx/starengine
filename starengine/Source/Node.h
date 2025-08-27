@@ -14,6 +14,7 @@ class TextureManager;
 class Scheduler;
 class EventDispatcher;
 class ActionManager;
+class Application;
 
 /** Node
  *
@@ -41,6 +42,8 @@ private:
   Color4B m_color;
 
 protected:
+  /** application instance */
+  Application* p_application;
   /** director instance */
   Director* p_director;
   /** font manager instance */

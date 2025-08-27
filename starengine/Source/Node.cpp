@@ -1,6 +1,7 @@
 #include "Node.h"
 #include "Action.h"
 #include "ActionManager.h"
+#include "Application.h"
 #include "Color.h"
 #include "Director.h"
 #include "EventDispatcher.h"
@@ -16,6 +17,7 @@ using namespace star;
 Node::Node()
     : m_position(Vec2(0, 0)), m_parent(nullptr), m_scale(1.0f), m_rotation(0.0f), m_zOrder(0),
       m_color(255, 255, 255, 255) {
+  p_application = Application::getInstance();
   p_director = Director::getInstance();
   p_fontManager = FontManager::getInstance();
   p_textureManager = TextureManager::getInstance();

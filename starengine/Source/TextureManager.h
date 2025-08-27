@@ -1,5 +1,5 @@
 #pragma once
-#include <raylib.h>
+#include <SDL2/SDL.h>
 #include <string>
 #include <unordered_map>
 
@@ -14,7 +14,7 @@ protected:
   static TextureManager p_instance;
 
   /** textures map, maps a texture path to the texture resource */
-  std::unordered_map<std::string, Texture2D> p_textures;
+  std::unordered_map<std::string, SDL_Texture*> p_textures;
 
 public:
   /** Get the global instance */
@@ -23,7 +23,7 @@ public:
   /**
    * Loads or gets the Texture2D raylib resource from a given path
    */
-  Texture2D getTexture(std::string path);
+  SDL_Texture* getTexture(std::string path);
   /**
    * Unloads all textures
    *

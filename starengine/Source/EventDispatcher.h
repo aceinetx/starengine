@@ -1,8 +1,7 @@
 #pragma once
 #include "Node.h"
 #include "ObjectVector.h"
-#include "RaylibEvent.h"
-#include <raylib.h>
+#include <SDL2/SDL.h>
 
 namespace star {
 class EventListener;
@@ -36,7 +35,7 @@ public:
    * Node (4)
    *
    */
-  bool dispatchEvent(const RaylibEvent& event, Node* startNode);
+  bool dispatchEvent(const SDL_Event& event, Node* startNode);
 
   /**
    * Add an event listener with scene graph priority, check out EventDispatcher::dispatchEvent to

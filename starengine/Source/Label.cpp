@@ -1,7 +1,5 @@
 #include "Label.h"
 #include "FontManager.h"
-#include <raylib.h>
-#include <rlgl.h>
 
 using namespace star;
 
@@ -11,7 +9,7 @@ bool Label::init() {
 
   p_fontSize = 30.0f;
   p_spacing = p_fontSize / 10.0f;
-  p_font = GetFontDefault();
+  // p_font = GetFontDefault();
 
   return true;
 }
@@ -25,26 +23,28 @@ std::string Label::getString() {
 }
 
 void Label::draw() {
-  float scale = p_getScaleTransform();
-  float rotation = p_getRotationTransform();
+  /*
+    float scale = p_getScaleTransform();
+    float rotation = p_getRotationTransform();
 
-  Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize, p_spacing);
-  Vec2 pos = p_getPositionTransform();
-  Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
-  rlPos.x /= scale;
-  rlPos.y /= scale;
+    //Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize, p_spacing);
+    Vec2 pos = p_getPositionTransform();
+    //Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
+    rlPos.x /= scale;
+    rlPos.y /= scale;
 
-  rlPushMatrix();
-  rlScalef(scale, scale, 1.0f);
-  DrawTextPro(p_font, p_string.c_str(), rlPos, Vector2(size.x / 2, size.y / 2), rotation,
-              p_fontSize, p_spacing, getColor().toRaylib());
-  rlPopMatrix();
+    rlPushMatrix();
+    rlScalef(scale, scale, 1.0f);
+    DrawTextPro(p_font, p_string.c_str(), rlPos, Vector2(size.x / 2, size.y / 2), rotation,
+                p_fontSize, p_spacing, getColor().toRaylib());
+    rlPopMatrix();
+    */
 
   Node::draw();
 }
 
 void Label::setFont(std::string path) {
-  p_font = p_fontManager->getFont(path);
+  // p_font = p_fontManager->getFont(path);
   p_fontPath = path;
 }
 
@@ -61,8 +61,9 @@ float Label::getFontSize() {
 }
 
 Vec2 Label::getContentSize() {
-  Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize, p_spacing);
-  return Vec2(size.x, size.y);
+  // Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize, p_spacing);
+  // return Vec2(size.x, size.y);
+  return Vec2(0, 0);
 }
 
 Label* Label::createWithFont(std::string text, std::string font, float fontSize) {

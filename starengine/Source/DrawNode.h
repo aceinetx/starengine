@@ -3,8 +3,6 @@
 #include "Color.h"
 #include "Macros.h"
 #include "Node.h"
-#include <climits>
-#include <raylib.h>
 
 namespace star {
 /** DrawNode
@@ -14,7 +12,7 @@ namespace star {
 class DrawNode : public Node {
 protected:
   /** Render texture to draw on */
-  RenderTexture p_renderTexture;
+  // RenderTexture p_renderTexture;
 
 public:
   ~DrawNode();

@@ -14,7 +14,7 @@ protected:
   static FontManager p_instance;
 
   /** fonts map, maps a font path to the font resource */
-  std::unordered_map<std::string, Font> p_fonts;
+  // std::unordered_map<std::string, Font> p_fonts;
 
 public:
   /** get the global instance */
@@ -23,7 +23,7 @@ public:
   /**
    * Loads or gets the Font raylib resource from a given path
    */
-  Font getFont(std::string path);
+  // Font getFont(std::string path);
   /**
    * Unloads all fonts
    *

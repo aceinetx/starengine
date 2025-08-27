@@ -1,7 +1,6 @@
 #include "AppDelegate.h"
 #include "ActionScene.h"
 #include "MainScene.h"
-#include <raylib.h>
 
 using namespace star;
 
@@ -12,9 +11,18 @@ bool AppDelegate::applicationDidFinishLaunching() {
   // initialize director
   auto director = Director::getInstance();
 
-  SetTraceLogLevel(TraceLogLevel::LOG_FATAL); // set to LOG_ALL if you want raylib logging
-  InitWindow(1280, 720, "StarEngine");
-  SetTargetFPS(60);
+  p_window = SDL_CreateWindow("Hello World!", 0, 0, 1280, 720, SDL_WINDOW_SHOWN);
+  if (!p_window) {
+    fmt::println("[star]: {}", SDL_GetError());
+    return false;
+  }
+
+  p_renderer =
+      SDL_CreateRenderer(p_window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
+  if (!p_renderer) {
+    fmt::println("[star]: {}", SDL_GetError());
+    return false;
+  }
 
   director->runWithScene(MainScene::create());
   director->statsDisplay = false;

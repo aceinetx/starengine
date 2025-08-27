@@ -1,8 +1,8 @@
 #include "EventListenerKeyboard.h"
-#include "RaylibEvent.h"
 #include <raylib.h>
 
-bool star::EventListenerKeyboard::listen(const RaylibEvent& event) {
+bool star::EventListenerKeyboard::listen(const SDL_Event& event) {
+  /*
   if (event.type != RaylibEvent::kKeyboard)
     return false;
   if (event.state == RaylibEvent::kPressed && onKeyPressed)
@@ -11,5 +11,6 @@ bool star::EventListenerKeyboard::listen(const RaylibEvent& event) {
     return onKeyDown((KeyboardKey)event.button);
   else if (event.state == RaylibEvent::kUp && onKeyUp)
     return onKeyUp((KeyboardKey)event.button);
+    */
   return false;
 }

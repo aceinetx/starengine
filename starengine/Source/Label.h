@@ -18,7 +18,7 @@ protected:
   /** font size */
   float p_fontSize;
   /** raylib's font resource */
-  Font p_font;
+  // Font p_font;
   /** font path */
   std::string p_fontPath;
 

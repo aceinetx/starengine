@@ -1,8 +1,6 @@
 #include "EventDispatcher.h"
 #include "Director.h"
 #include "EventListener.h"
-#include "RaylibEvent.h"
-#include <algorithm>
 
 using namespace star;
 
@@ -15,7 +13,7 @@ EventDispatcher* EventDispatcher::getInstance() {
 EventDispatcher::~EventDispatcher() {
 }
 
-bool EventDispatcher::dispatchEvent(const RaylibEvent& event, Node* startNode) {
+bool EventDispatcher::dispatchEvent(const SDL_Event& event, Node* startNode) {
   // fmt::println("[star] Dispatching event ({}, {}, {})", (int)event.type, (int)event.state,
   //(int)event.button);
 

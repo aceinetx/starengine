@@ -1,6 +1,6 @@
 #pragma once
 #include "Node.h"
-#include <raylib.h>
+#include <SDL2/SDL.h>
 #include <string>
 
 namespace star {
@@ -11,7 +11,7 @@ namespace star {
 class Sprite : public Node {
 protected:
   /** texture of the sprite */
-  Texture2D p_texture;
+  SDL_Texture* p_texture;
 
 public:
   /** Set the sprite's texture from the path */

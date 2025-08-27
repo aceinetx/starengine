@@ -29,7 +29,10 @@ function(add_fmt)
     FetchContent_MakeAvailable(fmt)
 endfunction()
 
-add_fmt()
+find_package(SDL2 REQUIRED)
+include_directories(${SDL2_INCLUDE_DIRS})
+find_package(SDL2_image REQUIRED)
+include_directories(${SDL2_image_INCLUDE_DIRS})
 
 ######################
 ## COPY CONTENT TARGET
@@ -91,7 +94,7 @@ if(LINUX OR ANDROID AND(NOT SWITCH))
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
     add_executable(${APP_NAME} "proj.linux/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
-    target_link_libraries(${APP_NAME} raylib)
+    target_link_libraries(${APP_NAME} ${SDL2_LIBRARIES} SDL2_image)
     add_dependencies(${APP_NAME} copy_content)
 elseif(WIN32)
     # Executable configuration for windows
@@ -101,7 +104,7 @@ elseif(WIN32)
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
     add_executable(${APP_NAME} WIN32 "proj.windows/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
-    target_link_libraries(${APP_NAME} raylib)
+    target_link_libraries(${APP_NAME} ${SDL2_LIBRARIES} ${SDL2_image_LIBRARIES})
     add_dependencies(${APP_NAME} copy_content)
 elseif(SWITCH)
     message("[star] platform: nintendo switch")
@@ -111,7 +114,7 @@ elseif(SWITCH)
     file(GLOB PLATFORM_SOURCE CONFIGURE_DEPENDS "starengine/Source/platform/shared/*.cpp")
 
     add_executable(${APP_NAME} "proj.switch/main.cpp" ${ENGINE_SOURCE} ${PLATFORM_SOURCE} ${GAME_SOURCE})
-    target_link_libraries(${APP_NAME} raylib)
+    target_link_libraries(${APP_NAME} ${SDL2_LIBRARIES} ${SDL2_image_LIBRARIES})
 
     # Resources
     dkp_add_asset_target(${APP_NAME}_romfs ${CMAKE_CURRENT_BINARY_DIR}/romfs)

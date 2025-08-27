@@ -1,7 +1,7 @@
 #pragma once
 #include "EventDispatcher.h"
 #include "Object.h"
-#include "RaylibEvent.h"
+#include <SDL2/SDL.h>
 
 namespace star {
 /** EventListener
@@ -20,7 +20,7 @@ public:
    * Returns true if an event has been successfully dispatched, false if not and we should continue
    * down the scene graph calling every single event listener
    */
-  virtual bool listen(const RaylibEvent& event) = 0;
+  virtual bool listen(const SDL_Event& event) = 0;
 
   friend class EventDispatcher;
 };

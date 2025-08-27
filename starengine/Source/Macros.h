@@ -2,7 +2,7 @@
 #include <cstdio>
 #include <cstdlib>
 #include <fmt/base.h>
-#include <raylib.h>
+#include <fmt/format.h>
 #ifdef STAR_PLATFORM_SWITCH
 #include <switch.h>
 #endif
@@ -34,22 +34,20 @@
 
 #ifdef STAR_PLATFORM_SWITCH
 // assert behavior for nintendo switch
-#define STARASSERT_PREPRINT()                                                                      \
-  CloseWindow();                                                                                   \
-  consoleInit(NULL)
+#define STARASSERT_PREPRINT() consoleInit(NULL)
 #define STARASSERT_AFTERPRINT()                                                                    \
   consoleUpdate(NULL);                                                                             \
   for (;;)
 #else
 // assert behavior for everything else
-#define STARASSERT_PREPRINT() CloseWindow()
+#define STARASSERT_PREPRINT()
 #define STARASSERT_AFTERPRINT() std::abort()
 #endif
 
 #define STARASSERT(expr, ...)                                                                      \
   if (!(expr)) {                                                                                   \
     STARASSERT_PREPRINT();                                                                         \
-    fmt::println("[star] Assertion failed {}: {}", #expr, __VA_ARGS__);                            \
+    fmt::println("[star] Assertion failed {}: {}", #expr, fmt::format(__VA_ARGS__));               \
     STARASSERT_AFTERPRINT();                                                                       \
   }
 

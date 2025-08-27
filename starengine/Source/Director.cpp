@@ -3,10 +3,6 @@
 #include "Application.h"
 #include "AutoreleasePool.h"
 #include "Scheduler.h"
-#include <raylib.h>
-#ifdef STAR_IMGUI
-#include <rlImGui.h>
-#endif
 
 using namespace star;
 
@@ -38,47 +34,51 @@ Scene* Director::getRunningScene() {
 }
 
 Vec2 Director::getVisibleSize() {
-  return Vec2(GetScreenWidth(), GetScreenHeight());
+  auto application = Application::getInstance();
+  auto window = application->getWindow();
+  int w, h;
+  SDL_GetWindowSize(window, &w, &h);
+  return Vec2(w, h);
 }
 
+static uint64_t now = SDL_GetPerformanceCounter();
+static uint64_t last = 0;
+
 void Director::mainLoop() {
-  p_deltaTime = GetFrameTime();
+  auto application = Application::getInstance();
+  auto renderer = application->getRenderer();
+
+  last = now;
+  now = SDL_GetPerformanceCounter();
+
+  p_deltaTime = (float)((now - last) * 1000 / (float)SDL_GetPerformanceFrequency());
 
   Scheduler::getInstance()->update(getDeltaTime());
   ActionManager::getInstance()->stepActions(getDeltaTime());
 
-  BeginDrawing();
-  ClearBackground(BLACK);
+  SDL_RenderClear(renderer);
 
   Scene* scene = getRunningScene();
-  auto camera = scene->getCamera();
+  // auto camera = scene->getCamera();
   if (scene) {
-    BeginMode2D(camera->getRaylibCamera());
+    // BeginMode2D(camera->getRaylibCamera());
   }
 
   scene->draw();
 
   if (scene) {
-    EndMode2D();
+    // EndMode2D();
   }
 
   if (statsDisplay) {
+    /*
     const char* text = TextFormat("%d / %.3f", GetFPS(), getDeltaTime());
     Vector2 size = MeasureTextEx(GetFontDefault(), text, 30.0f, 0);
     DrawText(text, 0, GetScreenHeight() - size.y, 30.0f, WHITE);
+    */
   }
 
-#ifdef STAR_IMGUI
-  rlImGuiBegin();
-#endif
-#ifdef STAR_INSPECTOR
-  drawInspector();
-#endif
-#ifdef STAR_IMGUI
-  rlImGuiEnd();
-#endif
-
-  EndDrawing();
+  SDL_RenderPresent(renderer);
 
   AutoreleasePool::getInstance()->clear();
 }

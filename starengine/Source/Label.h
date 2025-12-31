@@ -23,7 +23,7 @@ protected:
   std::string p_fontPath;
 
 public:
-  virtual bool init() override;
+  bool init() override;
 
   /**
    * Set the label's text
@@ -37,9 +37,9 @@ public:
   /**
    * Draw the label on the screen
    */
-  virtual void draw() override;
+  void draw() override;
 
-  virtual Vec2 getContentSize() override;
+  Vec2 getContentSize() override;
 
   /**
    * Set the label's font

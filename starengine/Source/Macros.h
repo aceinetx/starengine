@@ -1,5 +1,4 @@
 #pragma once
-#include <cstdio>
 #include <cstdlib>
 #include <fmt/base.h>
 #include <raylib.h>

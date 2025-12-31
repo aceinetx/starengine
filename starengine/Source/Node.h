@@ -64,7 +64,7 @@ protected:
 
 public:
   Node();
-  virtual ~Node();
+  ~Node() override;
 
   /**
    * Initialize

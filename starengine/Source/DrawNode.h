@@ -1,9 +1,7 @@
 #pragma once
-#include "ApplicationProtocol.h"
 #include "Color.h"
 #include "Macros.h"
 #include "Node.h"
-#include <climits>
 #include <raylib.h>
 
 namespace star {
@@ -17,8 +15,8 @@ protected:
   RenderTexture p_renderTexture;
 
 public:
-  ~DrawNode();
-  virtual bool init() override;
+  ~DrawNode() override;
+  bool init() override;
   void draw() override;
 
   void clear(Color4B color);

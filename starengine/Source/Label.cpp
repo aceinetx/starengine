@@ -30,7 +30,7 @@ void Label::draw() {
 
   Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize, p_spacing);
   Vec2 pos = p_getPositionTransform();
-  Vector2 rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
+  auto rlPos = CLITERAL(Vector2){pos.x, GetScreenHeight() - pos.y};
   rlPos.x /= scale;
   rlPos.y /= scale;
 
@@ -62,7 +62,7 @@ float Label::getFontSize() {
 
 Vec2 Label::getContentSize() {
   Vector2 size = MeasureTextEx(p_font, p_string.c_str(), p_fontSize, p_spacing);
-  return Vec2(size.x, size.y);
+  return {size.x, size.y};
 }
 
 Label* Label::createWithFont(std::string text, std::string font, float fontSize) {

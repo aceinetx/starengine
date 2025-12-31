@@ -8,14 +8,13 @@ namespace star {
  */
 struct RaylibEvent {
   /** type of the event */
-  enum { kNothing, kKeyboard, kMouse } type;
+  enum { kNothing, kKeyboard, kMouse } type{kNothing};
 
   /** button id */
   int button;
   /** state of the button */
-  enum { kNone, kDown, kUp, kPressed } state;
+  enum { kNone, kDown, kUp, kPressed } state{kNone};
 
-  RaylibEvent() : type(kNothing), state(kNone) {
-  }
+  RaylibEvent() = default;
 };
 } // namespace star

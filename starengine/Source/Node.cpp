@@ -15,13 +15,10 @@ using namespace star;
 
 Node::Node()
     : m_position(Vec2(0, 0)), m_parent(nullptr), m_scale(1.0f), m_rotation(0.0f), m_zOrder(0),
-      m_color(255, 255, 255, 255) {
-  p_director = Director::getInstance();
-  p_fontManager = FontManager::getInstance();
-  p_textureManager = TextureManager::getInstance();
-  p_scheduler = Scheduler::getInstance();
-  p_eventDispatcher = EventDispatcher::getInstance();
-  p_actionManager = ActionManager::getInstance();
+      m_color(255, 255, 255, 255), p_director(Director::getInstance()),
+      p_fontManager(FontManager::getInstance()), p_textureManager(TextureManager::getInstance()),
+      p_scheduler(Scheduler::getInstance()), p_eventDispatcher(EventDispatcher::getInstance()),
+      p_actionManager(ActionManager::getInstance()) {
 }
 
 Node::~Node() {
@@ -104,7 +101,7 @@ void Node::draw() {
 }
 
 Vec2 Node::getContentSize() {
-  return Vec2(0, 0);
+  return {0, 0};
 }
 
 const std::vector<Node*> Node::getChildren() {
@@ -209,8 +206,7 @@ void Node::setOpacity(uint8_t opacity) {
 }
 
 void Node::m_sortSceneGraph() {
-  std::sort(m_children.begin(), m_children.end(),
-            [](Node* a, Node* b) { return a->getZOrder() < b->getZOrder(); });
+  std::ranges::sort(m_children, [](Node* a, Node* b) { return a->getZOrder() < b->getZOrder(); });
   // fmt::println("[star] scene graph sorted");
 }
 

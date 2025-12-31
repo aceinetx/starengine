@@ -7,6 +7,8 @@ namespace star {
  */
 class ApplicationProtocol {
 public:
+  virtual ~ApplicationProtocol() = default;
+
   /**
    * What to do when the app finishes launching?
    */

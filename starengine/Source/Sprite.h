@@ -16,8 +16,8 @@ protected:
 public:
   /** Set the sprite's texture from the path */
   virtual void setTexture(std::string texturePath);
-  virtual void draw() override;
-  virtual Vec2 getContentSize() override;
+  void draw() override;
+  Vec2 getContentSize() override;
 
   static Sprite* create(std::string texturePath);
 };

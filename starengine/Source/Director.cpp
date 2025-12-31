@@ -1,6 +1,5 @@
 #include "Director.h"
 #include "ActionManager.h"
-#include "Application.h"
 #include "AutoreleasePool.h"
 #include "Scheduler.h"
 #include <raylib.h>
@@ -12,8 +11,7 @@ using namespace star;
 
 Director* Director::p_instance = nullptr;
 
-Director::~Director() {
-}
+Director::~Director() = default;
 
 Director* Director::getInstance() {
   if (p_instance == nullptr)
@@ -38,7 +36,7 @@ Scene* Director::getRunningScene() {
 }
 
 Vec2 Director::getVisibleSize() {
-  return Vec2(GetScreenWidth(), GetScreenHeight());
+  return {(float)GetScreenWidth(), (float)GetScreenHeight()};
 }
 
 void Director::mainLoop() {

@@ -4,8 +4,7 @@
 
 using namespace star;
 
-Scene::~Scene() {
-}
+Scene::~Scene() = default;
 
 bool Scene::init() {
   if (!Node::init())

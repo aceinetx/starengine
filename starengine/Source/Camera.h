@@ -16,7 +16,7 @@ protected:
   float p_zoom;
 
 public:
-  virtual bool init() override;
+  bool init() override;
 
   /**
    * Create a raylib's Camera2D with the properties of the current camera converted to it

@@ -1,8 +1,7 @@
 #pragma once
 #include <raymath.h>
 
-namespace star {
-namespace ease {
+namespace star::ease {
 #ifndef M_PI_X_2
 #define M_PI_X_2 (float)M_PI * 2.0f
 #endif
@@ -240,5 +239,4 @@ inline static constexpr float bounceEaseInOut(float time) {
 
   return newT;
 }
-} // namespace ease
-} // namespace star
+} // namespace star::ease

@@ -4,5 +4,7 @@
 class AppDelegate : private star::Application {
 public:
   AppDelegate();
-  virtual bool applicationDidFinishLaunching();
+  virtual ~AppDelegate();
+
+  bool applicationDidFinishLaunching() override;
 };

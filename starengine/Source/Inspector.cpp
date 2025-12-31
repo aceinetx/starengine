@@ -3,7 +3,6 @@
 #include "Node.h"
 #include "fmt/base.h"
 #include "imgui.h"
-#include <cstdio>
 #include <fmt/format.h>
 #include <string>
 #include <typeinfo>
@@ -49,8 +48,8 @@ void Director::drawInspector() {
                ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoCollapse);
   if (selectedNode) {
     // Position
-    float pos[2] = {selectedNode->getPositionX(), selectedNode->getPositionY()};
-    if (ImGui::DragFloat2("Position", pos)) {
+    std::array<float, 2> pos = {selectedNode->getPositionX(), selectedNode->getPositionY()};
+    if (ImGui::DragFloat2("Position", pos.data())) {
       selectedNode->setPositionX(pos[0]);
       selectedNode->setPositionY(pos[1]);
     }
@@ -82,8 +81,9 @@ void Director::drawInspector() {
 
     // Color
     Color4B color = selectedNode->getColor();
-    float imguiCol[] = {color.r / 255.0f, color.g / 255.0f, color.b / 255.0f, color.a / 255.0f};
-    if (ImGui::ColorEdit4("Color", imguiCol)) {
+    std::array<float, 4> imguiCol = {color.r / 255.0f, color.g / 255.0f, color.b / 255.0f,
+                                     color.a / 255.0f};
+    if (ImGui::ColorEdit4("Color", imguiCol.data())) {
       color.r = imguiCol[0] * 255.0f;
       color.g = imguiCol[1] * 255.0f;
       color.b = imguiCol[2] * 255.0f;

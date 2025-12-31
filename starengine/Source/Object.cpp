@@ -7,8 +7,7 @@ using namespace star;
 Object::Object() : p_refCount(1) {
 }
 
-Object::~Object() {
-}
+Object::~Object() = default;
 
 void Object::retain() {
   STARASSERT(p_refCount, "Reference count should be greater than 0");

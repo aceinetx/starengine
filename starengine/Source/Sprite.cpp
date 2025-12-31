@@ -24,7 +24,7 @@ void Sprite::draw() {
 }
 
 Vec2 Sprite::getContentSize() {
-  return Vec2(p_texture.width, p_texture.height);
+  return {static_cast<float>(p_texture.width), static_cast<float>(p_texture.height)};
 }
 
 Sprite* Sprite::create(std::string texturePath) {

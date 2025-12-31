@@ -5,8 +5,8 @@
 
 using namespace star;
 
-AppDelegate::AppDelegate() {
-}
+AppDelegate::AppDelegate() = default;
+AppDelegate::~AppDelegate() = default;
 
 bool AppDelegate::applicationDidFinishLaunching() {
   // initialize director

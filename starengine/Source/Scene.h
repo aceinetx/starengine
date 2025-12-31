@@ -16,7 +16,7 @@ protected:
   Camera* p_camera;
 
 public:
-  virtual ~Scene() override;
+  ~Scene() override;
 
   bool init() override;
 

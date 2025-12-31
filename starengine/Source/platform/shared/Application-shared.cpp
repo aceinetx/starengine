@@ -7,7 +7,6 @@
 #include "RaylibEvent.h"
 #include "Scheduler.h"
 #include "TextureManager.h"
-#include <algorithm>
 #include <raylib.h>
 #include <set>
 #ifdef STAR_IMGUI

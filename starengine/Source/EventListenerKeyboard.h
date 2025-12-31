@@ -21,7 +21,7 @@ public:
 
   /** Listen to an event, true if successfully dispatched, false if we should continue dispatching
    * events */
-  bool listen(const RaylibEvent& event);
+  bool listen(const RaylibEvent& event) override;
 
   CREATE_FUNC_NO_INIT(EventListenerKeyboard);
 };

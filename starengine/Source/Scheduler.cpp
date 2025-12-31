@@ -1,5 +1,4 @@
 #include "Scheduler.h"
-#include <cstdint>
 #include <fmt/base.h>
 
 using namespace star;

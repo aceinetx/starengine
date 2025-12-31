@@ -12,15 +12,15 @@ protected:
   Action* p_inner;
 
 public:
-  ~ActionEase();
+  ~ActionEase() override;
 
   /**
    * Get the inner action
    */
   virtual Action* getInnerAction();
 
-  virtual void startWithTarget(Node* target) override;
-  virtual void update(float time) override;
+  void startWithTarget(Node* target) override;
+  void update(float time) override;
 };
 
 #define DECLARE_EASING_CLASS(name)                                                                 \
